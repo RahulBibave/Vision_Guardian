@@ -1,0 +1,365 @@
+<resources>
+    <string name="app_name">Vision Guardian</string>
+    <string name="hint_password">Password*</string>
+    <string name="hint_email">Username*</string>
+    <string name="login">Login</string>
+    <string name="email">User Name</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="sign_in">New User Registration</string>
+    <string name="submit">Submit</string>
+    <string name="hint_age">Age</string>
+    <string name="hint_Address">Address line 1</string>
+    <string name="hint_firstname">First name *</string>
+    <string name="hint_middal">Middle name</string>
+    <string name="hint_last">Last name * </string>
+    <string name="hint_dob">Date of Birth</string>
+    <string name="hint_address2">Address line 2</string>
+    <string name="hint_pin">"Pin code *"</string>
+    <string name="hint_city">Village/City *</string>
+    <string name="hint_dis">"District * "</string>
+    <string name="hint_state">State</string>
+    <string name="hint_mobile">Mobile number*</string>
+    <string name="hint_Email">Email</string>
+    <string name="hintEducation">Education</string>
+    <string name="hint_Designation">"Designation    "</string>
+    <string name="hint_Role">"Role "</string>
+    <string name="question1">1.	Do you have blurry vision for distance? If yes in which eye?</string>
+    <string name="question1_choice1">Yes</string>
+    <string name="question1_choice2">No</string>
+    <string name="question2">2.	Do you have difficulty in reading ordinary print in newspapers or during near work? If yes in which eye?</string>
+    <string name="question3">3.	Do you have redness, pain, tears, discharge or uncomfortable eyes?</string>
+    <string name="question3_choice1">Yes – Redness/Pain/Tearing/Discharge/ uncomfortable eyes</string>
+    <string name="question4">4. Do you have any other difficulties in your eyes? "</string>
+    <string name="question4_choice1">Black spots in front of the eye</string>
+    <string name="question4_choice2">Growth on the eye</string>
+    <string name="question4_choice3">Swelling on the eyelid</string>
+    <string name="question4_choice4">Itching/irritation</string>
+    <string name="question4_choice5">Eyestrain</string>
+    <string name="question4_choice6">Headache </string>
+    <string name="question4_choice7">Light sensitivity </string>
+    <string name="question4_choice8">Flashes</string>
+    <string name="question4_choice9">White scales on the lid margin</string>
+    <string name="question4_choice10">Deviation of eyes</string>
+    <string name="question4_choice11">Foreign body sensation</string>
+    <string name="question4_choice12">"Dryness "</string>
+    <string name="question4_choice13">Coloured halos around light</string>
+    <string name="question4_choice14">"Glare "</string>
+    <string name="question4_choice15">"Double vision "</string>
+    <string name="question4_choice16">Nil</string>
+    <string name="question5">5. Do you have difficulty in both eyes? If no in which eye do you have difficulty?</string>
+    <string name="question5_choice1">"Right eye "</string>
+    <string name="question5_choice2">"Left eye "</string>
+    <string name="question5_choice3">"Both eye "</string>
+    <string name="submit_answers">Submit</string>
+    <string name="question6">"6. When did the problems(s) begin? "</string>
+    <string name="question7">7. How was the onset of symptoms? Was it sudden or gradual?</string>
+    <string name="question7_choice1">Gradual </string>
+    <string name="question7_choice2">Sudden</string>
+    <string name="question8">8. How often do you experience the above symptoms?</string>
+    <string name="question8_choice1">"Occasionally "</string>
+    <string name="question8_choice2">"Frequently "</string>
+    <string name="question8_choice3">"Constantly "</string>
+    <string name="question9">5. Are you wearing spectacles for distance or near? If yes do you have difficulty in seeing clearly with your glasses?</string>
+    <string name="question9_choice1">Yes, Have difficulty with glasses</string>
+    <string name="question9_choice2">Yes, No difficulty with glasses</string>
+    <string name="question9_choice3">Not wearing glasses</string>
+    <string name="question10">6. Do you have any past history of eye surgeries, eye injuries or eye treatment? </string>
+    <string name="question10_choice1">"Cataract surgery "</string>
+    <string name="question10_choice2">"Retinal surgery "</string>
+    <string name="question10_choice3">glaucoma treatment</string>
+    <string name="question10_choice4">"Eye injuries "</string>
+    <string name="question10_choice5">"Other "</string>
+    <string name="question10_choice6">Laser treatment</string>
+    <string name="question11">7. Are you taking medication for systemic illness?</string>
+    <string name="question11_choice1">"Diabetes "</string>
+    <string name="question11_choice2">Hypertension</string>
+    <string name="question11_choice3">Asthma</string>
+    <string name="question11_choice4">Thyroid</string>
+    <string name="question11_choice5">"Seizure "</string>
+    <string name="question11_choice6">"Allergy "</string>
+    <string name="question11_choice7">Arthritis</string>
+    <string name="question11_choice8">"Others "</string>
+    <string name="question11_choice9">Nil</string>
+    <string name="question12">8. Any of your first degree relatives experienced ocular problem?(Father/Mother/Siblings/Aunt/Uncle)</string>
+    <string name="question12_choice1">Yes</string>
+    <string name="question12_choice2">No</string>
+    <string name="submit_next">Next</string>
+    <string name="vs1">1. Distance vision without glasses </string>
+    <string name="vs_right">Right Eye</string>
+    <string name="vs_left">Left eye</string>
+    <string name="distance_vision1">Less than 3/60</string>
+    <string name="distance_vision2">Less than 6/60, more than 3/60</string>
+    <string name="distance_vision3">More than 6/60, less than 6/18</string>
+    <string name="distance_vision4">More than 6/18</string>
+    <string name="vs2">2. Distance vision with glasses </string>
+    <string name="vs3">3. Near vision without glasses</string>
+    <string name="near_vision1">Cannot see N6</string>
+    <string name="near_vision2">Can see N6</string>
+    <string name="vs4">4. Near vision with glasses</string>
+    <string name="vs5">5. Category of visual impairment</string>
+    <string name="cat_imp1">Mild visual impairment</string>
+    <string name="cat_imp2">Moderate visual impairment</string>
+    <string name="cat_imp3">Severe visual impairment</string>
+    <string name="cat_imp4">Blindness</string>
+    <string name="cat_imp5">Near vision impairment</string>
+    <string name="title1">HISTORY TAKING QUESTIONNAIRE</string>
+    <string name="title2">VISION SCREENING</string>
+    <string name="refraction1">Sphere</string>
+    <string name="refraction2">Cylinder </string>
+    <string name="lessthan"><![CDATA[< 1.00D]]></string>
+    <string name="greterthan"><![CDATA[>1.00D]]></string>
+    <string name="refraction3">Axis range </string>
+    <string name="title3">TORCHLIGHT EXAMINATION</string>
+    <string name="present">Present</string>
+    <string name="absent">Absent</string>
+    <string name="cataract_cataracts">"Cataract is commonly seen in people above 40 years."</string>
+    <string name="cataract_cataracts1">"Children may also develop a cataract."</string>
+    <string name="cataract_cataract2">"People with diabetes or those taking high doses of steroid medications are also at high risk  "</string>
+
+    <string name="symptoms_cataract">What are the symptoms of the cataract?</string>
+    <string name="symptoms_cataracts">"●\tBlurring of vision. "</string>
+    <string name="symptoms_cataracts1">"If left untreated, the patient may turn blind gradually. "</string>
+    <string name="symptoms_cataracts2">"Other possible symptoms are the presence of bight circles around light, glare, difficulty in the night driving, light seem too dim for reading. "</string>
+
+    <string name="treatment_cataract">"What is the treatment for Cataract surgery? "</string>
+    <string name="treatment_cataract_p1">"The only treatment for cataract is surgery.  "</string>
+    <string name="treatment_cataract_p12">"In early stages vision may improve with glasses."</string>
+    <string name="treatment_cataract_p13">"In cataract surgery, eye surgeons will remove the cloudy lens and place an artificial lens in the exact position of the original lens. "</string>
+    <string name="treatment_cataract_p14">"Cataract surgeries are simple, quick, painless, and suture less procedures.  "</string>
+    <string name="treatment_cataract_p15">"The patient can go for surgery when cataract starts affecting their lifestyle.  "</string>
+
+    <string name="refractive_error1">"Myopia or Near-sightedness- In myopia, there will be difficulty in seeing distant objects.  Myopia is usually inherited. "</string>
+    <string name="refractive_error2">"Hyperopia or Long Sightedness- In hyperopia there will be difficulty in seeing near objects.  "</string>
+    <string name="refractive_error3">"Astigmatism results in distorted vision due to an irregularly curved cornea. (the clear structure covering the eyeball).  "</string>
+    <string name="refractive_error4">"Presbyopia is linked to aging and can result in blurring of near vision   "</string>
+
+    <string name="symptoms_refractive">What are the symptoms?</string>
+    <string name="symptoms_rf_error1">"Blurring of vision.  "</string>
+    <string name="symptoms_rf_error2">"Headache /watering/eye-strain while doing near work/studying/watching TV .  "</string>
+    <string name="symptoms_rf_error3">"Children find difficulty in reading from the blackboard when sitting in the backbenches. "</string>
+    <string name="symptoms_rf_error4">"Children tend to watch TV from a close distance. "</string>
+    <string name="symptoms_rf_error5">"Squeezing/frequent blinking of the eyes while watching the distant objects.  "</string>
+
+    <string name="treatment_rf_error">What are the symptoms of presbyopia?</string>
+    <string name="treatment_rf_error_point1">"Difficulty in reading, doing computer work, or reading numbers on the mobile phone."</string>
+    <string name="treatment_rf_error_point2">"Difficulty in threading the needle/stitching. "</string>
+    <string name="treatment_rf_error_point3">"Difficulty in cleaning pulses/rice etc. "</string>
+
+    <string name="treatment_error">What is the available treatment?</string>
+    <string name="treatment_error_point1">"The need for refractive error correction depends on the patient's symptoms, age, and visual needs."</string>
+    <string name="treatment_error_point2">"Asymptomatic patients with low refractive errors may not require correction,  "</string>
+    <string name="treatment_error_point3">"Correction options include spectacles, contact lenses, or surgery.  "</string>
+
+    <string name="what_glaucoma1">"Glaucoma causes loss of vision by damaging the part of the eye called the optic nerve.   "</string>
+    <string name="what_glaucoma2">"Optic nerves carry information from your eyes to the brain.  "</string>
+
+    <string name="glaucoma_affect1">"Glaucoma occurs due to build-up of fluid within the front chamber of the eye (anterior chamber)  "</string>
+    <string name="glaucoma_affect2">"This increases pressure inside the eye, causing damage to the optic nerve. "</string>
+
+    <string name="symptoms_glaucoma1">"People with glaucoma usually do not show any symptoms initially. "</string>
+    <string name="symptoms_glaucoma2">"As glaucoma worsens side vision will get reduced and eventually central vision will also get affected.  "</string>
+    <string name="symptoms_glaucoma3">"Patients may experience headaches and pain in the eye, the coloured halo around light, nausea, frequent change of spectacle. "</string>
+
+    <string name="risk_glaucoma">"Anyone can get glaucoma, but some people have higher chances of getting glaucoma. \n●\tPeople above 40 years \n●\tFamily history of glaucoma  \n●\tNear-sightedness \n●\tDiabetes and hypertension  \n●\tLong term steroid use "</string>
+    <string name="treatable_glaucoma1">"There is no permanent cure for glaucoma . "</string>
+    <string name="treatable_glaucoma2">"Glaucoma can be prevented from getting worse by medication or surgery.   "</string>
+    <string name="treatable_glaucoma3">"Identifying it early is key to protecting your vision. "</string>
+
+    <string name="what_age_related">It is an eye condition commonly seen in people 50 years and above.</string>
+    <string name="what_age_related1">It damages central vision and causes difficulty in reading and driving </string>
+
+    <string name="age_risk_factor">"●\tAge 50 years and above \n\n●\tCigarette smoking  \n\n●\tFamily history of AMD \n\n●\tHigh cholesterol \n\n●\tHeart disease  \n\n●\tOverweight  \n\n●\tHigh blood pressure  "</string>
+    <string name="age_treated">How is it treated?</string>
+    <string name="age_treated_pt1">Currently, no treatment exists for early ARMD</string>
+    <string name="age_treated_pt2">Advise patients to get a comprehensive eye check-up at least once a year and to maintain a healthy lifestyle.</string>
+    <string name="age_treated_pt3">For late cases, high-dose vitamins and minerals are advised</string>
+
+
+    <string name="hy_retinopathy_11">The retina is the tissue layer located in the back of your eye.</string>
+    <string name="hy_retinopathy_12">Prolonged increase in blood pressure can cause damage to your retina.</string>
+    <string name="hy_retinopathy_13">When your blood pressure is too high, the retina’s blood vessel walls may thicken.</string>
+
+    <string name="hy_retinopathy_21">This may cause your blood vessels to become narrow, which then restricts blood from reaching the retina. </string>
+    <string name="hy_retinopathy_22">Over time, high blood pressure can cause damage to the retina’s blood vessels, limit the retina’s function, and put pressure on the optic nerve, causing vision problems. </string>
+    <string name="hy_retinopathy_23">This condition is called hypertensive retinopathy. </string>
+
+    <string name="hy_retinopathy_simtams1">Symptoms usually do not develop until late in the disease and include blurred vision.</string>
+    <string name="hy_retinopathy_simtams2">It can be diagnosed by through a detailed examination of your retina.</string>
+    <string name="hy_retinopathy_simtams3">Also hypertension combined with diabetes greatly increases the risk of visual loss. </string>
+
+    <string name="hy_treated_1">Hypertensive retinopathy is managed primarily by controlling hypertension.</string>
+    <string name="hy_treated_2">Sometimes laser or injection of corticosteroids is used </string>
+
+    <string name="diabetes_pt1">Diabetes is a condition in which glucose level in the blood is higher than normal.</string>
+    <string name="diabetes_pt2">A hormone called insulin in your body helps cells to take glucose for energy. </string>
+    <string name="diabetes_pt3">In diabetes, the body will be either unable to produce sufficient insulin or may be unable to utilize insulin well. </string>
+    <string name="diabetes_pt4">This causes glucose to stay in the blood and causes damage </string>
+
+    <string name="diabetes_affect">Diabetes can result in diabetic retinopathy. </string>
+    <string name="diabetes_affect1">In diabetic retinopathy, small blood vessels leak and bleed the retina and can cause blindness </string>
+
+    <string name="symptoms_diabets">What are the symptoms of diabetes?</string>
+    <string name="symptoms_diabets_pt">"You will usually not experience symptoms in the early stages.  \n\n●\tA sudden increase in black spots \n\n●\tBlurred vision \n\n●\tSudden loss of vision in one eye \n\n●\tBright circles around light \n\n●\tFlashing light  "</string>
+    <string name="diagnose_diabets">How can you diagnose diabetic retinopathy?</string>
+    <string name="diagnose_diabets_pt">All people with diabetes must get dilated eye exams at regular intervals to find out the development of any signs of retinopathy, even if their blood sugar is under control.</string>
+    <string name="retinopathy_diabets">Is diabetic retinopathy treatable?</string>
+    <string name="retinopathy_diabets_pt">In the early stages of diabetic retinopathy control of blood glucose level and an annual or more often dilated eye examination are recommended.</string>
+    <string name="retinopathy_diabets_pt1">In late stages, treatment options include - medication, lasers, and surgery "</string>
+    <string name="control_diabets">How to control blood sugar levels?</string>
+    <string name="control_diabets_pt">Regular exercise, following a healthy meal plan</string>
+    <string name="child_pt1">"●\tConstant eye rubbing  \n●\tExtreme sensitivity to light  \n●\tChronic redness  \n●\tChronic watering from eyes \n●\tPoor focusing \n●\tWhite instead of a black pupil  \n●\tTrouble in following objects with eyes \n●\tAbnormal alignment of eyes  "</string>
+    <string name="child_causes">"a.\tRefractive error  \nb.\tCorneal scarring mainly from Vitamin A deficiency and measles \nc.\tCataract  \nd.\tRetinopathy of prematurity \ne.\tRefractive error (mostly myopia) \nf. \tLow vision. "</string>
+    <string name="child_rf_error1">Refractive error occurs when the eyes fail to focus light coming from the object.</string>
+    <string name="child_rf_error2">Myopia, hyperopia, and astigmatism are the type of refractive error seen in young children.</string>
+    <string name="child_rf_error3">Symptoms of refractive error can include blurry vision, difficulty seeing up close, squinting, and headaches</string>
+    <string name="child_rf_error5">In amblyopia vision in one of the eyes is reduced because the eye and the brain are not working together properly.</string>
+    <string name="child_rf_error4">It failed to correct the refractive error in children, it results in amblyopia or lazy eye</string>
+    <string name="child_catatct1">"Cataracts are a cloudiness that occurs in the lens of the eye "</string>
+    <string name="child_catatct2">In children, abnormal lens development during pregnancy may result in congenital cataracts.</string>
+    <string name="child_catatct3">Genetic disorders, infections, and trauma can cause cataracts.</string>
+    <string name="child_catatct4">Common symptoms are the presence of white or yellow “glow” in the pupil in flash photos, lack of reaction to light, rapid eye movement, reduced vision</string>
+    <string name="child_catatct5">"If the congenital cataract is not treated timely, it can hinder normal vision development and cause amblyopia "</string>
+    <string name="child_catatct6">Congenital cataracts are typically treated by cataract surgery.</string>
+    <string name="child_catatct7">The cloudy lens is removed and is replaced either by an artificial lens, or the using contact lenses</string>
+    <string name="child_rop1">Retinopathy of prematurity affects children born prematurely.</string>
+    <string name="child_rop2">Mild forms of retinopathy of prematurely usually resolve by itself but severe forms can result in blindness, if not treated</string>
+    <string name="child_rop3">Screening of premature babies for retinopathy of prematurity and timely treatment is very important.</string>
+    <string name="child_rop4">Severe cases of ROP may require surgical treatments.</string>
+    <string name="child_rop5">Preterm children, and those who develop hypoxia, infection, or breathlessness after birth need to be examined within 30 days of birth.</string>
+    <string name="child_crossed_eyes1">"Squints usually develop during early childhood. "</string>
+    <string name="child_crossed_eyes2">The eyes of the child will be abnormally aligned.</string>
+    <string name="child_crossed_eyes3">The eye appears to cross or one wanders to one side.</string>
+    <string name="child_crossed_eyes4">"Squint is best corrected if noticed during early childhood "</string>
+    <string name="child_crossed_eyes5">If the squint is not corrected, the brain will ignore the weaker eye</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="normal">"Normal "</string>
+    <string name="diffuse">"Diffuse swelling "</string>
+    <string name="whitescale">"White scales on the lid margin "</string>
+    <string name="stye">"Stye / chalazion "</string>
+    <string name="abnormal">Abnormal closure</string>
+    <string name="lashes">"Lashes facing inward "</string>
+    <string name="crusting">"Crusting "</string>
+    <string name="whitewith">White with few veins</string>
+    <string name="red">"Red "</string>
+    <string name="whitest">Whitish mass present</string>
+    <string name="Others">"Others "</string>
+    <string name="bkackandsk">"Black and shiny "</string>
+    <string name="whiteorgrey">"White or grey areas "</string>
+    <string name="foreign">"Foreign body "</string>
+    <string name="black">"Black "</string>
+
+    <string name="cornel_pt1">"●\tRedness  \n●\tEye pain  \n●\tSensitivity to light  \n●\tBlurring of vision  \n●\tWatering  "</string>
+    <string name="cornel_pt2">"a.\tOcular injuries \nb.\tCorneal ulceration \nc.\tTrachoma \nd.\tVitamin A deficiency "</string>
+    <string name="ocular_p1">Chemical burns and splashes into the eye</string>
+    <string name="ocular_p2">Getting sand, dust or other foreign bodies in your eyes</string>
+    <string name="ocular_p3">Getting scratches on the eye</string>
+    <string name="prevent_p1">Don’t let children play dangerous games like Gulli-danda, bows, and arrows.</string>
+    <string name="prevent_p2">Always use proper personal protective equipment recommended at work. </string>
+    <string name="prevent_p3">Items of daily use like sharp edged toys, knives, needles, scissors, etc., should be kept away from children. </string>
+    <string name="prevent_p4">Avoid the use of chemicals while playing Holi.   </string>
+    <string name="prevent_p5">Don’t stand too close to firecrackers, adult supervision is essential, while children are playing with crackers.</string>
+    <string name="doincase_p1">Wash your eyes immediately in case of the chemical splash of something fell in your eyes</string>
+    <string name="doincase_p2">Go to an eye doctor or casuality immediately</string>
+    <string name="doincase_p3">Avoid rubbing of your eyes</string>
+    <string name="ulcer_wt">A corneal ulcer is an open sore present on the cornea. If left untreated can result in corneal blindness</string>
+    <string name="ulcer_ptall">"●\tRedness and pain  \n●\tForeign body sensation in your eyes \n●\tWatering of eyes  \n●\tSensitivity to light \n●\tBlurring of vision "</string>
+    <string name="causes_u2">It is commonly caused by infections (bacterial, viral, parasitic, fungal), injury to the cornea, dry eye</string>
+    <string name="causes_u1">Most of the causes of corneal ulceration are preventable.</string>
+    <string name="risk_1">Contact lens wearers</string>
+    <string name="risk_2">People with corneal injuries or burn</string>
+    <string name="risk_3">people who use steroid eye drops</string>
+    <string name="risk_4">people with eyelid disorders that prevent proper functioning of the eyelid</string>
+    <string name="prevent_u3">Don\'t let your children play with sharp objects, firecrackers, etc.</string>
+    <string name="prevent_u2">"Always use correct protective eyewear at work "</string>
+    <string name="prevent_u1">If you are contact lens wearer safe handling, cleaning and storage of contact lens is important</string>
+    <string name="trachoma_wt">Trachoma is one of the preventable causes of blindness. It is an infectious disease affecting your cornea and conjunctiva.</string>
+    <string name="trachoma_spred">The infection spreads through personal contact (via hands, clothes or bedding) and by flies that have been in contact with discharge from the eyes or nose of an infected person.</string>
+    <string name="trachomaSy3">permanent damage to the cornea</string>
+    <string name="trachomaSy2">Pain and discomfort</string>
+    <string name="trachomaSy1">Turning inward of eyelashes</string>
+    <string name="preventTr_4">"Wash your eyes and face several times with clean water. "</string>
+    <string name="preventTr_3">Keep your towel and handkerchief separate from others.</string>
+    <string name="preventTr_2">Do not let house flies breed both within the house and in the surrounding.</string>
+    <string name="preventTr_1">Maintain personal hygiene and environmental cleanliness.</string>
+    <string name="trachomatr">Treatment of trachoma is possible.  Put the eye ointment given by your doctor.  Wash your eyes several times with clean water. Inturned eyelashes can be surgically corrected</string>
+    <string name="vitamin_dueto">Vitamin ‘A’ is an essential nutrient for the eyes. Deficiency of vitamin A occurs due to:</string>
+    <string name="vitaminAll">"●\tDeficiency of Vitamin A in the diet. \n●\tSeveral episodes of diarrhoea. \n●\tMeasles and other diseases  "</string>
+    <string name="vitaSy4">If left untreated, it results in total blindness in children.</string>
+    <string name="vitaSy3">The condition is curable at an early stage. </string>
+    <string name="vitaSy2">Poor vision in dim light and at night.</string>
+    <string name="vitaSy1">The white portion of the eye appears lustreless and dull.</string>
+    <string name="vitaSy">The Infant’s skin and eyes appear dry and wrinkled.</string>
+    <string name="preventVita_1">Include vitamin A rich food in your diet (green leafy vegetables, carrot, yellow fruits like papaya, mango, banana, and dairy products- milk, curd, cottage cheese. The non-vegetarian sources are fish, egg, and meat.)</string>
+    <string name="preventVita_2">All infants should be breastfed from the very first day of their birth.</string>
+    <string name="preventVita_3">Vitamin A prophylaxis should be given to all the children from 9 months to 5 years of age at an interval of 6 months.</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+
+    <string name="hygiene1">Wash and sanitize your hands frequently.</string>
+    <string name="hygiene2">Clean your eyes daily with water to get free of infections.</string>
+    <string name="hygiene3">Don’t touch your eyes with unclean hands.</string>
+    <string name="hygiene4">If it is necessary to itch or rub eyes use a tissue instead of fingers.</string>
+    <string name="hygiene5">Keep your personalized articles like towel, handkerchief, bed linen, etc. separate to prevent transmission of infected eye conditions.</string>
+    <string name="hygiene6">Avoid instilling any substance like ghee, cow milk, Gulab Jal, honey, and homemade remedies in the eyes.</string>
+    <string name="hygiene7">Only use medications prescribed by your doctor.</string>
+    <string name="hygiene8">Discard the eye drops once opened within one month of opening, even if their expiry date is not reached.</string>
+    <string name="hygiene9">Always read in good light conditions, dim light strains the eyes.</string>
+    <string name="hygiene10">Do not see a solar eclipse with naked eyes as it may harm your eyes.</string>
+    <string name="hygiene11">Keep your premises clean.</string>
+
+    <string name="eat1">Avoid smoking.</string>
+    <string name="eat2">Maintain a balanced diet.</string>
+    <string name="eat3">Exercise regularly.</string>
+    <string name="eat4">Include vitamin A rich food in your diet (green leafy vegetables, carrot, yellow fruits like papaya, mango, banana, and dairy products- milk, curd, cottage cheese. The non-vegetarian sources are fish, egg, and meat.)</string>
+
+    <string name="caring1">Always wear or remove your glasses with two hands, this can prevent bending the frame.</string>
+    <string name="caring2">Always put your spectacles back in the case after the use. </string>
+    <string name="caring3">Never leave your glasses lens-side down on a table. </string>
+    <string name="caring4">Do not use dirty and scratched glasses. </string>
+    <string name="caring5">Do not share or use others spectacles. </string>
+    <string name="caring6">Clean your glasses every day with a soft piece of cloth. </string>
+
+    <string name="eyedrop1">Tilt your head back. </string>
+    <string name="eyedrop2">Pull your lower eyelid down to create a “cup” that holds the drops or ointment. </string>
+    <string name="eyedrop3">Put in the prescribed amount of medicine and close your eyes to distribute it evenly. </string>
+    <string name="eyedrop4">If you have trouble doing this, ask a friend or relative for help. </string>
+    <string name="eyedrop5">Start with a fresh bottle of medicine after surgery so germs don’t get transferred.</string>
+
+    <string name="postcare1">Instil eye-drops/ointments as advised by your operating surgeon.</string>
+    <string name="postcare2">Protect eyes from bright sunlight, dust, smoke</string>
+    <string name="postcare3">Avoid lifting heavyweights.</string>
+    <string name="postcare4">Wear goggles.</string>
+    <string name="postcare5">Before cleaning eyes, wash hands with soap and water.</string>
+    <string name="postcare6">Clean your eyes with clean cotton soaked in boiling water for 10 minutes after cooling</string>
+    <string name="postcare7">Start wiping from the inner corner and move to the periphery.</string>
+    <string name="postcare8">Do not press or rub it.</string>
+    <string name="postcare9">If redness, pain, or sudden loss of vision is observed, the patient should contact the doctor immediately.</string>
+    <string name="postcare10">Get follow up check-up after one week of the surgery and again after 4-6 weeks for spectacles requirement.</string>
+    <string name="postcare11">Don’t get soap, shampoo, or other irritants in your eye.</string>
+    <string name="postcare12">Do wear eye shields at night to protect your eyes during sleep.</string>
+    <string name="postcare13">Don’t bend over to pick things up; kneel instead.</string>
+
+
+    <string name="hygieneTital">Hygiene and Eye care</string>
+
+    <string name="contactlens1">Wash your hands with mild soap and dry your hands using lint-free cloth before handling contact lenses</string>
+    <string name="contactlens2">Avoid the use of oily soaps, lotions or oily cosmetics and hand sanitizer before handling contact lens</string>
+    <string name="contactlens3">Ensure that your lens is moist, clean, clear and free of any nicks or tears before putting in eyes</string>
+    <string name="contactlens4">Remove your lenses immediately and contact your eye care personnel, if you experience eye discomfort, excessive tearing, vision changes, and redness of the eye or other problems </string>
+    <string name="contactlens5">Never wear your lenses beyond the prescribed wear schedule, as serious complications may occur, including loss of vision.</string>
+    <string name="contactlens6">Always store your lens in a clean case and replace it once in a month. Bacteria can grow in dirty contact lens cases.</string>
+
+    <string name="digitaleye1">Keep your computer screen lower to your eye level</string>
+    <string name="digitaleye2">Position computer to avoid glare from overhead lamps, windows</string>
+    <string name="digitaleye3">Use drapes and curtains</string>
+    <string name="digitaleye4">Switch off excessive light in the room</string>
+    <string name="digitaleye5">Adjust the display setting of your computer</string>
+    <string name="digitaleye6">Blink your eyes frequents</string>
+    <string name="digitaleye7">Take frequent breaks</string>
+    <string name="digitaleye8">Start using the 20-20-20 rule to reduce eye fatigue.  Every 20 minutes, look away from your screen and fix your eyes on something at least 20 feet away for at least 20 seconds.</string>
+    <string name="digitaleye">Computer-related eye care problems can be solved to an extent by making changes in the positioning of your computer, by proper eye care and taking regular breaks. </string>
+
+
+</resources>

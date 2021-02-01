@@ -1,0 +1,1588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Examination">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:background="@color/blue"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Corneal blindness"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:background="@color/blue"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+
+
+        <LinearLayout
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+
+            >
+
+            <androidx.cardview.widget.CardView
+
+                android:elevation="25dp"
+                app:cardCornerRadius="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:padding="@dimen/size8dp"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_gravity="start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_bold"
+                        android:paddingTop="@dimen/activity_vertical_margin"
+                        android:text="Corneal blindness"
+
+                        android:textColor="@color/primaryText"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+
+                    <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/bullet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:paddingTop="@dimen/size5dp"
+                        android:text="● "
+                        android:textColor="@color/primaryText"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:layout_toRightOf="@id/bullet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:paddingTop="@dimen/size5dp"
+                        android:text="The cornea is a clear structure through which light enters the eyes. Some corneal conditions can cause blindness. The only cure for corneal blindness is transplantation. However, most of the corneal conditions causing blindness are preventable. "
+                        android:textColor="@color/primaryText"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="Common symptoms of corneal disease:"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_marginLeft="@dimen/size5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text=" "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_bold"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/cornel_pt1"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="Common causes for corneal blindness: "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_marginLeft="@dimen/size5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text=" "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_bold"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/cornel_pt2"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+               </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:background="@color/textColor"
+                android:layout_height="0.5dp"/>
+
+            <androidx.cardview.widget.CardView
+
+                android:elevation="25dp"
+                app:cardCornerRadius="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:padding="@dimen/size8dp"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_bold"
+                        android:paddingTop="@dimen/activity_vertical_margin"
+                        android:text="Ocular injuries "
+
+                        android:textColor="@color/primaryText"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_gravity="start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_bold"
+                        android:paddingTop="@dimen/activity_vertical_margin"
+                        android:text="What are the causes of ocular injuries ?"
+
+                        android:textColor="@color/primaryText"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/ocular_p1"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/ocular_p2"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/ocular_p3"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="400dp"
+                        android:layout_height="400dp"
+                        android:src="@drawable/eye_injury"/>
+
+
+                    <TextView
+                        android:layout_gravity="start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_bold"
+                        android:paddingTop="@dimen/activity_vertical_margin"
+                        android:text="How to prevent ocular injuries?"
+
+                        android:textColor="@color/primaryText"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/prevent_p1"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/prevent_p2"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/prevent_p3"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/prevent_p4"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/prevent_p5"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+
+
+                    <TextView
+                        android:layout_gravity="start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_bold"
+                        android:paddingTop="@dimen/activity_vertical_margin"
+                        android:text="What should you do in case of ocular injury ?"
+
+                        android:textColor="@color/primaryText"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/doincase_p1"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/doincase_p2"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/doincase_p3"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:background="@color/textColor"
+                android:layout_height="0.5dp"/>
+
+            <androidx.cardview.widget.CardView
+
+                android:elevation="25dp"
+                app:cardCornerRadius="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:padding="@dimen/size8dp"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_bold"
+                        android:paddingTop="@dimen/activity_vertical_margin"
+                        android:text="Corneal Ulceration  "
+
+                        android:textColor="@color/primaryText"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_gravity="start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_bold"
+                        android:paddingTop="@dimen/activity_vertical_margin"
+                        android:text="What is a corneal ulcer?"
+
+                        android:textColor="@color/primaryText"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/ulcer_wt"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+
+
+
+                    <TextView
+                        android:layout_gravity="start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_bold"
+                        android:paddingTop="@dimen/activity_vertical_margin"
+                        android:text="What are the symptoms?"
+
+                        android:textColor="@color/primaryText"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_marginLeft="@dimen/size5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text=" "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_bold"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/ulcer_ptall"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+
+
+
+
+
+                    <TextView
+                        android:layout_gravity="start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_bold"
+                        android:paddingTop="@dimen/activity_vertical_margin"
+                        android:text="What are the causes of corneal ulcer ?"
+
+                        android:textColor="@color/primaryText"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/causes_u1"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/causes_u2"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_gravity="start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_bold"
+                        android:paddingTop="@dimen/activity_vertical_margin"
+                        android:text="Who is at risk of developing corneal ulceration?"
+
+                        android:textColor="@color/primaryText"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/risk_1"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/risk_2"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/risk_3"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/risk_4"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_gravity="start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_bold"
+                        android:paddingTop="@dimen/activity_vertical_margin"
+                        android:text="How can we prevent corneal ulceration?"
+
+                        android:textColor="@color/primaryText"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/prevent_u1"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/prevent_u2"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/prevent_u3"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:background="@color/textColor"
+                android:layout_height="0.5dp"/>
+
+            <androidx.cardview.widget.CardView
+
+                android:elevation="25dp"
+                app:cardCornerRadius="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:padding="@dimen/size8dp"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_bold"
+                        android:paddingTop="@dimen/activity_vertical_margin"
+                        android:text="Trachoma   "
+
+                        android:textColor="@color/primaryText"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_gravity="start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_bold"
+                        android:paddingTop="@dimen/activity_vertical_margin"
+                        android:text="What is trachoma?"
+
+                        android:textColor="@color/primaryText"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/trachoma_wt"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+
+
+
+                    <TextView
+                        android:layout_gravity="start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_bold"
+                        android:paddingTop="@dimen/activity_vertical_margin"
+                        android:text="How does trachoma spread?"
+
+                        android:textColor="@color/primaryText"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/trachoma_spred"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+
+
+
+
+
+                    <TextView
+                        android:layout_gravity="start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_bold"
+                        android:paddingTop="@dimen/activity_vertical_margin"
+                        android:text="What are the symptoms of trachoma ?"
+
+                        android:textColor="@color/primaryText"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/trachomaSy1"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/trachomaSy2"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/trachomaSy3"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_gravity="start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_bold"
+                        android:paddingTop="@dimen/activity_vertical_margin"
+                        android:text="How can we prevent trachoma?"
+
+                        android:textColor="@color/primaryText"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/preventTr_1"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/preventTr_2"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/preventTr_3"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/preventTr_4"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_gravity="start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_bold"
+                        android:paddingTop="@dimen/activity_vertical_margin"
+                        android:text="Is trachoma treatable?"
+
+                        android:textColor="@color/primaryText"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/trachomatr"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+
+
+
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:background="@color/textColor"
+                android:layout_height="0.5dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:elevation="25dp"
+                app:cardCornerRadius="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:padding="@dimen/size8dp"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_bold"
+                        android:paddingTop="@dimen/activity_vertical_margin"
+                        android:text="VITAMIN A DEFICIENCY  "
+
+                        android:textColor="@color/primaryText"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_gravity="start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_bold"
+                        android:paddingTop="@dimen/activity_vertical_margin"
+                        android:text="What is Vitamin A deficiency?"
+
+                        android:textColor="@color/primaryText"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/vitamin_dueto"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_marginLeft="@dimen/size5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text=" "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_bold"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/vitaminAll"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+                    <TextView
+                        android:layout_gravity="start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_bold"
+                        android:paddingTop="@dimen/activity_vertical_margin"
+                        android:text="What are the symptoms?"
+
+                        android:textColor="@color/primaryText"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/vitaSy"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/vitaSy1"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/vitaSy2"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/vitaSy3"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/vitaSy4"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_gravity="start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_bold"
+                        android:paddingTop="@dimen/activity_vertical_margin"
+                        android:text="How to prevent vitamin A deficiency?"
+                        android:textColor="@color/primaryText"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/preventVita_1"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/preventVita_2"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:adjustViewBounds="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="360dp"
+                        android:src="@drawable/vitamin_a"/>
+                    <LinearLayout
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="● "
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_toRightOf="@id/bullet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/preventVita_3"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>
+</LinearLayout>

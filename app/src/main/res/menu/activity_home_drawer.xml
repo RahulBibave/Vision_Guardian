@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mRegistration"
+        android:title="Registration"/>
+    <item
+
+        android:id="@+id/mExamination"
+        android:title="Examination"/>
+
+    <item
+        android:id="@+id/mRefer"
+        android:title="Referral"/>
+
+    <item
+        android:id="@+id/mAwarness"
+        android:title="Awareness"/>
+
+    <item
+        android:id="@+id/mScheme"
+        android:title="Scheme"/>
+    <item
+        android:id="@+id/mGk"
+        android:title="General Care"/>
+
+     <item
+        android:id="@+id/mCamp"
+        android:title="Set Screening Locations"/>
+
+
+
+</menu>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="size16dp">16dp</dimen>
+    <dimen name="size14dp">14dp</dimen>
+    <dimen name="size8dp">8dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="size5dp">5dp</dimen>
+</resources>
