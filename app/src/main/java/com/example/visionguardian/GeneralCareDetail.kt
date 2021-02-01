@@ -2,6 +2,7 @@ package com.example.visionguardian
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import kotlinx.android.synthetic.main.view_eat_healthy.*
 
 class GeneralCareDetail : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,23 +19,6 @@ class GeneralCareDetail : AppCompatActivity() {
        // else if (stringGK=="Regular physician check-up after 40 years") setContentView(R.layout.view_regularphysician)
 
 
-
-
-
-
-
-
-
-
-
-       // "Hygiene and eye care"
-       // "Eat healthy for good vision"
-        //"Caring your spectacle"
-       // "Instillation of eye drops"
-       // "Postoperative care"
-       // "First aid"
-       // "Eye care solutions of digital eye strain"
-      //  "Contact lens care"
-       // "Regular physician check-up after 40 years"
+        back_arrow.setOnClickListener { finish() }
     }
 }
