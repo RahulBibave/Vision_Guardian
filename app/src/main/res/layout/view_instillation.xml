@@ -85,7 +85,10 @@
                             android:textColor="@color/primaryText"
                             android:textSize="18sp"
                             android:textStyle="bold" />
-
+                        <ImageView
+                            android:src="@drawable/how_to_put_eye"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"/>
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
@@ -107,7 +110,10 @@
                                 android:textColor="@color/primaryText"
                                 android:textSize="18sp" />
                         </LinearLayout>
-
+                        <ImageView
+                            android:src="@drawable/before_cleaning_eyes"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"/>
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
@@ -129,7 +135,10 @@
                                 android:textColor="@color/primaryText"
                                 android:textSize="18sp" />
                         </LinearLayout>
-
+                        <ImageView
+                            android:src="@drawable/pull_your_lower_eyelid_down"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"/>
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
@@ -151,7 +160,10 @@
                                 android:textColor="@color/primaryText"
                                 android:textSize="18sp" />
                         </LinearLayout>
-
+                        <ImageView
+                            android:src="@drawable/give_minutes"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"/>
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">

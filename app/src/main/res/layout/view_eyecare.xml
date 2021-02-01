@@ -127,7 +127,10 @@
                                 android:textColor="@color/primaryText"
                                 android:textSize="18sp" />
                         </LinearLayout>
-
+                        <ImageView
+                            android:src="@drawable/keep_your_computer_screen"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"/>
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
@@ -172,7 +175,10 @@
                                 android:textColor="@color/primaryText"
                                 android:textSize="18sp" />
                         </LinearLayout>
-
+                        <ImageView
+                            android:src="@drawable/use_drapes"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"/>
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
