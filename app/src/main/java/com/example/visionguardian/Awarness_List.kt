@@ -13,6 +13,7 @@ class Awarness_List : AppCompatActivity() {
         setContentView(R.layout.activity_awarness)
        // val myArray = arrayOf("Cataract","Refractive error and low vision", "Glaucoma","Diabetic retinopathy","Hypertensive retinopathy","Corneal blindness","Childhood Blindness","Age related macular degeneration" )
         val arrayList = ArrayList<AwarnessList>()
+        arrayList.add(AwarnessList(9,R.drawable.ic_cataract,"Structure & Function"))
         arrayList.add(AwarnessList(1,R.drawable.ic_cataract,"Cataract"))
         arrayList.add(AwarnessList(2,R.drawable.ic_refractive_error,"Refractive error and low vision"))
         arrayList.add(AwarnessList(3,R.drawable.ic_glaucoma,"Glaucoma"))

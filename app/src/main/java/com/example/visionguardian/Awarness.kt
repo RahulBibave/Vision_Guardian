@@ -38,6 +38,9 @@ class Awarness : AppCompatActivity() {
         else if (stringOne=="Age related macular degeneration"){
             setContentView(R.layout.layout_age_related)
         }
+        else if (stringOne=="Structure & Function"){
+            setContentView(R.layout.layout_structure)
+        }
 
 //        refer_catract.setOnClickListener{
 //            setContentView(R.layout.view_cataract)
