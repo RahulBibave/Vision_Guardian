@@ -33,7 +33,7 @@
           android:textColor="@color/white"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:text="PATIENT REGISTRATION  "/>
+          android:text="@string/PATIENT_reg"/>
     </RelativeLayout>
 
 
@@ -71,7 +71,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_bg"
             android:cursorVisible="true"
-            android:hint="First name* "
+            android:hint="@string/hint_firstname"
             android:inputType="textCapWords"
             android:maxLines="1"
             android:importantForAutofill="no"
@@ -93,7 +93,7 @@
             android:background="@drawable/rounded_bg"
             android:cursorVisible="true"
             android:drawablePadding="16dp"
-            android:hint="Middle Name"
+            android:hint="@string/middel_name"
             android:inputType="textCapWords"
             android:maxLines="1"
             android:paddingLeft="16dp"
@@ -117,7 +117,7 @@
           android:cursorVisible="true"
 
           android:drawablePadding="16dp"
-          android:hint="Last name*"
+          android:hint="@string/last_name"
           android:inputType="textCapWords"
           android:maxLines="1"
           android:importantForAutofill="no"
@@ -182,7 +182,7 @@
           android:cursorVisible="true"
 
           android:drawablePadding="16dp"
-          android:hint="Date of Birth (DD/MM/YY)"
+          android:hint="@string/dateofbirth"
           android:inputType="text"
           android:maxLines="1"
           android:paddingLeft="16dp"
@@ -208,7 +208,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:paddingLeft="16dp"
-            android:text="Gender"
+            android:text="@string/gender"
             android:textSize="16sp" />
 
         <RadioGroup
@@ -224,7 +224,7 @@
               android:layout_height="wrap_content"
               android:layout_marginRight="20dp"
               android:checked="true"
-              android:text="Male" />
+              android:text="@string/male" />
 
 
           <RadioButton
@@ -233,7 +233,7 @@
               android:layout_height="wrap_content"
               android:layout_marginLeft="20dp"
 
-              android:text="Female" />
+              android:text="@string/female" />
 
           <RadioButton
               android:id="@+id/rb_other"
@@ -241,7 +241,7 @@
               android:layout_height="wrap_content"
               android:layout_marginLeft="20dp"
 
-              android:text="Other" />
+              android:text="@string/other" />
 
         </RadioGroup>
 
@@ -257,7 +257,7 @@
 
           android:importantForAutofill="no"
           android:drawablePadding="16dp"
-          android:hint="Age *"
+          android:hint="@string/age"
           android:inputType="number"
           android:maxLength="2"
           android:maxLines="1"
@@ -299,7 +299,7 @@
           android:cursorVisible="true"
           android:drawablePadding="16dp"
           android:importantForAutofill="no"
-          android:hint="Aadhaar Number"
+          android:hint="@string/adharno"
           android:inputType="number"
           android:maxLength="12"
           android:maxLines="1"
@@ -320,7 +320,7 @@
           android:background="@drawable/rounded_bg"
           android:cursorVisible="true"
           android:drawablePadding="16dp"
-          android:hint="Address line 1"
+          android:hint="@string/hint_addres"
           android:importantForAutofill="no"
           android:inputType="textCapWords"
           android:maxLines="1"

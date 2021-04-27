@@ -1,15 +1,15 @@
 package com.example.visionguardian
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.content.res.Configuration
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
-import android.widget.ImageView
-import android.widget.RadioButton
-import android.widget.RadioGroup
-import android.widget.Toast
+import android.view.View
+import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.room.Room
@@ -91,11 +91,12 @@ class TourchLightExamination : AppCompatActivity() {
     var flageyePupile=1
     var flageyeInjury=1
     var flageyeFB=1
-
+    val REQUEST_CODE = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tourch_light_examination)
+        loadLocate()
         setUpDB()
         getShareData()
 
@@ -114,172 +115,173 @@ class TourchLightExamination : AppCompatActivity() {
         }
 
 
+
        var back_arrow=findViewById<ImageView>(R.id.back_arrow)
         back_arrow.setOnClickListener { finish() }
 
         radio_deviation_right.setOnCheckedChangeListener(
-                RadioGroup.OnCheckedChangeListener { group, checkedId ->
-                    val radio_langange: RadioButton = findViewById(checkedId)
-                    flagDev +=1
-                    if (flagDev==3){
-                        card_t1.setBackgroundColor(Color.GRAY)
-                    }
-
-                    devRight = radio_langange.text.toString()
-                  //  Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            RadioGroup.OnCheckedChangeListener { group, checkedId ->
+                val radio_langange: RadioButton = findViewById(checkedId)
+                flagDev += 1
+                if (flagDev == 3) {
+                    card_t1.setBackgroundColor(Color.GRAY)
                 }
+
+                devRight = radio_langange.text.toString()
+                //  Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            }
         )
 
         radio_deviation_left.setOnCheckedChangeListener(
-                RadioGroup.OnCheckedChangeListener { group, checkedId ->
-                    val radio_langange: RadioButton = findViewById(checkedId)
-                    flagDev +=1
-                    if (flagDev==3){
-                        card_t1.setBackgroundColor(Color.GRAY)
-                    }
-                    //  flag += 1
-                    devLeft = radio_langange.text.toString()
-                   // Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            RadioGroup.OnCheckedChangeListener { group, checkedId ->
+                val radio_langange: RadioButton = findViewById(checkedId)
+                flagDev += 1
+                if (flagDev == 3) {
+                    card_t1.setBackgroundColor(Color.GRAY)
                 }
+                //  flag += 1
+                devLeft = radio_langange.text.toString()
+                // Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            }
         )
 
         radio_size_right.setOnCheckedChangeListener(
-                RadioGroup.OnCheckedChangeListener { group, checkedId ->
-                    val radio_langange: RadioButton = findViewById(checkedId)
-                    flagsize +=1
-                    if (flagsize==3){
-                        card_t2.setBackgroundColor(Color.GRAY)
-                    }
-
-                    //  flag += 1
-                    sizeRight = radio_langange.text.toString()
-                  //  Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            RadioGroup.OnCheckedChangeListener { group, checkedId ->
+                val radio_langange: RadioButton = findViewById(checkedId)
+                flagsize += 1
+                if (flagsize == 3) {
+                    card_t2.setBackgroundColor(Color.GRAY)
                 }
+
+                //  flag += 1
+                sizeRight = radio_langange.text.toString()
+                //  Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            }
         )
 
         radio_size_left.setOnCheckedChangeListener(
-                RadioGroup.OnCheckedChangeListener { group, checkedId ->
-                    val radio_langange: RadioButton = findViewById(checkedId)
-                    flagsize +=1
-                    if (flagsize==3){
-                        card_t2.setBackgroundColor(Color.GRAY)
-                    }
-                    //  flag += 1
-                    sizeLeft = radio_langange.text.toString()
-                  //  Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            RadioGroup.OnCheckedChangeListener { group, checkedId ->
+                val radio_langange: RadioButton = findViewById(checkedId)
+                flagsize += 1
+                if (flagsize == 3) {
+                    card_t2.setBackgroundColor(Color.GRAY)
                 }
+                //  flag += 1
+                sizeLeft = radio_langange.text.toString()
+                //  Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            }
         )
 
 
         radio_eyelids_right.setOnCheckedChangeListener(
-                RadioGroup.OnCheckedChangeListener { group, checkedId ->
-                    val radio_langange: RadioButton = findViewById(checkedId)
-                    flageyelids +=1
-                    if (flageyelids==3){
-                        card_t3.setBackgroundColor(Color.GRAY)
-                    }
-
-                    //  flag += 1
-                    eyelidsRight = radio_langange.text.toString()
-                  //  Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            RadioGroup.OnCheckedChangeListener { group, checkedId ->
+                val radio_langange: RadioButton = findViewById(checkedId)
+                flageyelids += 1
+                if (flageyelids == 3) {
+                    card_t3.setBackgroundColor(Color.GRAY)
                 }
+
+                //  flag += 1
+                eyelidsRight = radio_langange.text.toString()
+                //  Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            }
         )
         radio_eyelids_left.setOnCheckedChangeListener(
-                RadioGroup.OnCheckedChangeListener { group, checkedId ->
-                    val radio_langange: RadioButton = findViewById(checkedId)
-                    flageyelids +=1
-                    if (flageyelids==3){
-                        card_t3.setBackgroundColor(Color.GRAY)
-                    }
-                    //  flag += 1
-                    eyelidsLeft = radio_langange.text.toString()
-                 //   Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            RadioGroup.OnCheckedChangeListener { group, checkedId ->
+                val radio_langange: RadioButton = findViewById(checkedId)
+                flageyelids += 1
+                if (flageyelids == 3) {
+                    card_t3.setBackgroundColor(Color.GRAY)
                 }
+                //  flag += 1
+                eyelidsLeft = radio_langange.text.toString()
+                //   Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            }
         )
 
 
 
         radio_eyelashes_right.setOnCheckedChangeListener(
-                RadioGroup.OnCheckedChangeListener { group, checkedId ->
-                    val radio_langange: RadioButton = findViewById(checkedId)
-                    flageyelashes +=1
-                    if (flageyelashes==3){
-                        card_t4.setBackgroundColor(Color.GRAY)
-                    }
-
-                    //  flag += 1
-                    eyelashesRight = radio_langange.text.toString()
-                  //  Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            RadioGroup.OnCheckedChangeListener { group, checkedId ->
+                val radio_langange: RadioButton = findViewById(checkedId)
+                flageyelashes += 1
+                if (flageyelashes == 3) {
+                    card_t4.setBackgroundColor(Color.GRAY)
                 }
+
+                //  flag += 1
+                eyelashesRight = radio_langange.text.toString()
+                //  Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            }
         )
         radio_eyelashes_left.setOnCheckedChangeListener(
-                RadioGroup.OnCheckedChangeListener { group, checkedId ->
-                    val radio_langange: RadioButton = findViewById(checkedId)
-                    flageyelashes +=1
-                    if (flageyelashes==3){
-                        card_t4.setBackgroundColor(Color.GRAY)
-                    }
-                    //  flag += 1
-                    eyelashesLeft = radio_langange.text.toString()
-                  //  Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            RadioGroup.OnCheckedChangeListener { group, checkedId ->
+                val radio_langange: RadioButton = findViewById(checkedId)
+                flageyelashes += 1
+                if (flageyelashes == 3) {
+                    card_t4.setBackgroundColor(Color.GRAY)
                 }
+                //  flag += 1
+                eyelashesLeft = radio_langange.text.toString()
+                //  Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            }
         )
 
 
 
         radio_white_right.setOnCheckedChangeListener(
-                RadioGroup.OnCheckedChangeListener { group, checkedId ->
-                    val radio_langange: RadioButton = findViewById(checkedId)
-                    flageyeWhite +=1
-                    if (flageyeWhite==3){
-                        card_t5.setBackgroundColor(Color.GRAY)
-                    }
-
-                    //  flag += 1
-                    whiteRight = radio_langange.text.toString()
-                   // Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            RadioGroup.OnCheckedChangeListener { group, checkedId ->
+                val radio_langange: RadioButton = findViewById(checkedId)
+                flageyeWhite += 1
+                if (flageyeWhite == 3) {
+                    card_t5.setBackgroundColor(Color.GRAY)
                 }
+
+                //  flag += 1
+                whiteRight = radio_langange.text.toString()
+                // Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            }
         )
         radio_white_left.setOnCheckedChangeListener(
-                RadioGroup.OnCheckedChangeListener { group, checkedId ->
-                    val radio_langange: RadioButton = findViewById(checkedId)
-                    flageyeWhite +=1
-                    if (flageyeWhite==3){
-                        card_t5.setBackgroundColor(Color.GRAY)
-                    }
-                    //  flag += 1
-                    whiteLeft = radio_langange.text.toString()
-                  //  Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            RadioGroup.OnCheckedChangeListener { group, checkedId ->
+                val radio_langange: RadioButton = findViewById(checkedId)
+                flageyeWhite += 1
+                if (flageyeWhite == 3) {
+                    card_t5.setBackgroundColor(Color.GRAY)
                 }
+                //  flag += 1
+                whiteLeft = radio_langange.text.toString()
+                //  Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            }
         )
 
 
 
 
         radio_black_right.setOnCheckedChangeListener(
-                RadioGroup.OnCheckedChangeListener { group, checkedId ->
-                    val radio_langange: RadioButton = findViewById(checkedId)
-                    flageyeBlack +=1
-                    if (flageyeBlack==3){
-                        card_t6.setBackgroundColor(Color.GRAY)
-                    }
-
-                    //  flag += 1
-                    blackRight = radio_langange.text.toString()
-                //    Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            RadioGroup.OnCheckedChangeListener { group, checkedId ->
+                val radio_langange: RadioButton = findViewById(checkedId)
+                flageyeBlack += 1
+                if (flageyeBlack == 3) {
+                    card_t6.setBackgroundColor(Color.GRAY)
                 }
+
+                //  flag += 1
+                blackRight = radio_langange.text.toString()
+                //    Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            }
         )
         radio_black_left.setOnCheckedChangeListener(
-                RadioGroup.OnCheckedChangeListener { group, checkedId ->
-                    val radio_langange: RadioButton = findViewById(checkedId)
-                    flageyeBlack +=1
-                    if (flageyeBlack==3){
-                        card_t6.setBackgroundColor(Color.GRAY)
-                    }
-                    //  flag += 1
-                    blackLeft = radio_langange.text.toString()
-                 //   Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            RadioGroup.OnCheckedChangeListener { group, checkedId ->
+                val radio_langange: RadioButton = findViewById(checkedId)
+                flageyeBlack += 1
+                if (flageyeBlack == 3) {
+                    card_t6.setBackgroundColor(Color.GRAY)
                 }
+                //  flag += 1
+                blackLeft = radio_langange.text.toString()
+                //   Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            }
         )
 
 
@@ -287,84 +289,84 @@ class TourchLightExamination : AppCompatActivity() {
 
 
         radio_pupil_right.setOnCheckedChangeListener(
-                RadioGroup.OnCheckedChangeListener { group, checkedId ->
-                    val radio_langange: RadioButton = findViewById(checkedId)
-                    flageyePupile +=1
-                    if (flageyePupile==3){
-                        card_t7.setBackgroundColor(Color.GRAY)
-                    }
-
-                    //  flag += 1
-                    pupilRight = radio_langange.text.toString()
-                 //   Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            RadioGroup.OnCheckedChangeListener { group, checkedId ->
+                val radio_langange: RadioButton = findViewById(checkedId)
+                flageyePupile += 1
+                if (flageyePupile == 3) {
+                    card_t7.setBackgroundColor(Color.GRAY)
                 }
+
+                //  flag += 1
+                pupilRight = radio_langange.text.toString()
+                //   Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            }
         )
         radio_pupil_left.setOnCheckedChangeListener(
-                RadioGroup.OnCheckedChangeListener { group, checkedId ->
-                    val radio_langange: RadioButton = findViewById(checkedId)
-                    flageyePupile +=1
-                    if (flageyePupile==3){
-                        card_t7.setBackgroundColor(Color.GRAY)
-                    }
-                    //  flag += 1
-                    pupilLeft = radio_langange.text.toString()
-                 //   Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            RadioGroup.OnCheckedChangeListener { group, checkedId ->
+                val radio_langange: RadioButton = findViewById(checkedId)
+                flageyePupile += 1
+                if (flageyePupile == 3) {
+                    card_t7.setBackgroundColor(Color.GRAY)
                 }
+                //  flag += 1
+                pupilLeft = radio_langange.text.toString()
+                //   Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            }
         )
 
         radio_external_right.setOnCheckedChangeListener(
-                RadioGroup.OnCheckedChangeListener { group, checkedId ->
-                    val radio_langange: RadioButton = findViewById(checkedId)
-                    flageyeInjury +=1
-                    if (flageyeInjury==3){
-                        card_t8.setBackgroundColor(Color.GRAY)
-                    }
-
-                    //  flag += 1
-                    externalRight = radio_langange.text.toString()
-                   // Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            RadioGroup.OnCheckedChangeListener { group, checkedId ->
+                val radio_langange: RadioButton = findViewById(checkedId)
+                flageyeInjury += 1
+                if (flageyeInjury == 3) {
+                    card_t8.setBackgroundColor(Color.GRAY)
                 }
+
+                //  flag += 1
+                externalRight = radio_langange.text.toString()
+                // Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            }
         )
         radio_external_left.setOnCheckedChangeListener(
-                RadioGroup.OnCheckedChangeListener { group, checkedId ->
-                    val radio_langange: RadioButton = findViewById(checkedId)
-                    flageyeInjury +=1
-                    if (flageyeInjury==3){
-                        card_t8.setBackgroundColor(Color.GRAY)
-                    }
-                    //  flag += 1
-                    externalLeft = radio_langange.text.toString()
-                  //  Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            RadioGroup.OnCheckedChangeListener { group, checkedId ->
+                val radio_langange: RadioButton = findViewById(checkedId)
+                flageyeInjury += 1
+                if (flageyeInjury == 3) {
+                    card_t8.setBackgroundColor(Color.GRAY)
                 }
+                //  flag += 1
+                externalLeft = radio_langange.text.toString()
+                //  Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            }
         )
 
 
 
         radio_foreign_right.setOnCheckedChangeListener(
-                RadioGroup.OnCheckedChangeListener { group, checkedId ->
-                    val radio_langange: RadioButton = findViewById(checkedId)
-                    flageyeFB +=1
-                    if (flageyeFB==3){
-                        card_t9.setBackgroundColor(Color.GRAY)
-                    }
-
-                    //  flag += 1
-                    foreignRight = radio_langange.text.toString()
-                  //  Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            RadioGroup.OnCheckedChangeListener { group, checkedId ->
+                val radio_langange: RadioButton = findViewById(checkedId)
+                flageyeFB += 1
+                if (flageyeFB == 3) {
+                    card_t9.setBackgroundColor(Color.GRAY)
                 }
+
+                //  flag += 1
+                foreignRight = radio_langange.text.toString()
+                //  Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            }
         )
         radio_foreign_left.setOnCheckedChangeListener(
-                RadioGroup.OnCheckedChangeListener { group, checkedId ->
-                    val radio_langange: RadioButton = findViewById(checkedId)
-                    flageyeFB +=1
-                    if (flageyeFB==3){
-                        card_t9.setBackgroundColor(Color.GRAY)
-                    }
-                    //  flag += 1
-                    foreignLeft = radio_langange.text.toString()
-
-                   // Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            RadioGroup.OnCheckedChangeListener { group, checkedId ->
+                val radio_langange: RadioButton = findViewById(checkedId)
+                flageyeFB += 1
+                if (flageyeFB == 3) {
+                    card_t9.setBackgroundColor(Color.GRAY)
                 }
+                //  flag += 1
+                foreignLeft = radio_langange.text.toString()
+
+                // Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            }
         )
 
 
@@ -377,14 +379,59 @@ class TourchLightExamination : AppCompatActivity() {
 
 
     }
-    fun submitData( reffer:String){
-        val examination = ExaminationData(ques1, ques2, ques3, ques4, ques5, ques6, ques6_1, ques7, reffer, ques9, ques10, ques11, ques12, patientID,
-                disWithoutGL, disWithoutGR, disWithGL, disWithGR, nearVisionWithL, nearVisionWithR, nearVisionWithOutR, nearVisionWithOutL, catOfVisual,
-                sphereL, sphereR, cylinderL, cylinderR,axisR, axisL,
-                devLeft, devRight, sizeLeft, eyelidsRight, eyelidsLeft, eyelashesRight, eyelashesLeft, whiteRight, whiteLeft, blackLeft, blackRight, pupilRight, pupilLeft, externalLeft, externalRight, foreignRight, foreignLeft,dateOfExam)
+    fun submitData(reffer: String){
+        val examination = ExaminationData(
+            ques1,
+            ques2,
+            ques3,
+            ques4,
+            ques5,
+            ques6,
+            ques6_1,
+            ques7,
+            reffer,
+            ques9,
+            ques10,
+            ques11,
+            ques12,
+            patientID,
+            disWithoutGL,
+            disWithoutGR,
+            disWithGL,
+            disWithGR,
+            nearVisionWithL,
+            nearVisionWithR,
+            nearVisionWithOutR,
+            nearVisionWithOutL,
+            catOfVisual,
+            sphereL,
+            sphereR,
+            cylinderL,
+            cylinderR,
+            axisR,
+            axisL,
+            devLeft,
+            devRight,
+            sizeLeft,
+            eyelidsRight,
+            eyelidsLeft,
+            eyelashesRight,
+            eyelashesLeft,
+            whiteRight,
+            whiteLeft,
+            blackLeft,
+            blackRight,
+            pupilRight,
+            pupilLeft,
+            externalLeft,
+            externalRight,
+            foreignRight,
+            foreignLeft,
+            dateOfExam
+        )
         myDatabase!!.examDao()!!.patientExamInsertion(examination)
         val sharedPreferences = getSharedPreferences("MySharedPref", MODE_PRIVATE)
-        sharedPreferences.edit().clear().commit();
+        sharedPreferences.edit().clear().commit()
         showAlertDialog()
     }
 
@@ -398,7 +445,7 @@ class TourchLightExamination : AppCompatActivity() {
         alertDialog.setTitle("DigiDrishti")
         alertDialog.setMessage("Examination Completed...")
         alertDialog.setPositiveButton(
-                "OK"
+            "OK"
 
         ) { _, _ ->
             val intent = Intent(applicationContext, LandingActivity::class.java)
@@ -452,10 +499,12 @@ class TourchLightExamination : AppCompatActivity() {
 
     fun RefferDialog(){
         val builder = AlertDialog.Builder(this)
-        builder.setMessage("Do you want to Reffer ?")
+        builder.setMessage("Do you want to Refer ?")
                 .setCancelable(false)
                 .setPositiveButton("Yes") { dialog, id ->
-                   submitData("Yes")
+                    val intent = Intent(this, OpenCamera::class.java)
+                    startActivityForResult(intent, REQUEST_CODE)
+                  // submitData("Yes")
 
                 }
                 .setNegativeButton("No") { dialog, id ->
@@ -464,5 +513,85 @@ class TourchLightExamination : AppCompatActivity() {
                 }
         val alert = builder.create()
         alert.show()
+    }
+
+    fun OnClickNormal(view: View) {
+        val checked = (view as CheckBox).isChecked
+        when (view.getId()) {
+
+            R.id.right_eye_normal -> if (checked) {
+
+                devRight = "Absent"
+                devNormalR.isChecked = true
+                sizeRight = "Yes"
+                sizeNormalR.isChecked = true
+                eyelidsRight = "Normal"
+                eyelidsNormalR.isChecked = true
+                eyelashesRight = "Normal"
+                eyelashesNR.isChecked = true
+                whiteRight = "White with few veins"
+                whiteNR.isChecked = true
+                blackRight = "Black and shiny"
+                blackNR.isChecked = true
+                pupilRight = "Black"
+                pupilNR.isChecked = true
+                externalRight = "No"
+                externalNR.isChecked = true
+                foreignRight = "No"
+                foreignNR.isChecked = true
+
+            } else Toast.makeText(applicationContext, "Right Unched ", Toast.LENGTH_SHORT).show()
+
+            R.id.left_eye_normal -> if (checked) {
+                devLeft = "Absent"
+                devNormalL.isChecked = true
+                sizeLeft = "Yes"
+                sizeNormalL.isChecked = true
+                eyelidsLeft = "Normal"
+                eyelidsNormalL.isChecked = true
+                eyelashesLeft = "Normal"
+                eyelashesNL.isChecked = true
+                whiteLeft = "White with few veins"
+                whiteNL.isChecked = true
+                blackLeft = "Black and shiny"
+                blackNL.isChecked = true
+                pupilLeft = "Black"
+                pupilNL.isChecked = true
+                externalLeft = "No"
+                externalNL.isChecked = true
+                foreignLeft = "No"
+                foreignNL.isChecked = true
+
+            } else Toast.makeText(applicationContext, "Left Unched ", Toast.LENGTH_SHORT).show()
+
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == REQUEST_CODE) {
+            submitData("Yes")
+        }
+    }
+    private fun setLocate(Lang: String) {
+
+        val locale = Locale(Lang)
+
+        Locale.setDefault(locale)
+
+        val config = Configuration()
+
+        config.locale = locale
+        baseContext.resources.updateConfiguration(config, baseContext.resources.displayMetrics)
+
+        val editor = getSharedPreferences("Settings", Context.MODE_PRIVATE).edit()
+        editor.putString("My_Lang", Lang)
+        editor.apply()
+    }
+
+    private fun loadLocate() {
+        val sharedPreferences = getSharedPreferences("Settings", Activity.MODE_PRIVATE)
+        val language = sharedPreferences.getString("My_Lang", "")
+        setLocate(language.toString())
     }
 }

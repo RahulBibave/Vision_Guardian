@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.VisionGuardian" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryDark">@color/purple_700</item>
+        <item name="colorPrimary">@color/blue_500</item>
+        <item name="colorPrimaryDark">@color/blue_500</item>
         <item name="colorAccent">@color/orange</item>
         <item name="drawerArrowStyle">@style/MyDrawerArrowToggle</item>
         <!-- Customize your theme here. -->
@@ -25,4 +25,7 @@
     </style>
 
     <color name="orange">#FF4E17</color>
+
+
+
 </resources>

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/grey"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Awarness"
     android:orientation="vertical">
@@ -30,7 +31,7 @@
           android:layout_gravity="center"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="Awareness "
+          android:text="@string/awarness"
           android:textStyle="bold"
           android:textColor="@color/white"
           android:textSize="18sp" />

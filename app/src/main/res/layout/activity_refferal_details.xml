@@ -31,7 +31,7 @@
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Referal "
+                android:text="Referral "
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
@@ -381,6 +381,7 @@
                     android:layout_marginTop="10dp">
 
                     <TextView
+
                         android:id="@+id/txtPast1"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -396,7 +397,7 @@
 
 
                 <LinearLayout
-
+                    android:id="@+id/txtHistr"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp">

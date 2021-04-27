@@ -28,7 +28,7 @@
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="General Care"
+                android:text="@string/eyecaretitle"
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
@@ -205,10 +205,7 @@
                                 android:textColor="@color/primaryText"
                                 android:textSize="18sp" />
                         </LinearLayout>
-                        <ImageView
-                            android:src="@drawable/keep_your"
-                            android:layout_width="200dp"
-                            android:layout_height="200dp"/>
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
@@ -345,9 +342,14 @@
                                 android:text="@string/hygiene11"
                                 android:textColor="@color/primaryText"
                                 android:textSize="18sp" />
+
+
                         </LinearLayout>
 
-
+                        <ImageView
+                            android:src="@drawable/keep_your"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"/>
 
 
 

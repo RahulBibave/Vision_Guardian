@@ -1,24 +1,24 @@
 package com.example.visionguardian
 
+
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.AdapterView
-import android.widget.ArrayAdapter
+import android.widget.EditText
 import android.widget.RadioButton
 import android.widget.RadioGroup
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_examination.*
-
 import kotlinx.android.synthetic.main.activity_refraction.*
-
-
 import java.math.RoundingMode
 import java.text.DecimalFormat
 
-class Refraction : AppCompatActivity() {
+
+class Refraction : AppCompatActivity() ,AdapterView.OnItemSelectedListener {
 
     var sphereR = ""
     var sphereL = ""
@@ -26,14 +26,30 @@ class Refraction : AppCompatActivity() {
     var cylinderL = ""
     var axisR = "10"
     var axisL = "10"
+
+    var angles = arrayOf( "15", "30", "45","60","75","90","105","120","135","150","165","180")
+    var images = intArrayOf(
+
+            R.drawable.ic_moon_white,
+            R.drawable.ic_star_white,
+            R.drawable.ic_elct_white,
+            R.drawable.ic_sun_white,
+            R.drawable.ic_cloud_white,
+            R.drawable.ic_drop_white,
+            R.drawable.ic_moon_black,
+            R.drawable.ic_star_black,
+            R.drawable.ic_elct_black,
+            R.drawable.ic_sun_black,
+            R.drawable.ic_cloud_black,
+            R.drawable.ic_drop_black
+    )
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_refraction)
         val sharedPreferences = getSharedPreferences("MySharedPref", MODE_PRIVATE)
 
 
-        val axisRange = arrayOf("10", "20", "30", "40","50","60","70","80","90","100","110","120","130","140","150","160","170","180")
-        val adapter = ArrayAdapter(
+        /*val adapter = ArrayAdapter(
                 this, // Context
                 android.R.layout.simple_spinner_item, // Layout
                 axisRange // Array
@@ -65,7 +81,23 @@ class Refraction : AppCompatActivity() {
             override fun onNothingSelected(parent: AdapterView<*>){
                 // Another interface callback
             }
+        }*/
+
+       // val spinR = findViewById<View>(R.id.axisSpinnerR) as Spinner
+
+        axisSpinnerL.onItemSelectedListener=this
+        axisSpinnerR.onItemSelectedListener=this
+        axisSpinnerL.onItemClickListener{
+            AdapterView.OnItemClickListener { parent, view, position, id -> axisL=angles[position]
+                Log.e("zzzzzzzzzzzzz",""+position)}
         }
+
+
+        val customAdapter = CustomAdapter(applicationContext, images, angles)
+        axisSpinnerR.adapter = customAdapter
+        axisSpinnerL.adapter = customAdapter
+
+
 
 
 
@@ -141,22 +173,12 @@ class Refraction : AppCompatActivity() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
         }
         submit_next_t.setOnClickListener {
-            Log.e("cccccccccccccccccc","clicked")
-            //axisR = axisSpinnerR.text.toString()
+
+
+          Log.e("cccccccccccccccccc",axisR)
+          Log.e("cccccccccccccccccc",axisL)
           //  axisL = edit_axis_L.text.toString()
 
             val myEdit = sharedPreferences.edit()
@@ -175,4 +197,48 @@ class Refraction : AppCompatActivity() {
 
         back_arrow_t.setOnClickListener{finish()}
     }
+
+    override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+
+        when (parent!!.id) {
+            R.id.axisSpinnerL -> {
+                axisL=angles[position]
+            }
+            R.id.axisSpinnerR -> {
+                axisR=angles[position]
+            }
+            else -> {
+            }
+        }
+
+    }
+
+   /* override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
+        Log.e("zzzzzzzzzzzzzzzz",""+parent.id)
+        when (parent.id) {
+            R.id.axisSpinnerL -> {
+                Toast.makeText(this, "LeftClicked", Toast.LENGTH_SHORT).show()
+            }
+            R.id.axisSpinnerR -> {
+
+                Toast.makeText(this, "RightClicked", Toast.LENGTH_SHORT).show()
+            }
+            else -> {
+            }
+        }
+    }*/
+
+    override fun onNothingSelected(parent: AdapterView<*>?) {
+       // TODO("Not yet implemented")
+    }
+
+    fun onClickInfo(view: View) {
+        val intent=Intent(this,Manual::class.java)
+        startActivity(intent)
+    }
+
+}
+
+private operator fun AdapterView.OnItemClickListener?.invoke(function: () -> AdapterView.OnItemClickListener) {
+
 }

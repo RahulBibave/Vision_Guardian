@@ -49,6 +49,8 @@
             android:layout_width="150dp"
             android:layout_height="150dp"/>
 
+
+
     </RelativeLayout>
 
     <GridLayout
@@ -89,7 +91,7 @@
 
                 <TextView
 
-                    android:text="Registration"
+                    android:text="@string/registration"
                     android:layout_gravity="center"
                     android:textAlignment="center"
                     android:textSize="@dimen/size16dp"
@@ -132,7 +134,7 @@
 
                 <TextView
 
-                    android:text="Examination"
+                    android:text="@string/exam"
                     android:layout_gravity="center"
                     android:textAlignment="center"
                     android:textSize="@dimen/size16dp"
@@ -176,7 +178,7 @@
 
                 <TextView
 
-                    android:text="Referral"
+                    android:text="@string/referral"
                     android:layout_gravity="center"
                     android:textAlignment="center"
                     android:textSize="@dimen/size16dp"
@@ -218,7 +220,7 @@
                     android:src="@drawable/awareness_updated"/>
 
                 <TextView
-                    android:text="Awareness"
+                    android:text="@string/awarness"
                     android:layout_gravity="center"
                     android:textAlignment="center"
                     android:textSize="@dimen/size16dp"
@@ -261,7 +263,7 @@
 
                 <TextView
 
-                    android:text="Scheme"
+                    android:text="@string/scheme"
                     android:layout_gravity="center"
                     android:textAlignment="center"
                     android:textSize="@dimen/size16dp"
@@ -304,7 +306,7 @@
 
                 <TextView
 
-                    android:text="Genral Care"
+                    android:text="@string/eyecare"
                     android:layout_gravity="center"
                     android:textAlignment="center"
                     android:textSize="@dimen/size16dp"
@@ -346,9 +348,29 @@
             <TextView
                 android:id="@+id/footer_item_2"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="© 2020 DigiDrishti" />
+
+            <TextView
+
+                android:textSize="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Developed by HVDEH \u0026 Digital India Corporation"
+
+                />
+            <TextView
+
+                android:layout_marginBottom="15dp"
+                android:textSize="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Supported by Ministry of E\u0026IT, GoI"
+
+                />
         </LinearLayout>
     </com.google.android.material.navigation.NavigationView>
 </androidx.drawerlayout.widget.DrawerLayout>

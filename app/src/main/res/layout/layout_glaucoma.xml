@@ -28,7 +28,7 @@
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Glaucoma"
+                android:text="@string/Glaucoma"
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
@@ -82,7 +82,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_bold"
                         android:paddingTop="@dimen/activity_vertical_margin"
-                        android:text="What is glaucoma ?"
+                        android:text="@string/Whatglaucoma"
 
                         android:textColor="@color/primaryText"
                         android:textSize="18sp"
@@ -171,7 +171,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_bold"
                         android:paddingTop="@dimen/activity_vertical_margin"
-                        android:text="How does glaucoma affect your eyes ?"
+                        android:text="@string/affect"
                         android:textColor="@color/primaryText"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -253,7 +253,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_bold"
                         android:paddingTop="@dimen/activity_vertical_margin"
-                        android:text="What are the symptoms of glaucoma ?"
+                        android:text="@string/symptomsofglaucoma"
                         android:textColor="@color/primaryText"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -364,7 +364,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_bold"
                         android:paddingTop="@dimen/activity_vertical_margin"
-                        android:text="Who is at risk ?"
+                        android:text="@string/reskglau"
                         android:textColor="@color/primaryText"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -413,7 +413,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_bold"
                         android:paddingTop="@dimen/activity_vertical_margin"
-                        android:text="Is glaucoma treatable ?"
+                        android:text="@string/glaucomatreatable"
                         android:textColor="@color/primaryText"
                         android:textSize="18sp"
                         android:textStyle="bold" />

@@ -83,7 +83,7 @@ internal class RefferalDetails : AppCompatActivity() {
             txtcomp3.text=data.mHistoryQ3
         }
         if (data.mHistoryQ9.equals("Not wearing glasses")){
-
+            txtPast1.visibility=View.GONE
         }else{
             txtPast1.text="History of Wearing glasses"
         }
@@ -92,6 +92,9 @@ internal class RefferalDetails : AppCompatActivity() {
         txtSystemic.text=data.mHistoryQ6
         txtSysduration.text=data.mHistoryQ11
         txtPastHistory.text=data.mHistoryQ10+data.mHistoryQ7
+        if (data.mHistoryQ10.equals("Nil")){
+            txtHistr.visibility=View.GONE
+        }
         txtOther.text=data.mHistoryQ4
 
 

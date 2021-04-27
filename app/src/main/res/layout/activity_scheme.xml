@@ -30,7 +30,7 @@
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Scheme"
+                android:text="@string/scheme"
                 android:fontFamily="@font/roboto_bold"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
@@ -39,19 +39,279 @@
 
     </androidx.appcompat.widget.Toolbar>
 
-    <LinearLayout
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:gravity="center"
+    <ScrollView
+        android:background="@color/blue"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
 
-        <TextView
-            android:textSize="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Coming Soon"/>
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="5dp">
+
+
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:elevation="25dp"
+                    app:cardCornerRadius="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:padding="@dimen/size8dp"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_bold"
+                            android:paddingTop="@dimen/size8dp"
+                            android:text="@string/scheme_title"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+
+                        <ImageView
+                            android:layout_width="300dp"
+                            android:layout_height="300dp"
+                            android:src="@drawable/scheme_logo"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_bold"
+                                android:paddingTop="@dimen/size5dp"
+                                android:text="1. "
+                                android:textColor="@color/primaryText"
+                                android:textSize="18sp" />
+                            <TextView
+
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_bold"
+                                android:paddingTop="@dimen/size5dp"
+                                android:text="@string/scheme_whois"
+                                android:textColor="@color/primaryText"
+                                android:textSize="18sp" />
+
+
+                        </LinearLayout>
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/scheme1"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_bold"
+                                android:paddingTop="@dimen/size5dp"
+                                android:text="2. "
+                                android:textColor="@color/primaryText"
+                                android:textSize="18sp" />
+                            <TextView
+
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_bold"
+                                android:paddingTop="@dimen/size5dp"
+                                android:text="@string/scheme_documents"
+                                android:textColor="@color/primaryText"
+                                android:textSize="18sp" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/scheme2"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+
+
+
+                            <TextView
+                                android:layout_gravity="start"
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:paddingTop="@dimen/size5dp"
+                                android:text="@string/doc1"
+                                android:textColor="@color/primaryText"
+                                android:textSize="18sp" />
+                        <TextView
+                            android:layout_gravity="start"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/doc2"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_gravity="start"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/doc3"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_gravity="start"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/doc4"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_gravity="start"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/doc5"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_gravity="start"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/doc6"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_gravity="start"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/doc7"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_gravity="start"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/doc8"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_gravity="start"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/doc9"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_gravity="start"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/doc10"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_gravity="start"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/doc11"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_gravity="start"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/doc12"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_gravity="start"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/doc13"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_gravity="start"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:paddingTop="@dimen/size5dp"
+                            android:text="@string/doc14"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+
+
+
+                </androidx.cardview.widget.CardView>
+
+
+
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

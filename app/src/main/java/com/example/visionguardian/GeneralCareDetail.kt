@@ -1,24 +1,51 @@
 package com.example.visionguardian
 
+import android.app.Activity
+import android.content.Context
+import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.view_eat_healthy.*
+import java.util.*
 
 class GeneralCareDetail : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val stringGK = getIntent().getStringExtra("GKdata")
-        if (stringGK=="Hygiene and eye care")setContentView(R.layout.view_hygiene)
-        else if (stringGK=="Eat healthy for good vision")  setContentView(R.layout.view_eat_healthy)
-        else if (stringGK=="Caring your spectacle") setContentView(R.layout.view_caring)
-        else if (stringGK=="Instillation of eye drops") setContentView(R.layout.view_instillation)
-        else if (stringGK=="Postoperative care")setContentView(R.layout.view_postoperative)
-        else if (stringGK=="First aid") setContentView(R.layout.view_firstaid)
-        else if (stringGK=="Eye care solutions of digital eye strain") setContentView(R.layout.view_eyecare)
-        else if (stringGK=="Contact lens care") setContentView(R.layout.view_contactlens)
+        loadLocate()
+        val stringGK = intent.getStringExtra("GKdata")
+        if (stringGK==getString(R.string.care1) )setContentView(R.layout.view_hygiene)
+        else if (stringGK==getString(R.string.care2))  setContentView(R.layout.view_eat_healthy)
+        else if (stringGK==getString(R.string.care3)) setContentView(R.layout.view_caring)
+        else if (stringGK==getString(R.string.care4)) setContentView(R.layout.view_instillation)
+        else if (stringGK==getString(R.string.care5))setContentView(R.layout.view_postoperative)
+        else if (stringGK==getString(R.string.care6)) setContentView(R.layout.view_firstaid)
+        else if (stringGK==getString(R.string.care7)) setContentView(R.layout.view_eyecare)
+        else if (stringGK==getString(R.string.care8)) setContentView(R.layout.view_contactlens)
        // else if (stringGK=="Regular physician check-up after 40 years") setContentView(R.layout.view_regularphysician)
 
 
         back_arrow.setOnClickListener { finish() }
+    }
+
+    private fun setLocate(Lang: String) {
+
+        val locale = Locale(Lang)
+
+        Locale.setDefault(locale)
+
+        val config = Configuration()
+
+        config.locale = locale
+        baseContext.resources.updateConfiguration(config, baseContext.resources.displayMetrics)
+
+        val editor = getSharedPreferences("Settings", Context.MODE_PRIVATE).edit()
+        editor.putString("My_Lang", Lang)
+        editor.apply()
+    }
+
+    private fun loadLocate() {
+        val sharedPreferences = getSharedPreferences("Settings", Activity.MODE_PRIVATE)
+        val language = sharedPreferences.getString("My_Lang", "")
+        setLocate(language.toString())
     }
 }

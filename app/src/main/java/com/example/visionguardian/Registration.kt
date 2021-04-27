@@ -1,8 +1,12 @@
+
 package com.example.visionguardian
 
 import android.Manifest
+import android.app.Activity
 import android.app.DatePickerDialog
+import android.content.Context
 import android.content.pm.PackageManager
+import android.content.res.Configuration
 import android.graphics.Color
 import android.location.Address
 import android.location.Geocoder
@@ -51,6 +55,7 @@ class Registration : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registration)
         setUpDB()
+        loadLocate()
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
         back_arrow.setOnClickListener { finish() }
 
@@ -99,7 +104,7 @@ class Registration : AppCompatActivity() {
                 val mmMonth = mMonth+1
                 val date = "$mDay/$mmMonth/$mYear"
                 dobYear=mYear
-                txt_dob.setText(date)
+                txt_dob.text = date
             },year,month,day)
             dpd.show()
         }
@@ -288,6 +293,26 @@ class Registration : AppCompatActivity() {
         Log.e("sssssssssssssssss", "" + address + "   " + city)
     }
 
+    private fun setLocate(Lang: String) {
 
+        val locale = Locale(Lang)
+
+        Locale.setDefault(locale)
+
+        val config = Configuration()
+
+        config.locale = locale
+        baseContext.resources.updateConfiguration(config, baseContext.resources.displayMetrics)
+
+        val editor = getSharedPreferences("Settings", Context.MODE_PRIVATE).edit()
+        editor.putString("My_Lang", Lang)
+        editor.apply()
+    }
+
+    private fun loadLocate() {
+        val sharedPreferences = getSharedPreferences("Settings", Activity.MODE_PRIVATE)
+        val language = sharedPreferences.getString("My_Lang", "")
+        setLocate(language.toString())
+    }
 
 }

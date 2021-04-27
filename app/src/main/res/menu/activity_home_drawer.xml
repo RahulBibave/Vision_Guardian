@@ -3,30 +3,38 @@
 
     <item
         android:id="@+id/mRegistration"
-        android:title="Registration"/>
+        android:title="@string/registration"/>
     <item
 
         android:id="@+id/mExamination"
-        android:title="Examination"/>
+        android:title="@string/exam"/>
 
     <item
         android:id="@+id/mRefer"
-        android:title="Referral"/>
+        android:title="@string/referral"/>
 
     <item
         android:id="@+id/mAwarness"
-        android:title="Awareness"/>
+        android:title="@string/awarness"/>
 
     <item
         android:id="@+id/mScheme"
-        android:title="Scheme"/>
+        android:title="@string/scheme"/>
     <item
         android:id="@+id/mGk"
-        android:title="General Care"/>
+        android:title="@string/generalcare"/>
 
      <item
         android:id="@+id/mCamp"
-        android:title="Set Screening Locations"/>
+        android:title="@string/setlocation"/>
+
+    <item
+        android:id="@+id/mSelectLang"
+        android:title="@string/changlang"
+        />
+   <!-- <item
+        android:id="@+id/"
+        android:title="Change Language"/>-->
 
 
 

@@ -29,7 +29,7 @@
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cataract"
+                android:text="@string/Cataract"
                 android:fontFamily="@font/roboto_bold"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
@@ -83,7 +83,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_bold"
                         android:paddingTop="@dimen/activity_vertical_margin"
-                        android:text="What is a cataract ?"
+                        android:text="@string/Whatcataract"
 
                         android:textColor="@color/primaryText"
                         android:textSize="18sp"
@@ -108,7 +108,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto"
                             android:paddingTop="@dimen/activity_vertical_margin"
-                            android:text="A cataract is the clouding of the transparent lens of the eye."
+                            android:text="@string/whatcat1"
                             android:textColor="@color/primaryText"
                             android:textSize="18sp" />
                     </RelativeLayout>
@@ -154,7 +154,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto"
                             android:paddingTop="@dimen/activity_vertical_margin"
-                            android:text="The cataract blocks the passage of light through the lens and can cause a reduction of vision."
+                            android:text="@string/whatcat2"
                             android:textColor="@color/primaryText"
                             android:textSize="18sp" />
                     </LinearLayout>
@@ -188,7 +188,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_bold"
                         android:paddingTop="@dimen/activity_vertical_margin"
-                        android:text="Who is at the risk of developing cataracts?"
+                        android:text="@string/whorisk"
                         android:textColor="@color/primaryText"
                         android:textSize="18sp"
                         android:textStyle="bold" />

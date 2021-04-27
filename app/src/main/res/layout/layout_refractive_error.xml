@@ -30,7 +30,7 @@
                 android:singleLine="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Refractive error and low vision"
+                android:text="@string/Refractiveerror"
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
@@ -82,7 +82,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_bold"
                         android:paddingTop="@dimen/activity_vertical_margin"
-                        android:text="What is refractive error ?"
+                        android:text="@string/whatrf"
 
                         android:textColor="@color/primaryText"
                         android:textSize="18sp"
@@ -105,17 +105,18 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto"
                             android:paddingTop="@dimen/activity_vertical_margin"
-                            android:text="Refractive error occurs when the eyes fail to focus the images of the objects in the outside world. "
+                            android:text="@string/rfpt1"
                             android:textColor="@color/primaryText"
                             android:textSize="18sp" />
                     </LinearLayout>
 
 
-                    <ImageView
+                    <pl.droidsonroids.gif.GifImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="200dp"
+                        android:src="@drawable/rf_gif"
+                        />
 
-                        android:src="@drawable/refractive_error"
-                        android:layout_width="400dp"
-                        android:layout_height="320dp"/>
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -146,7 +147,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_bold"
                         android:paddingTop="@dimen/activity_vertical_margin"
-                        android:text="Which are types of refractive error?"
+                        android:text="@string/tyesofrf"
                         android:textColor="@color/primaryText"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -286,7 +287,10 @@
                         android:textColor="@color/primaryText"
                         android:textSize="18sp"
                         android:textStyle="bold" />
-
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="200dp"
+                        android:src="@drawable/old_man"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"

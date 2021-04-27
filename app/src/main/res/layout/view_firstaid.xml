@@ -28,7 +28,7 @@
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="General Care"
+                android:text="@string/eyecaretitle"
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
@@ -81,7 +81,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_bold"
                             android:paddingTop="@dimen/size8dp"
-                            android:text="First aid for ocular injuries "
+                            android:text="@string/care6"
                             android:textColor="@color/primaryText"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -117,7 +117,10 @@
                             android:text="○	Do not rub the eyes "
                             android:textColor="@color/primaryText"
                             android:textSize="18sp" />
-
+                        <ImageView
+                            android:src="@drawable/dont_rub_eyes"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"/>
                         <TextView
                             android:layout_gravity="start"
                             android:layout_marginLeft="15dp"

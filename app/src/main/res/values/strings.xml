@@ -1,5 +1,17 @@
 <resources>
+
+
+
+
     <string name="app_name">Vision Guardian</string>
+
+    <string name="registration">Registration</string>
+    <string name="exam">Examination</string>
+    <string name="referral">Referral</string>
+    <string name="awarness">Awareness</string>
+    <string name="scheme">Scheme</string>
+    <string name="eyecare">Eyecare</string>
+
     <string name="hint_password">Password*</string>
     <string name="hint_email">Username*</string>
     <string name="login">Login</string>
@@ -84,7 +96,7 @@
     <string name="question12_choice1">Yes</string>
     <string name="question12_choice2">No</string>
     <string name="submit_next">Next</string>
-    <string name="vs1">1. Distance vision without glasses </string>
+    <string name="vs1">1.Distance vision without glasses </string>
     <string name="vs_right">Right Eye</string>
     <string name="vs_left">Left eye</string>
     <string name="distance_vision1">Less than 3/60</string>
@@ -113,15 +125,15 @@
     <string name="present">Present</string>
     <string name="absent">Absent</string>
     <string name="cataract_cataracts">"Cataract is commonly seen in people above 40 years."</string>
-    <string name="cataract_cataracts1">"Children may also develop a cataract."</string>
+    <string name="cataract_cataracts1">"Children may also develop the cataract."</string>
     <string name="cataract_cataract2">"People with diabetes or those taking high doses of steroid medications are also at high risk  "</string>
 
     <string name="symptoms_cataract">What are the symptoms of the cataract?</string>
     <string name="symptoms_cataracts">"●\tBlurring of vision. "</string>
     <string name="symptoms_cataracts1">"If left untreated, the patient may turn blind gradually. "</string>
-    <string name="symptoms_cataracts2">"Other possible symptoms are the presence of bight circles around light, glare, difficulty in the night driving, light seem too dim for reading. "</string>
+    <string name="symptoms_cataracts2">"Other possible symptoms are the presence of bright circles around the light, glare, difficulty in the night driving, light seem too dim for reading. "</string>
 
-    <string name="treatment_cataract">"What is the treatment for Cataract surgery? "</string>
+    <string name="treatment_cataract">"What is the treatment for Cataract ? "</string>
     <string name="treatment_cataract_p1">"The only treatment for cataract is surgery.  "</string>
     <string name="treatment_cataract_p12">"In early stages vision may improve with glasses."</string>
     <string name="treatment_cataract_p13">"In cataract surgery, eye surgeons will remove the cloudy lens and place an artificial lens in the exact position of the original lens. "</string>
@@ -360,6 +372,121 @@
     <string name="digitaleye7">Take frequent breaks</string>
     <string name="digitaleye8">Start using the 20-20-20 rule to reduce eye fatigue.  Every 20 minutes, look away from your screen and fix your eyes on something at least 20 feet away for at least 20 seconds.</string>
     <string name="digitaleye">Computer-related eye care problems can be solved to an extent by making changes in the positioning of your computer, by proper eye care and taking regular breaks. </string>
+    <string name="struct">Vision is one among the five senses and eyes are the window through which we can see the world. Often we ignore the importance of the eye and act lazy in taking care of our eyes.</string>
+    <string name="struct1">Eyes are situated within a bony socket in the skull. The eye consists of the following parts</string>
+    <string name="struct2">Eyelids can be described as a curtain of tissue placed in front of the eyes. Upper and lower eyelids together with eyelashes protect our eyes from sunlight, dust falling in our eyes, and from ocular injuries. </string>
+    <string name="struct3">The white portion of the eye that is seen on the outer surface is called the sclera. Sclera protects the inner part of our eyes.</string>
+    <string name="struct4">The cornea is the transparent structure placed centrally in front of our eyes. Light enters our eyes through the cornea. </string>
+    <string name="struct5">Iris is the circular band located behind the cornea. The color of the iris can vary from black, brown, or blue. The function of the iris is similar to the diaphragm of a camera. It controls the amount of light reaching to the back of the eye i.e. retina. </string>
+    <string name="struct6">The pupil is the small aperture seen in the middle of iris. The light passes through pupil to reach the retina</string>
+    <string name="struct7">The lens is the transparent structure placed inside the eye. It helps in focusing of light on the retina</string>
+    <string name="struct8">The retina is the place where all the light entering the eye falls and forms the image of the object. The retina is the innermost layer of the layer located at the back of the eye</string>
+    <string name="struct9">The optic nerve carries the image formed by retina towards the brain, where the image is processed </string>
+    <string name="struct10">The working of the human eye is similar to that of a camera. Light enters the eye through the eye aperture called pupil and travels through the lens and forms an image on the retina. The image formed on the retina is carried towards the brain through the optic nerve.  Defects in any of these structures can result in the dimension of vision and can even result in blindness.</string>
+    <string name="distance_vision5">≥ 6/12</string>
+    <string name="scheme1">The people who are having a range/Yellow/White Ration Card and Antyodaya and Annapurna Ration card.></string>
+    <string name="scheme2">List of valid Photo Id proofs to be accepted along with document of eligible criteria:</string>
+
+    //care
+    <string name="care1">Hygiene and eye care</string>
+    <string name="care2">Eat healthy for good vision</string>
+    <string name="care3">Caring your spectacle</string>
+    <string name="care4">Instillation of eye drops</string>
+    <string name="care5">Postoperative care</string>
+    <string name="care6">First aid</string>
+    <string name="care7">Eye care solutions of digital eye strain</string>
+    <string name="care8">Contact lens care</string>
+
+    //Awarness
+    <string name="awarness1">Cataract</string>
+    <string name="awarness2">Refractive error and low vision</string>
+    <string name="awarness3">Glaucoma</string>
+    <string name="awarness4">Corneal blindness</string>
+    <string name="awarness5">Childhood Blindness</string>
+    <string name="awarness6">Diabetic retinopathy</string>
+    <string name="awarness7">Hypertensive retinopathy</string>
+    <string name="awarness8">Age related macular degeneration</string>
+    <string name="awarness9">Structure and Function Eyes</string>
+
+    //Title
+    <string name="generalcare">General Care</string>
+    <!--<string name="awarness">Awarness</string>
+    <string name="scheme">Scheme</string>-->
+
+    <string name="patientreg">Patient Registration</string>
+    <string name="patientlist">Patient List</string>
+    <string name="examintionlist">Examination List</string>
+    <string name="setlocation">Set Screening Locations</string>
+    <string name="changlang">Change Language</string>
+
+
+
+    <string name="Cataract">Cataract</string>
+    <string name="Whatcataract">What is a cataract ?</string>
+    <string name="whatcat1">A cataract is the clouding of the transparent lens of the eye.</string>
+    <string name="whatcat2">The cataract blocks the passage of light through the lens and can cause a reduction of vision.</string>
+    <string name="whorisk">Who is at the risk of developing cataract?</string>
+    <string name="Refractiveerror">Refractive error and low vision</string>
+    <string name="whatrf">What is refractive error ?</string>
+    <string name="rfpt1">Refractive error occurs when the eyes fail to focus the images of the objects in the outside world.</string>
+    <string name="tyesofrf">Which are types of refractive error?</string>
+    <string name="Glaucoma">Glaucoma</string>
+    <string name="Whatglaucoma">What is glaucoma ?</string>
+    <string name="affect">How does glaucoma affect your eyes ?</string>
+    <string name="reskglau">Who is at risk ?</string>
+    <string name="symptomsofglaucoma">What are the symptoms of glaucoma ?</string>
+    <string name="glaucomatreatable">Is glaucoma treatable ?</string>
+    <string name="title4">Click Check Refraction</string>
+    <string name="whatage_related">What is Age-related Macular degeneration?</string>
+    <string name="age_risk">What are the risk factors ?</string>
+    <string name="whathyper">What is hypertensive retinopathy ?</string>
+    <string name="what_symptoms">What are its symptoms ?</string>
+    <string name="how_treated">How is it treated?</string>
+    <string name="whatisdiabetes">What is diabetes ?</string>
+    <string name="diabetes_affect_eyes">How does diabetes affect eyes ?</string>
+    <string name="child_pt">Certain eye conditions occur in childhood or early adolescence, which, if left untreated, result in blindness or severe visual impairment. Common symptoms of visual impairment in children include:</string>
+    <string name="causes_child">The following are major causes of blindness in children: </string>
+    <string name="corneal_1">"The cornea is a clear structure through which light enters the eyes. Some corneal conditions can cause blindness. The only cure for corneal blindness is transplantation. However, most of the corneal conditions causing blindness are preventable. "</string>
+    <string name="corneal_2">Common symptoms of corneal disease:</string>
+    <string name="corneal_3">"Common causes for corneal blindness: "</string>
+    <string name="PATIENT_reg">"PATIENT REGISTRATION  "</string>
+    <string name="middel_name">Middle Name</string>
+    <string name="last_name">Last name*</string>
+    <string name="dateofbirth">Date of Birth (DD/MM/YY)</string>
+    <string name="gender">Gender</string>
+    <string name="male">Gender</string>
+    <string name="female">Female</string>
+    <string name="other">Other</string>
+    <string name="age">Age *</string>
+    <string name="adharno">Aadhaar Number</string>
+    <string name="hint_addres">Address line 1</string>
+    <string name="eyecaretitle">Eye Care</string>
+    <string name="Eyelid">Eyelid</string>
+    <string name="sclera">Sclera</string>
+    <string name="Cornea">Cornea</string>
+    <string name="iris">Iris</string>
+    <string name="pupil">Pupil</string>
+    <string name="eyefunction">How do eye functions?</string>
+    <string name="lens">Lens</string>
+    <string name="ratina">Retina</string>
+    <string name="opticnerve">Optic nerve</string>
+    <string name="scheme_title">Mahatma Phule Jan Arogya Yojana</string>
+    <string name="scheme_whois">" Who is a beneficiary?"</string>
+    <string name="scheme_documents">What are all the documents required?</string>
+    <string name="doc1">1.Aadhaar Card </string>
+    <string name="doc2">2.Pan Card </string>
+    <string name="doc3">3.Voter Id</string>
+    <string name="doc4">4.Driving License </string>
+    <string name="doc5">5.School/College Id </string>
+    <string name="doc6">6.Passport</string>
+    <string name="doc7">7.Freedom Fighter ID card</string>
+    <string name="doc8">8.Health Card of RGJAY / MP JAY</string>
+    <string name="doc9">9.Handicap Certificate</string>
+    <string name="doc10">10.Nationalized Bank Passbook with Photo</string>
+    <string name="doc11">11.Senior citizen card issued by Central Government or State Government</string>
+    <string name="doc12">12.Defense ex-servicemen card issued by Sainik Board</string>
+    <string name="doc13">13.Marine Fishery Identity card (Issued by Ministry of Agriculture / Fisheries Department Government of Maharashtra).</string>
+    <string name="doc14">14.Any photo ID proof issued by Government of Maharashtra/ Government of India</string>
 
 
 </resources>

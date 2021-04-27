@@ -45,44 +45,76 @@
         android:background="@color/white"
         android:layout_height="0.5dp"/>
     <LinearLayout
-
         android:layout_marginRight="@dimen/size16dp"
         android:layout_marginLeft="@dimen/size16dp"
         android:weightSum="2"
-
         android:layout_width="match_parent"
-        android:layout_height="40dp">
+        android:layout_height="wrap_content">
 
 
-            <TextView
-                android:fontFamily="@font/roboto_bold"
-                android:gravity="center"
-                android:layout_weight="1"
-                android:layout_marginTop="10dp"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/vs_right"
-                android:textColor="@color/white"
-                android:textSize="15sp" />
 
 
+       <LinearLayout
+           android:gravity="center"
+           android:orientation="vertical"
+           android:layout_weight="1"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content">
+           <TextView
+               android:fontFamily="@font/roboto_bold"
+               android:gravity="center"
+               android:layout_weight="1"
+               android:layout_marginTop="10dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/vs_right"
+               android:textColor="@color/white"
+               android:textSize="15sp" />
+
+           <CheckBox
+               android:id="@+id/right_eye_normal"
+               android:backgroundTint="@color/white"
+               android:textColor="@color/white"
+               android:text="Normal"
+               android:onClick="OnClickNormal"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"/>
+
+       </LinearLayout>
 
          <View
+             android:layout_gravity="center"
              android:layout_width="0.5dp"
-             android:layout_height="wrap_content"
+             android:layout_height="50dp"
              android:background="@color/white"/>
 
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+             <TextView
 
-            <TextView
-                android:layout_weight="1"
-                android:fontFamily="@font/roboto_bold"
-                android:gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/vs_left"
+                 android:fontFamily="@font/roboto_bold"
+                 android:gravity="center"
+                 android:layout_marginTop="10dp"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="@string/vs_left"
+                 android:textColor="@color/white"
+                 android:textSize="15sp" />
+            <CheckBox
+                android:id="@+id/left_eye_normal"
                 android:textColor="@color/white"
-                android:textSize="15sp" />
+                android:backgroundTint="@color/white"
+                android:text="Normal"
+                android:onClick="OnClickNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
 
 
 
@@ -163,6 +195,7 @@
                             android:orientation="vertical">
 
                             <RadioButton
+                                android:id="@+id/devNormalR"
                                 android:layout_gravity="start"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -207,6 +240,7 @@
                             android:orientation="vertical">
 
                             <RadioButton
+                                android:id="@+id/devNormalL"
                                 android:layout_gravity="start"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -284,6 +318,7 @@
                             android:orientation="vertical">
 
                             <RadioButton
+                                android:id="@+id/sizeNormalR"
                                 android:layout_gravity="start"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -328,6 +363,7 @@
                             android:orientation="vertical">
 
                             <RadioButton
+                                android:id="@+id/sizeNormalL"
                                 android:layout_gravity="start"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -407,6 +443,7 @@
                             android:orientation="vertical">
 
                             <RadioButton
+                                android:id="@+id/eyelidsNormalR"
                                 android:layout_gravity="start"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -472,6 +509,7 @@
                             android:orientation="vertical">
 
                             <RadioButton
+                                android:id="@+id/eyelidsNormalL"
                                 android:layout_gravity="start"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -573,6 +611,7 @@
                             android:orientation="vertical">
 
                             <RadioButton
+                                android:id="@+id/eyelashesNR"
                                 android:layout_gravity="start"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -624,6 +663,7 @@
                             android:orientation="vertical">
 
                             <RadioButton
+                                android:id="@+id/eyelashesNL"
                                 android:layout_gravity="start"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -710,6 +750,7 @@
                             android:orientation="vertical">
 
                             <RadioButton
+                                android:id="@+id/whiteNR"
                                 android:layout_gravity="start"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -768,6 +809,7 @@
                             android:orientation="vertical">
 
                             <RadioButton
+                                android:id="@+id/whiteNL"
                                 android:layout_gravity="start"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -860,6 +902,7 @@
                             android:orientation="vertical">
 
                             <RadioButton
+                                android:id="@+id/blackNR"
                                 android:layout_gravity="start"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -910,6 +953,7 @@
                             android:orientation="vertical">
 
                             <RadioButton
+                                android:id="@+id/blackNL"
                                 android:layout_gravity="start"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -995,6 +1039,7 @@
                             android:orientation="vertical">
 
                             <RadioButton
+                                android:id="@+id/pupilNR"
                                 android:layout_gravity="start"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -1039,6 +1084,7 @@
                             android:orientation="vertical">
 
                             <RadioButton
+                                android:id="@+id/pupilNL"
                                 android:layout_gravity="start"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -1117,6 +1163,7 @@
                             android:orientation="vertical">
 
                             <RadioButton
+
                                 android:layout_gravity="start"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -1124,6 +1171,7 @@
                                 android:text="@string/yes" />
 
                             <RadioButton
+                                android:id="@+id/externalNR"
                                 android:layout_gravity="start"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -1161,6 +1209,7 @@
                             android:orientation="vertical">
 
                             <RadioButton
+
                                 android:layout_gravity="start"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -1168,6 +1217,7 @@
                                 android:text="@string/yes" />
 
                             <RadioButton
+                                android:id="@+id/externalNL"
                                 android:layout_gravity="start"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -1239,6 +1289,7 @@
                             android:orientation="vertical">
 
                             <RadioButton
+
                                 android:layout_gravity="start"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -1246,6 +1297,7 @@
                                 android:text="@string/yes" />
 
                             <RadioButton
+                                android:id="@+id/foreignNR"
                                 android:layout_gravity="start"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -1283,6 +1335,7 @@
                             android:orientation="vertical">
 
                             <RadioButton
+
                                 android:layout_gravity="start"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -1290,6 +1343,7 @@
                                 android:text="@string/yes" />
 
                             <RadioButton
+                                android:id="@+id/foreignNL"
                                 android:layout_gravity="start"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -1326,7 +1380,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:background="@drawable/next_button_bg"
-            android:text="@string/submit_next"
+            android:text="Submit"
             android:textColor="@android:color/white"
             />
 

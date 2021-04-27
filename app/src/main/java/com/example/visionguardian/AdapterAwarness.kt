@@ -9,6 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.NonNull
+import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 
@@ -16,7 +17,7 @@ internal class AdapterAwarness(val context: Context,val array: ArrayList<Awarnes
     internal inner class AwarnessAdapter(view: View) : RecyclerView.ViewHolder(view) {
         var title: TextView = view.findViewById(R.id.textViewName)
         var image: ImageView = view.findViewById(R.id.imageView)
-        var card :ConstraintLayout= view.findViewById(R.id.container_awarness)
+        var card :CardView= view.findViewById(R.id.container_awarness)
 
     }
     @NonNull

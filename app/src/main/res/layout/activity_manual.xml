@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_height="match_parent"
+    tools:context=".Manual">
+
+    <RelativeLayout
+
+        android:id="@+id/big_e"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/backimg"
+            android:onClick="Exit"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ic_arrow_back_black"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+        <!-- <TextView
+
+             android:layout_alignParentEnd="true"
+             android:layout_marginTop="20dp"
+             android:layout_marginRight="20dp"
+             android:text="Flip"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"/>-->
+
+<ScrollView
+
+    android:layout_below="@+id/backimg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+
+
+
+                android:layout_width="43.6mm"
+                android:layout_height="43.6mm"
+                android:gravity="center"
+                android:src="@drawable/ii" />
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_width="43.6mm"
+                android:layout_height="43.6mm"
+                android:gravity="center"
+                android:src="@drawable/i" />
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_width="43.6mm"
+                android:layout_height="43.6mm"
+                android:gravity="center"
+                android:src="@drawable/iii" />
+
+            <ImageView
+                android:layout_marginBottom="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="43.6mm"
+                android:layout_height="43.6mm"
+                android:gravity="center"
+                android:src="@drawable/cilck_check_cylinder" />
+
+
+
+        </LinearLayout>
+</ScrollView>
+        <LinearLayout
+            android:id="@+id/lin"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+
+
+                <Button
+                    android:onClick="Exit"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/next_button_bg"
+                    android:id="@+id/done"
+                    android:text="OK"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+</LinearLayout>

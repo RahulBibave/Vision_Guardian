@@ -116,98 +116,110 @@ class Referral : AppCompatActivity() {
             sheet.addCell(Label(3, 0, "Sex", cellFormats))
             sheet.addCell(Label(4, 0, "Date Of Visit", cellFormats))
             sheet.addCell(Label(5, 0, "Mobile", cellFormats))
-            sheet.addCell(Label(6, 0, "Aa", cellFormats))
+            sheet.addCell(Label(6, 0, "Adhar", cellFormats))
 
             sheet.addCell(Label(7, 0, "Complaint", cellFormats))
-            sheet.mergeCells(7, 0, 8, 0)
-            sheet.addCell(Label(7, 1, "1", cellFormats))
-            sheet.addCell(Label(8, 1, "2", cellFormats))
-
-            sheet.addCell(Label(9, 0, "Past Ocular history", cellFormats))
-            sheet.mergeCells(9, 0, 10, 0)
-            sheet.addCell(Label(9, 1, "Difficulty with glass", cellFormats))
-            sheet.addCell(Label(10, 1, "Past History", cellFormats))
-
-            sheet.addCell(Label(11, 0, "Systemic History", cellFormats))
+            sheet.mergeCells(7, 0, 10, 0)
+            sheet.addCell(Label(7, 1, "Blurry Vision", cellFormats))
+            sheet.addCell(Label(8, 1, "Difficulty in Reading", cellFormats))
+            sheet.addCell(Label(9, 1, "Uncomfortable Eyes", cellFormats))
+            sheet.addCell(Label(10, 1, "Other", cellFormats))
 
 
-            sheet.addCell(Label(12, 0, "Distant vision without glasses", cellFormats))
-            sheet.mergeCells(12, 0, 13, 0)
-            sheet.addCell(Label(12, 1, "Right eye", cellFormats))
-            sheet.addCell(Label(13, 1, "Left eye", cellFormats))
 
-            sheet.addCell(Label(14, 0, "Near vision without glasses", cellFormats))
+
+
+            sheet.addCell(Label(11, 0, "Past Ocular history", cellFormats))
+            sheet.mergeCells(11, 0, 12, 0)
+            sheet.addCell(Label(11, 1, "Difficulty with glass", cellFormats))
+            sheet.addCell(Label(12, 1, "Past History", cellFormats))
+
+            sheet.addCell(Label(13, 0, "Systemic History", cellFormats))
+
+
+            sheet.addCell(Label(14, 0, "Distant vision without glasses", cellFormats))
             sheet.mergeCells(14, 0, 15, 0)
             sheet.addCell(Label(14, 1, "Right eye", cellFormats))
             sheet.addCell(Label(15, 1, "Left eye", cellFormats))
 
-            sheet.addCell(Label(16, 0, "Distant vision with glasses", cellFormats))
+            sheet.addCell(Label(16, 0, "Near vision without glasses", cellFormats))
             sheet.mergeCells(16, 0, 17, 0)
             sheet.addCell(Label(16, 1, "Right eye", cellFormats))
             sheet.addCell(Label(17, 1, "Left eye", cellFormats))
 
-            sheet.addCell(Label(18, 0, "Near vision with glasses", cellFormats))
+            sheet.addCell(Label(18, 0, "Distant vision with glasses", cellFormats))
             sheet.mergeCells(18, 0, 19, 0)
             sheet.addCell(Label(18, 1, "Right eye", cellFormats))
             sheet.addCell(Label(19, 1, "Left eye", cellFormats))
 
-            sheet.addCell(Label(20, 0, "click checkrefraction", cellFormats))
-            sheet.mergeCells(20, 0, 25, 0)
+            sheet.addCell(Label(20, 0, "Near vision with glasses", cellFormats))
+            sheet.mergeCells(20, 0, 21, 0)
             sheet.addCell(Label(20, 1, "Right eye", cellFormats))
-            sheet.mergeCells(20, 1, 22, 1)
-            sheet.addCell(Label(23, 1, "Left eye", cellFormats))
-            sheet.mergeCells(23, 1, 25, 1)
+            sheet.addCell(Label(21, 1, "Left eye", cellFormats))
 
-            sheet.addCell(Label(20, 2, "Sphere", cellFormats))
-            sheet.addCell(Label(21, 2, "Cylinder", cellFormats))
-            sheet.addCell(Label(22, 2, "Axis", cellFormats))
 
-            sheet.addCell(Label(23, 2, "Sphere", cellFormats))
-            sheet.addCell(Label(24, 2, "Cylinder", cellFormats))
-            sheet.addCell(Label(25, 2, "Axis", cellFormats))
+            sheet.addCell(Label(22, 0, "click checkrefraction", cellFormats))
+            sheet.mergeCells(22, 0, 27, 0)
+            sheet.addCell(Label(22, 1, "Right eye", cellFormats))
+            sheet.mergeCells(22, 1, 24, 1)
+            sheet.addCell(Label(25, 1, "Left eye", cellFormats))
+            sheet.mergeCells(25, 1, 27, 1)
 
-            sheet.addCell(Label(26, 0, "Deviation of eyes", cellFormats))
+            sheet.addCell(Label(22, 2, "Sphere", cellFormats))
+            sheet.addCell(Label(23, 2, "Cylinder", cellFormats))
+            sheet.addCell(Label(24, 2, "Axis", cellFormats))
+
+            sheet.addCell(Label(25, 2, "Sphere", cellFormats))
+            sheet.addCell(Label(26, 2, "Cylinder", cellFormats))
+            sheet.addCell(Label(27, 2, "Axis", cellFormats))
+
+
+
+
+
+
+            sheet.addCell(Label(28, 0, "Deviation of eyes", cellFormats))
             sheet.mergeCells(26, 0, 27, 0)
-            sheet.addCell(Label(26, 1, "Right eye", cellFormats))
-            sheet.addCell(Label(27, 1, "Left eye", cellFormats))
-
-            sheet.addCell(Label(28, 0, "Size of eye", cellFormats))
-            sheet.mergeCells(28, 0, 29, 0)
             sheet.addCell(Label(28, 1, "Right eye", cellFormats))
             sheet.addCell(Label(29, 1, "Left eye", cellFormats))
 
-            sheet.addCell(Label(30, 0, "Eyelids", cellFormats))
-            sheet.mergeCells(30, 0, 31, 0)
+            sheet.addCell(Label(30, 0, "Size of eye", cellFormats))
+            sheet.mergeCells(28, 0, 29, 0)
             sheet.addCell(Label(30, 1, "Right eye", cellFormats))
             sheet.addCell(Label(31, 1, "Left eye", cellFormats))
 
-            sheet.addCell(Label(32, 0, "Eyelashes", cellFormats))
-            sheet.mergeCells(32, 0, 33, 0)
+            sheet.addCell(Label(32, 0, "Eyelids", cellFormats))
+            sheet.mergeCells(30, 0, 31, 0)
             sheet.addCell(Label(32, 1, "Right eye", cellFormats))
             sheet.addCell(Label(33, 1, "Left eye", cellFormats))
 
-            sheet.addCell(Label(34, 0, "White of the eyes", cellFormats))
-            sheet.mergeCells(34, 0, 35, 0)
+            sheet.addCell(Label(34, 0, "Eyelashes", cellFormats))
+            sheet.mergeCells(32, 0, 33, 0)
             sheet.addCell(Label(34, 1, "Right eye", cellFormats))
             sheet.addCell(Label(35, 1, "Left eye", cellFormats))
 
-            sheet.addCell(Label(36, 0, "Black of the eyes", cellFormats))
-            sheet.mergeCells(36, 0, 37, 0)
+            sheet.addCell(Label(36, 0, "White of the eyes", cellFormats))
+            sheet.mergeCells(34, 0, 35, 0)
             sheet.addCell(Label(36, 1, "Right eye", cellFormats))
             sheet.addCell(Label(37, 1, "Left eye", cellFormats))
 
-            sheet.addCell(Label(38, 0, "External injury", cellFormats))
-            sheet.mergeCells(38, 0, 39, 0)
+            sheet.addCell(Label(38, 0, "Black of the eyes", cellFormats))
+            sheet.mergeCells(36, 0, 37, 0)
             sheet.addCell(Label(38, 1, "Right eye", cellFormats))
             sheet.addCell(Label(39, 1, "Left eye", cellFormats))
 
-            sheet.addCell(Label(40, 0, "Foreign body", cellFormats))
-            sheet.mergeCells(40, 0, 41, 0)
+            sheet.addCell(Label(40, 0, "External injury", cellFormats))
+            sheet.mergeCells(38, 0, 39, 0)
             sheet.addCell(Label(40, 1, "Right eye", cellFormats))
             sheet.addCell(Label(41, 1, "Left eye", cellFormats))
 
+            sheet.addCell(Label(42, 0, "Foreign body", cellFormats))
+            sheet.mergeCells(42, 0, 43, 0)
+            sheet.addCell(Label(42, 1, "Right eye", cellFormats))
+            sheet.addCell(Label(43, 1, "Left eye", cellFormats))
+
            // sheet.addCell(Label(42, 0, "", cellFormats))
-            sheet.addCell(Label(42, 0, "Refer", cellFormats))
+            sheet.addCell(Label(44, 0, "Refer", cellFormats))
 
 
             for (item in examDataList.indices) {
@@ -223,59 +235,64 @@ class Referral : AppCompatActivity() {
                 sheet.addCell(Label(4, x, examDataList.get(item).mDateOfExam))
                 sheet.addCell(Label(5, x, patientList.get(0).mMobile))
                 sheet.addCell(Label(6, x, patientList.get(0).mEmail))
-                sheet.addCell(Label(7, x, "Blurry vision -${examDataList.get(item).mHistoryQ1},"+
-                "Difficulty in Reading-${examDataList.get(item).mHistoryQ2}"))
-                sheet.addCell(Label(8, x,examDataList.get(item).mHistoryQ3 +"-"+ examDataList.get(item).mHistoryQ5 +"Other - " +examDataList.get(item).mHistoryQ4))
+                sheet.addCell(Label(7, x, examDataList.get(item).mHistoryQ1))
+                sheet.addCell(Label(8, x, examDataList.get(item).mHistoryQ2))
+                sheet.addCell(Label(9, x, examDataList.get(item).mHistoryQ5))
+                sheet.addCell(Label(10, x, examDataList.get(item).mHistoryQ4))
 
-                sheet.addCell(Label(9, x, examDataList.get(item).mHistoryQ9))
-                sheet.addCell(Label(10, x, examDataList.get(item).mHistoryQ10+examDataList.get(item).mHistoryQ7))
 
-                sheet.addCell(Label(11, x, examDataList.get(item).mHistoryQ6+examDataList.get(item).mHistoryQ11))
+
+                //sheet.addCell(Label(8, x,examDataList.get(item).mHistoryQ3 +"-"+  +"Other - " +examDataList.get(item).mHistoryQ4))
+
+                sheet.addCell(Label(11, x, examDataList.get(item).mHistoryQ9))
+                sheet.addCell(Label(12, x, examDataList.get(item).mHistoryQ10+examDataList.get(item).mHistoryQ7))
+
+                sheet.addCell(Label(13, x, examDataList.get(item).mHistoryQ6+examDataList.get(item).mHistoryQ11))
               //  sheet.addCell(Label(11, x, examDataList.get(item).mHistoryQ12))
 
-                sheet.addCell(Label(12, x, examDataList.get(item).mdistanceVisionWithoutR))
-                sheet.addCell(Label(13, x, examDataList.get(item).mdistanceVisionWithoutL))
+                sheet.addCell(Label(14, x, examDataList.get(item).mdistanceVisionWithoutR))
+                sheet.addCell(Label(15, x, examDataList.get(item).mdistanceVisionWithoutL))
 
-                sheet.addCell(Label(14, x, examDataList.get(item).mNearWithOutGR))
-                sheet.addCell(Label(15, x, examDataList.get(item).mNearWithOutGL))
+                sheet.addCell(Label(16, x, examDataList.get(item).mNearWithOutGR))
+                sheet.addCell(Label(17, x, examDataList.get(item).mNearWithOutGL))
 
-                sheet.addCell(Label(16, x, examDataList.get(item).mdistanceGlassR))
-                sheet.addCell(Label(17, x, examDataList.get(item).mdistanceGlassL))
+                sheet.addCell(Label(18, x, examDataList.get(item).mdistanceGlassR))
+                sheet.addCell(Label(19, x, examDataList.get(item).mdistanceGlassL))
 
-                sheet.addCell(Label(18, x, examDataList.get(item).mNearWithGR))
-                sheet.addCell(Label(19, x, examDataList.get(item).mNearWithGL))
+                sheet.addCell(Label(20, x, examDataList.get(item).mNearWithGR))
+                sheet.addCell(Label(21, x, examDataList.get(item).mNearWithGL))
 
-                sheet.addCell(Label(20, x, examDataList.get(item).mSphereR))
-                sheet.addCell(Label(21, x, examDataList.get(item).mCylinderR))
-                sheet.addCell(Label(22, x, examDataList.get(item).mAxisR))
-                sheet.addCell(Label(23, x, examDataList.get(item).mSphereL))
-                sheet.addCell(Label(24, x, examDataList.get(item).mCylinderL))
-                sheet.addCell(Label(25, x, examDataList.get(item).mAxisL))
+                sheet.addCell(Label(22, x, examDataList.get(item).mSphereR))
+                sheet.addCell(Label(23, x, examDataList.get(item).mCylinderR))
+                sheet.addCell(Label(24, x, examDataList.get(item).mAxisR))
+                sheet.addCell(Label(25, x, examDataList.get(item).mSphereL))
+                sheet.addCell(Label(26, x, examDataList.get(item).mCylinderL))
+                sheet.addCell(Label(27, x, examDataList.get(item).mAxisL))
 
-                sheet.addCell(Label(26, x, examDataList.get(item).mDeviation))
-                sheet.addCell(Label(27, x, examDataList.get(item).mDevL))
+                sheet.addCell(Label(28, x, examDataList.get(item).mDeviation))
+                sheet.addCell(Label(29, x, examDataList.get(item).mDevL))
 
-                sheet.addCell(Label(28, x, examDataList.get(item).mSameSize))
-                sheet.addCell(Label(29, x, examDataList.get(item).mSameSize))
+                sheet.addCell(Label(30, x, examDataList.get(item).mSameSize))
+                sheet.addCell(Label(31, x, examDataList.get(item).mSameSize))
 
-                sheet.addCell(Label(30, x, examDataList.get(item).mEyelidsR))
-                sheet.addCell(Label(31, x, examDataList.get(item).mEyelidsL))
+                sheet.addCell(Label(32, x, examDataList.get(item).mEyelidsR))
+                sheet.addCell(Label(33, x, examDataList.get(item).mEyelidsL))
 
-                sheet.addCell(Label(32, x, examDataList.get(item).mEyelashR))
-                sheet.addCell(Label(33, x, examDataList.get(item).mEyelashL))
+                sheet.addCell(Label(34, x, examDataList.get(item).mEyelashR))
+                sheet.addCell(Label(35, x, examDataList.get(item).mEyelashL))
 
-                sheet.addCell(Label(34, x, examDataList.get(item).mWhiteR))
-                sheet.addCell(Label(35, x, examDataList.get(item).mWhiteL))
+                sheet.addCell(Label(36, x, examDataList.get(item).mWhiteR))
+                sheet.addCell(Label(37, x, examDataList.get(item).mWhiteL))
 
-                sheet.addCell(Label(36, x, examDataList.get(item).mBlackR))
-                sheet.addCell(Label(37, x, examDataList.get(item).mBlackL))
+                sheet.addCell(Label(38, x, examDataList.get(item).mBlackR))
+                sheet.addCell(Label(39, x, examDataList.get(item).mBlackL))
 
-                sheet.addCell(Label(38, x, examDataList.get(item).mExInjuR))
-                sheet.addCell(Label(39, x, examDataList.get(item).mExInjuL))
+                sheet.addCell(Label(40, x, examDataList.get(item).mExInjuR))
+                sheet.addCell(Label(41, x, examDataList.get(item).mExInjuL))
 
-                sheet.addCell(Label(40, x, examDataList.get(item).mForeignR))
-                sheet.addCell(Label(41, x, examDataList.get(item).mForeignL))
-                sheet.addCell(Label(42, x, examDataList.get(item).mHistoryQ8))
+                sheet.addCell(Label(42, x, examDataList.get(item).mForeignR))
+                sheet.addCell(Label(43, x, examDataList.get(item).mForeignL))
+                sheet.addCell(Label(44, x, examDataList.get(item).mHistoryQ8))
               //  sheet.addCell(Label(43, x, patientList.get(0).mEmail))
 
 

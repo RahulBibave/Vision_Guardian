@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_height="match_parent"
+    tools:context=".VisionImage">
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/big_e"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/backimg"
+            android:onClick="OnBack"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ic_arrow_back_black"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+       <!-- <TextView
+
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Flip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>-->
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+
+                android:id="@+id/big_image"
+
+                android:layout_width="43.6mm"
+                android:layout_height="43.6mm"
+                android:gravity="center"
+                android:src="@drawable/e" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+        <RelativeLayout
+            android:layout_gravity="end"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/yes_no_button_bg"
+                android:id="@+id/big_e_yes"
+                android:text="correct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:layout_toEndOf="@+id/big_e_yes"
+                android:background="@drawable/yes_no_button_bg"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/big_e_no"
+                android:text="incorrect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <Button
+
+                android:layout_marginRight="20dp"
+               android:layout_alignParentEnd="true"
+                android:background="@drawable/yes_no_button_bg"
+               android:layout_gravity="end"
+                android:id="@+id/big_flip"
+                android:text="Rotate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+            <TextView
+
+                android:textColor="@color/textColor"
+                android:fontFamily="@font/roboto_bold"
+                android:text="(Note:-Use this chart at 10 feet)"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+       android:visibility="gone"
+        android:id="@+id/mid_e"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:onClick="OnBack"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ic_arrow_back_black"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+       <!-- <TextView
+            android:id="@+id/mid_flip"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentEnd="true"
+            android:text="Flip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>-->
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <ImageView
+                android:id="@+id/mid_image"
+                android:layout_width="13mm"
+                android:layout_height="13mm"
+                android:layout_centerVertical="true"
+                android:src="@drawable/e" />
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_gravity="end"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/yes_no_button_bg"
+                android:id="@+id/mid_e_yes"
+                android:text="correct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <Button
+
+                android:layout_toEndOf="@+id/mid_e_yes"
+                android:background="@drawable/yes_no_button_bg"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/mid_e_no"
+                android:text="incorrect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <Button
+
+                android:layout_marginRight="20dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/yes_no_button_bg"
+                android:layout_gravity="end"
+                android:id="@+id/mid_flip"
+                android:text="Rotate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+            <TextView
+
+                android:textColor="@color/textColor"
+                android:fontFamily="@font/roboto_bold"
+                android:text="(Note:-Use this chart at 10 feet)"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/small_e"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:onClick="OnBack"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ic_arrow_back_black"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+       <!-- <TextView
+
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentEnd="true"
+            android:text="Flip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>-->
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/small_image"
+            android:src="@drawable/e"
+            android:gravity="center"
+            android:layout_width="8.7mm"
+            android:layout_height="8.7mm"/>
+        </LinearLayout>
+        <LinearLayout
+           android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_gravity="end"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/yes_no_button_bg"
+                android:id="@+id/small_e_yes"
+                android:text="correct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:layout_toEndOf="@+id/small_e_yes"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/yes_no_button_bg"
+                android:id="@+id/small_e_no"
+                android:text="incorrect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <Button
+
+                android:layout_marginRight="20dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/yes_no_button_bg"
+                android:layout_gravity="end"
+                android:id="@+id/small_flip"
+                android:text="Rotate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+            <TextView
+
+                android:textColor="@color/textColor"
+                android:fontFamily="@font/roboto_bold"
+                android:text="(Note:-Use this chart at 10 feet)"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+
+        android:id="@+id/vision_view"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+
+            android:onClick="OnBack"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ic_arrow_back_black"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+        <!-- <TextView
+
+             android:layout_alignParentEnd="true"
+             android:layout_marginTop="20dp"
+             android:layout_marginRight="20dp"
+             android:text="Flip"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"/>-->
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_marginTop="20dp"
+                android:layout_width="6pt"
+                android:layout_height="6pt"
+                android:src="@drawable/ic_car"/>
+            <ImageView
+                android:layout_marginTop="20dp"
+                android:layout_width="2.2mm"
+                android:layout_height="2.2mm"
+                android:src="@drawable/ic_apple_new"/>
+            <ImageView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/apple"/>
+            <ImageView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="1.16mm"
+                android:layout_height="1.16mm"
+                android:src="@drawable/ic_baseline_home"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="20dp"
+                android:background="@color/primaryText"/>
+            <ImageView
+                android:layout_marginTop="20dp"
+                android:layout_width="1.16mm"
+                android:layout_height="1.16mm"
+                android:src="@drawable/e"/>
+            <ImageView
+                android:rotation="180"
+                android:layout_marginTop="20dp"
+                android:layout_width="1.16mm"
+                android:layout_height="1.16mm"
+                android:src="@drawable/e"/>
+            <ImageView
+                android:rotation="90"
+                android:layout_marginTop="20dp"
+                android:layout_width="1.16mm"
+                android:layout_height="1.16mm"
+                android:src="@drawable/e"/>
+            <ImageView
+                android:rotation="270"
+                android:layout_marginTop="20dp"
+                android:layout_width="1.16mm"
+                android:layout_height="1.16mm"
+                android:src="@drawable/e"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_gravity="end"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/yes_no_button_bg"
+                    android:id="@+id/vision_yes"
+                    android:text="correct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:layout_toEndOf="@+id/big_e_yes"
+                    android:background="@drawable/yes_no_button_bg"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/vision_no"
+                    android:text="incorrect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+            <TextView
+
+                android:textColor="@color/textColor"
+                android:fontFamily="@font/roboto_bold"
+                android:text="(Note:-Use this chart at 16 Inch/40 cmn)"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

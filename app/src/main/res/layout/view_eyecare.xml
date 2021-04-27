@@ -28,7 +28,7 @@
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="General Care"
+                android:text="@string/eyecaretitle"
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
@@ -81,7 +81,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_bold"
                             android:paddingTop="@dimen/size8dp"
-                            android:text="Solution to digital eye strain "
+                            android:text="@string/care7"
                             android:textColor="@color/primaryText"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -201,6 +201,7 @@
                                 android:textSize="18sp" />
                         </LinearLayout>
 
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
@@ -244,6 +245,11 @@
                                 android:textColor="@color/primaryText"
                                 android:textSize="18sp" />
                         </LinearLayout>
+
+                        <pl.droidsonroids.gif.GifImageView
+                            android:src="@drawable/gk_gif"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"/>
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">

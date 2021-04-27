@@ -45,7 +45,7 @@ class SignUp : AppCompatActivity() {
                 val mmMonth = mMonth+1
                 val date = "$mDay/$mmMonth/$mYear"
 
-                dob_vg.setText(date)
+                dob_vg.text = date
             },year,month,day)
             dpd.show()
         }

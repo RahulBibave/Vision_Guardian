@@ -5,10 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.view.WindowManager
+import androidx.appcompat.app.AppCompatDelegate
 
 class SplashScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         val sharedPreferences = getSharedPreferences("MySharedPrefLogin", MODE_PRIVATE)
         val isLogin=  sharedPreferences.getString("islogin", "No")
         setContentView(R.layout.activity_splash_screen)

@@ -28,7 +28,7 @@
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="General Care"
+                android:text="@string/eyecaretitle"
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
@@ -57,7 +57,6 @@
 
             <LinearLayout
                 android:layout_marginBottom="15dp"
-
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -70,23 +69,19 @@
                     android:layout_height="wrap_content">
                     <LinearLayout
                         android:padding="@dimen/size8dp"
-
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:orientation="vertical">
-
                         <TextView
-
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_bold"
                             android:paddingTop="@dimen/size8dp"
-                            android:text="Contact lens care  "
+                            android:text="@string/care8"
                             android:textColor="@color/primaryText"
                             android:textSize="18sp"
                             android:textStyle="bold" />
-
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">

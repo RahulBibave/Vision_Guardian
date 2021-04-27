@@ -41,6 +41,7 @@ class ListAdapter(val context: Context, val array: ArrayList<Patient>) : Recycle
 
             val intent = Intent(context,Examination::class.java)
             intent.putExtra("patientID",array.get(position).patientId)
+            intent.putExtra("patientName",array.get(position).mFirstName)
             context.startActivity(intent)
         }
 
