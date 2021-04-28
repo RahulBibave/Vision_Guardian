@@ -1,5 +1,8 @@
 package com.example.visionguardian
 
+import android.app.Activity
+import android.content.Context
+import android.content.res.Configuration
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
@@ -15,6 +18,8 @@ import com.example.visionguardian.db.Patient
 import kotlinx.android.synthetic.main.activity_awarness.*
 import kotlinx.android.synthetic.main.activity_list_of_paitent.*
 import kotlinx.android.synthetic.main.activity_list_of_paitent.back_arrow
+import java.util.*
+import kotlin.collections.ArrayList
 
 class ListOfPaitent : AppCompatActivity() {
 
@@ -22,6 +27,7 @@ class ListOfPaitent : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list_of_paitent)
+        loadLocate()
         setUpDB()
         getAllData()
 
@@ -68,5 +74,27 @@ class ListOfPaitent : AppCompatActivity() {
             recyclerViewPatient.adapter = adapter
         }
 
+    }
+
+    private fun setLocate(Lang: String) {
+
+        val locale = Locale(Lang)
+
+        Locale.setDefault(locale)
+
+        val config = Configuration()
+
+        config.locale = locale
+        baseContext.resources.updateConfiguration(config, baseContext.resources.displayMetrics)
+
+        val editor = getSharedPreferences("Settings", Context.MODE_PRIVATE).edit()
+        editor.putString("My_Lang", Lang)
+        editor.apply()
+    }
+
+    private fun loadLocate() {
+        val sharedPreferences = getSharedPreferences("Settings", Activity.MODE_PRIVATE)
+        val language = sharedPreferences.getString("My_Lang", "")
+        setLocate(language.toString())
     }
 }

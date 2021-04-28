@@ -30,7 +30,7 @@
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Examination List "
+                android:text="@string/exam_list"
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:textSize="18sp" />

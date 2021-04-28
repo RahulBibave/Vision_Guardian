@@ -172,7 +172,7 @@
     <string name="symptoms_glaucoma2">"As glaucoma worsens side vision will get reduced and eventually central vision will also get affected.  "</string>
     <string name="symptoms_glaucoma3">"Patients may experience headaches and pain in the eye, the coloured halo around light, nausea, frequent change of spectacle. "</string>
 
-    <string name="risk_glaucoma">"Anyone can get glaucoma, but some people have higher chances of getting glaucoma. \n●\tPeople above 40 years \n●\tFamily history of glaucoma  \n●\tNear-sightedness \n●\tDiabetes and hypertension  \n●\tLong term steroid use "</string>
+    <string name="risk_glaucoma">Anyone can get glaucoma, but some people have higher chances of getting glaucoma. \n●\tPeople above 40 years \n●\tFamily history of glaucoma  \n●\tNear-sightedness \n●\tDiabetes and hypertension  \n●\tLong term steroid use </string>
     <string name="treatable_glaucoma1">"There is no permanent cure for glaucoma . "</string>
     <string name="treatable_glaucoma2">"Glaucoma can be prevented from getting worse by medication or surgery.   "</string>
     <string name="treatable_glaucoma3">"Identifying it early is key to protecting your vision. "</string>
@@ -487,6 +487,20 @@
     <string name="doc12">12.Defense ex-servicemen card issued by Sainik Board</string>
     <string name="doc13">13.Marine Fishery Identity card (Issued by Ministry of Agriculture / Fisheries Department Government of Maharashtra).</string>
     <string name="doc14">14.Any photo ID proof issued by Government of Maharashtra/ Government of India</string>
+    <string name="nil">Nil</string>
+    <string name="Diabetes">Diabetes</string>
+    <string name="Hypertension">Hypertension</string>
+    <string name="Asthma">Asthma</string>
+    <string name="Thyroid">Thyroid</string>
+    <string name="Seizure">Seizure</string>
+    <string name="Allergy">Allergy</string>
+    <string name="Arthritis">Arthritis</string>
+    <string name="Days">Days</string>
+    <string name="Weeks">Weeks</string>
+    <string name="Months">Months</string>
+    <string name="Years">Years</string>
+    <string name="Patient_List">"Patient List "</string>
+    <string name="exam_list">"Examination List "</string>
 
 
 </resources>

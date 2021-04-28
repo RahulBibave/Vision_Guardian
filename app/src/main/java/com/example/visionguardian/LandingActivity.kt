@@ -12,6 +12,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.GravityCompat
 import kotlinx.android.synthetic.main.activity_landing.*
 import kotlinx.android.synthetic.main.activity_registration.*
@@ -32,11 +33,13 @@ class LandingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
        // window.setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE)
+
+        loadLocate()
         setContentView(R.layout.demo)
 
         val heder=nav_view.getHeaderView(0)
         val txtname=heder.findViewById<TextView>(R.id.nav_header_textView)
-        loadLocate()
+       // loadLocate()
         val sharedPreferencesData = getSharedPreferences("MySharedPrefCamp", MODE_PRIVATE)
         city= sharedPreferencesData.getString("city", "").toString()
         district= sharedPreferencesData.getString("district", "").toString()
@@ -279,6 +282,19 @@ class LandingActivity : AppCompatActivity() {
         val language = sharedPreferences.getString("My_Lang", "")
         setLocate(language.toString())
     }
+
+   /* fun loadlang(){
+        val sharedPreferences = getSharedPreferences("Settings", Activity.MODE_PRIVATE)
+        val language = sharedPreferences.getString("My_Lang", "")
+        val locale = Locale(language)
+        Locale.setDefault(locale)
+        val config = Configuration()
+        config.locale = locale
+        baseContext.resources.updateConfiguration(config, baseContext.resources.displayMetrics)
+        val editor = getSharedPreferences("Settings", Context.MODE_PRIVATE).edit()
+        editor.putString("My_Lang", language)
+        editor.apply()
+    }*/
 
 
 }

@@ -478,6 +478,20 @@
     <string name="doc12">12.Defense ex-servicemen card issued by Sainik Board</string>
     <string name="doc13">13.Marine Fishery Identity card (Issued by Ministry of Agriculture / Fisheries Department Government of Maharashtra).</string>
     <string name="doc14">14.Any photo ID proof issued by Government of Maharashtra/ Government of India</string>
+    <string name="nil">Nil</string>
+    <string name="Diabetes">Diabetes</string>
+    <string name="Hypertension">Hypertension</string>
+    <string name="Asthma">Asthma</string>
+    <string name="Thyroid">Thyroid</string>
+    <string name="Seizure">Seizure</string>
+    <string name="Allergy">Allergy</string>
+    <string name="Arthritis">Arthritis</string>
+    <string name="Days">Days</string>
+    <string name="Weeks">Weeks</string>
+    <string name="Months">Months</string>
+    <string name="Years">Years</string>
+    <string name="Patient_List">"Patient List "</string>
+    <string name="exam_list">"Examination List "</string>
 
 
 </resources>

@@ -1,7 +1,10 @@
 package com.example.visionguardian
 
 import android.Manifest
+import android.app.Activity
+import android.content.Context
 import android.content.pm.PackageManager
+import android.content.res.Configuration
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AlertDialog
@@ -35,6 +38,7 @@ class Referral : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_referral)
+        loadLocate()
         setUpDB()
         val sharedPreferences = getSharedPreferences("MySharedPrefLogin", MODE_PRIVATE)
         var VCName= sharedPreferences.getString("visioncenter", "defaultName").toString()
@@ -339,5 +343,27 @@ class Referral : AppCompatActivity() {
         val alert: AlertDialog = alertDialog.create()
         alert.setCanceledOnTouchOutside(false)
         alert.show()
+    }
+
+    private fun setLocate(Lang: String) {
+
+        val locale = Locale(Lang)
+
+        Locale.setDefault(locale)
+
+        val config = Configuration()
+
+        config.locale = locale
+        baseContext.resources.updateConfiguration(config, baseContext.resources.displayMetrics)
+
+        val editor = getSharedPreferences("Settings", Context.MODE_PRIVATE).edit()
+        editor.putString("My_Lang", Lang)
+        editor.apply()
+    }
+
+    private fun loadLocate() {
+        val sharedPreferences = getSharedPreferences("Settings", Activity.MODE_PRIVATE)
+        val language = sharedPreferences.getString("My_Lang", "")
+        setLocate(language.toString())
     }
 }

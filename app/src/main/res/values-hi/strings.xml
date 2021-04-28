@@ -167,7 +167,7 @@
     <string name="symptoms_glaucoma2">काचबिंदू जसजशी खराब होते तसतसे दृष्टी कमी होते आणि अखेरीस केंद्रीय दृष्टी देखील प्रभावित होते.</string>
     <string name="symptoms_glaucoma3">रूग्णांना डोकेदुखी आणि डोळ्यातील वेदना, प्रकाशाभोवती रंगीत हलवा, मळमळ, वारंवार देखावा बदलू शकतो.</string>
 
-    <string name="risk_glaucoma">कोणालाही काचबिंदू होऊ शकतो, परंतु काही लोकांना काचबिंदू होण्याची शक्यता जास्त असते. \ n ● \ t 40 वर्षांवरील लोक \ n ● gla t काचबिंदूचा सामान्य इतिहास \ n ● ear t जवळचा दृष्टी ighted n \ \ t मधुमेह आणि उच्चरक्तदाब</string>
+    <string name="risk_glaucoma">●\tकोणालाही काचबिंदू होऊ शकतो, परंतु काही लोकांना काचबिंदू होण्याची शक्यता जास्त असते. \n\n●\t 40 वर्षांपेक्षा जास्त लोक \n\n●\t काचबिंदूचा सामान्य इतिहास \n\n●\t दीर्घकालीन स्टिरॉइड वापर</string>
     <string name="treatable_glaucoma1">काचबिंदूवर कायमचा इलाज नाही.</string>
     <string name="treatable_glaucoma2">औषध किंवा शस्त्रक्रिया करून ग्लॅकोमा खराब होण्यापासून रोखता येतो.</string>
     <string name="treatable_glaucoma3">त्यास लवकर ओळखणे आपल्या दृष्टीस संरक्षण देण्यासाठी महत्त्वपूर्ण आहे.</string>
@@ -480,5 +480,19 @@
     <string name="doc12">12.सैनिक मंडळाने जारी केलेले डिफेन्सचे माजी सैनिक कार्ड</string>
     <string name="doc13">13.सागरी मत्स्य पालन ओळखपत्र (कृषी मंत्रालय / मत्स्यव्यवसाय विभाग महाराष्ट्र शासन द्वारा जारी केलेले)</string>
     <string name="doc14">14.महाराष्ट्र शासन / भारत सरकार द्वारा जारी केलेला कोणताही फोटो आयडी पुरावा</string>
+    <string name="nil">शून्य</string>
+    <string name="Diabetes">मधुमेह</string>
+    <string name="Hypertension">उच्च रक्तदाब</string>
+    <string name="Asthma">दमा</string>
+    <string name="Thyroid">थायरॉईड</string>
+    <string name="Seizure">जप्ती</string>
+    <string name="Allergy">वावडं</string>
+    <string name="Arthritis">संधिवात</string>
+    <string name="Days">दिवस</string>
+    <string name="Weeks">आठवडे</string>
+    <string name="Months">महिने</string>
+    <string name="Years">वर्षे</string>
+    <string name="Patient_List">रुग्णांची यादी</string>
+    <string name="exam_list">नेत्र तपासणीसाठीचे रुग्ण</string>
 
 </resources>

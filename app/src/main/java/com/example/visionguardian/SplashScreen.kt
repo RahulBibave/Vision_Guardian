@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatDelegate
 class SplashScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         val sharedPreferences = getSharedPreferences("MySharedPrefLogin", MODE_PRIVATE)
         val isLogin=  sharedPreferences.getString("islogin", "No")
         setContentView(R.layout.activity_splash_screen)

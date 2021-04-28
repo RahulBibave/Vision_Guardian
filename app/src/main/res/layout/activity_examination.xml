@@ -318,7 +318,7 @@
                 android:id="@+id/question3_choice1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Yes" />
+                android:text="@string/yes" />
 
 
         </RadioGroup>

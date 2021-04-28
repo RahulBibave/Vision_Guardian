@@ -105,7 +105,7 @@ class Examination : AppCompatActivity() {
         val sharedPreferences = getSharedPreferences("MySharedPref", MODE_PRIVATE)
 
 
-        val duration = arrayOf("Years", "Months", "Weeks", "Days")
+        val duration = arrayOf(getString(R.string.Years), getString(R.string.Months), getString(R.string.Weeks), getString(R.string.Days))
         val adapter = ArrayAdapter(
                 this, // Context
                 android.R.layout.simple_spinner_item, // Layout
@@ -147,11 +147,11 @@ class Examination : AppCompatActivity() {
                     val radio_langange: RadioButton = findViewById(checkedId)
                     card1.setBackgroundColor(Color.WHITE)
 
-                    if (radio_langange.text.toString() == "Yes") {
+                    if (radio_langange.text.toString() == getString(R.string.yes)) {
                         card1.setBackgroundColor(Color.WHITE)
                         which_eye1.visibility = View.VISIBLE
                         firstDuration.visibility = View.VISIBLE
-                    } else if (radio_langange.text.toString() == "No") {
+                    } else if (radio_langange.text.toString() == getString(R.string.no)) {
                         card1.setBackgroundColor(Color.GRAY)
                         which_eye1.visibility = View.GONE
                         firstDuration.visibility = View.GONE
@@ -223,7 +223,7 @@ class Examination : AppCompatActivity() {
                 RadioGroup.OnCheckedChangeListener { group, checkedId ->
                     val radio_langange: RadioButton = findViewById(checkedId)
 
-                    if (radio_langange.text.toString() == "Yes") {
+                    if (radio_langange.text.toString() == getString(R.string.yes)) {
                         card2.setBackgroundColor(Color.WHITE)
                         which_eye2.visibility = View.VISIBLE
                         secondDuration.visibility = View.VISIBLE
@@ -243,7 +243,7 @@ class Examination : AppCompatActivity() {
                 RadioGroup.OnCheckedChangeListener { group, checkedId ->
                     val radio_langange: RadioButton = findViewById(checkedId)
 
-                    if (radio_langange.text.toString() == "Yes") {
+                    if (radio_langange.text.toString() == getString(R.string.yes)) {
                         card3.setBackgroundColor(Color.WHITE)
                         which_eye3.visibility = View.VISIBLE
                         Duration3.visibility = View.VISIBLE
@@ -372,7 +372,7 @@ class Examination : AppCompatActivity() {
 
 
         //Q11
-        val medication = arrayOf("Nil", "Diabetes", "Hypertension", "Asthma", "Thyroid", "Seizure", "Allergy", "Arthritis", "Others")
+        val medication = arrayOf(getString(R.string.nil), getString(R.string.Diabetes), getString(R.string.Hypertension), getString(R.string.Asthma), getString(R.string.Thyroid), getString(R.string.Seizure), getString(R.string.Allergy), getString(R.string.Arthritis), getString(R.string.Others))
         val adaptermedi = ArrayAdapter(
                 this, // Context
                 android.R.layout.simple_spinner_item, // Layout
