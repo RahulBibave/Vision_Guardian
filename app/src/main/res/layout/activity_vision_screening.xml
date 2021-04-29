@@ -857,7 +857,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/submit_next" />-->
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/submit_next"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -866,8 +866,7 @@
             android:layout_marginRight="30dp"
             android:background="@drawable/next_button_bg"
             android:text="@string/submit_next"
-            android:textColor="@android:color/white"
-            />
+            android:textColor="@android:color/white" />
 
     </LinearLayout>
 

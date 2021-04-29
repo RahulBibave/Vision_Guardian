@@ -68,33 +68,33 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:layout_marginLeft="20dp"
                 android:background="@drawable/yes_no_button_bg"
                 android:id="@+id/big_e_yes"
                 android:text="correct"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:layout_toEndOf="@+id/big_e_yes"
                 android:background="@drawable/yes_no_button_bg"
                 android:layout_marginLeft="10dp"
                 android:id="@+id/big_e_no"
                 android:text="incorrect"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
 
                 android:layout_marginRight="20dp"
-               android:layout_alignParentEnd="true"
+                android:layout_alignParentEnd="true"
                 android:background="@drawable/yes_no_button_bg"
-               android:layout_gravity="end"
+                android:layout_gravity="end"
                 android:id="@+id/big_flip"
                 android:text="Rotate"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
         </RelativeLayout>
 
             <TextView
@@ -163,15 +163,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:layout_marginLeft="20dp"
                 android:background="@drawable/yes_no_button_bg"
                 android:id="@+id/mid_e_yes"
                 android:text="correct"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
 
                 android:layout_toEndOf="@+id/mid_e_yes"
                 android:background="@drawable/yes_no_button_bg"
@@ -179,9 +179,9 @@
                 android:id="@+id/mid_e_no"
                 android:text="incorrect"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
 
                 android:layout_marginRight="20dp"
                 android:layout_alignParentEnd="true"
@@ -190,7 +190,7 @@
                 android:id="@+id/mid_flip"
                 android:text="Rotate"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
         </RelativeLayout>
             <TextView
 
@@ -252,24 +252,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:layout_marginLeft="20dp"
                 android:background="@drawable/yes_no_button_bg"
                 android:id="@+id/small_e_yes"
                 android:text="correct"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:layout_toEndOf="@+id/small_e_yes"
                 android:layout_marginLeft="20dp"
                 android:background="@drawable/yes_no_button_bg"
                 android:id="@+id/small_e_no"
                 android:text="incorrect"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
 
                 android:layout_marginRight="20dp"
                 android:layout_alignParentEnd="true"
@@ -278,7 +278,7 @@
                 android:id="@+id/small_flip"
                 android:text="Rotate"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
         </RelativeLayout>
             <TextView
 
@@ -392,22 +392,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:layout_marginLeft="20dp"
                     android:background="@drawable/yes_no_button_bg"
                     android:id="@+id/vision_yes"
                     android:text="correct"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content" />
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:layout_toEndOf="@+id/big_e_yes"
                     android:background="@drawable/yes_no_button_bg"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/vision_no"
                     android:text="incorrect"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content" />
 
 
             </LinearLayout>

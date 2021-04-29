@@ -93,14 +93,14 @@
 
 
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:onClick="Exit"
                     android:layout_marginLeft="20dp"
                     android:background="@drawable/next_button_bg"
                     android:id="@+id/done"
                     android:text="OK"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content" />
 
 
 

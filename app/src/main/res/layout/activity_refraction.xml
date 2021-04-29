@@ -145,12 +145,12 @@
 
 
 
-                        <Button
+                        <androidx.appcompat.widget.AppCompatButton
                             android:layout_gravity="center"
                             android:id="@+id/btn_right_avg"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Average"/>
+                            android:text="Average" />
 
                         <TextView
                             android:visibility="gone"
@@ -223,12 +223,12 @@
                             android:maxLength="5"
                             android:inputType="numberDecimal|numberSigned" />
 
-                        <Button
+                        <androidx.appcompat.widget.AppCompatButton
                             android:layout_gravity="center"
                             android:id="@+id/btn_left_avg"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Average"/>
+                            android:text="Average" />
                         <TextView
                             android:visibility="gone"
                             android:id="@+id/average_left"
@@ -505,7 +505,7 @@
             android:layout_height="0.5dp"/>
 
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/submit_next_t"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -514,8 +514,7 @@
             android:layout_marginRight="30dp"
             android:background="@drawable/next_button_bg"
             android:text="@string/submit_next"
-            android:textColor="@android:color/white"
-            />
+            android:textColor="@android:color/white" />
 
     </LinearLayout>
 

@@ -434,7 +434,7 @@
 
 
 
-  <Button
+  <androidx.appcompat.widget.AppCompatButton
       android:layout_marginLeft="18dp"
       android:layout_marginRight="18dp"
       android:layout_alignParentBottom="true"
@@ -442,7 +442,7 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginTop="20dp"
-      android:background="@color/blue"
+      android:background="@color/orange"
       android:text="@string/submit"
       android:textColor="@android:color/white"
       />
