@@ -1,24 +1,19 @@
-
 package com.example.visionguardian
 
-import android.Manifest
 import android.app.Activity
 import android.app.DatePickerDialog
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.content.res.Configuration
-import android.graphics.Color
-import android.location.Address
-import android.location.Geocoder
 import android.os.Build
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
+import android.widget.DatePicker
 import android.widget.EditText
 import android.widget.RadioButton
 import android.widget.RadioGroup
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.room.Room
@@ -26,30 +21,29 @@ import com.example.visionguardian.db.MyDatabase
 import com.example.visionguardian.db.Patient
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
-import kotlinx.android.synthetic.main.activity_examination.*
 import kotlinx.android.synthetic.main.activity_registration.*
-import kotlinx.android.synthetic.main.activity_registration.back_arrow
 import java.text.SimpleDateFormat
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.util.*
 
 private const val PERMISSION_REQUEST = 10
+
 class Registration : AppCompatActivity() {
 
 
     var myDatabase: MyDatabase? = null
-    var gender="Male"
-    var currentYear=0
-    var dobYear=0
-    var currentAge=0
-
+    var gender = "Male"
+    var currentYear = 0
+    var dobYear = 0
+    var currentAge = 0
+    var cal = Calendar.getInstance()
     lateinit var mFusedLocationClient: FusedLocationProviderClient
 
-    private var permissions = arrayOf(
-            Manifest.permission.ACCESS_FINE_LOCATION,
-            Manifest.permission.ACCESS_COARSE_LOCATION
-    )
+    /*  private var permissions = arrayOf(
+              Manifest.permission.ACCESS_FINE_LOCATION,
+              Manifest.permission.ACCESS_COARSE_LOCATION
+      )*/
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,83 +51,115 @@ class Registration : AppCompatActivity() {
         setUpDB()
         loadLocate()
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
-        back_arrow.setOnClickListener { finish() }
+        back_arrow.setOnClickListener {
+            /* val intent = Intent(this, LandingActivity::class.java)
+             startActivity(intent)*/
+            finish()
+        }
 
         val sharedPreferences = getSharedPreferences("MySharedPrefCamp", MODE_PRIVATE)
-        val city= sharedPreferences.getString("city", "")
+        val city = sharedPreferences.getString("city", "")
         edt_city.setText(city)
-        val district= sharedPreferences.getString("district", "")
+        val district = sharedPreferences.getString("district", "")
         txt_dist.setText(district)
-        val state= sharedPreferences.getString("state", "")
+        val state = sharedPreferences.getString("state", "")
         text_state.setText(state)
-        val pin= sharedPreferences.getString("pincode", "")
+        val pin = sharedPreferences.getString("pincode", "")
         edt_pin.setText(pin)
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (checkPermission(permissions)) {
+        /* if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+             if (checkPermission(permissions)) {
 
-                mFusedLocationClient.lastLocation.addOnCompleteListener { task ->
-                    val location = task.result
-                    if (location == null) {
-                        // requestNewLocationData()
-                    } else {
+                 mFusedLocationClient.lastLocation.addOnCompleteListener { task ->
+                     val location = task.result
+                     if (location == null) {
+                         // requestNewLocationData()
+                     } else {
 
-                        Log.e("aaaaaaaaaaa",""+location.latitude.toString() )
-                        Log.e("aaaaaaaaaaa",""+location.longitude.toString())
-                        GetAddress(location.latitude.toString() ,  location.longitude.toString())
+                         Log.e("aaaaaaaaaaa",""+location.latitude.toString() )
+                         Log.e("aaaaaaaaaaa",""+location.longitude.toString())
+                         GetAddress(location.latitude.toString() ,  location.longitude.toString())
 
-                    }
-                }
+                     }
+                 }
 
 
-                // getLocation()
-            } else {
-                requestPermissions(permissions, PERMISSION_REQUEST)
+                 // getLocation()
+             } else {
+                 requestPermissions(permissions, PERMISSION_REQUEST)
+             }
+         } else {
+
+             // enableView()
+         }*/
+
+        /* txt_dob.setOnClickListener {
+             val c= Calendar.getInstance()
+             val year= c.get(Calendar.YEAR)
+             val month = c.get(Calendar.MONTH)
+             val day = c.get(Calendar.DAY_OF_MONTH)
+             var dpd = DatePickerDialog(this,DatePickerDialog.OnDateSetListener { view, mYear,mMonth , mDay ->
+                 val mmMonth = mMonth
+                 val date = "$mDay/$mmMonth/$mYear"
+                 dobYear=mYear
+                 txt_dob.text = date
+             },year,month,day)
+             dpd.show()
+         }*/
+
+        val dateSetListener = object : DatePickerDialog.OnDateSetListener {
+            override fun onDateSet(
+                view: DatePicker, year: Int, monthOfYear: Int,
+                dayOfMonth: Int
+            ) {
+                cal.set(Calendar.YEAR, year)
+                cal.set(Calendar.MONTH, monthOfYear)
+                cal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
+                updateDateInView()
             }
-        } else {
-
-            // enableView()
         }
 
         txt_dob.setOnClickListener {
-            val c= Calendar.getInstance()
-            val year= c.get(Calendar.YEAR)
-            val month = c.get(Calendar.MONTH)
-            val day = c.get(Calendar.DAY_OF_MONTH)
-            var dpd = DatePickerDialog(this,DatePickerDialog.OnDateSetListener { view, mYear,mMonth , mDay ->
-                val mmMonth = mMonth+1
-                val date = "$mDay/$mmMonth/$mYear"
-                dobYear=mYear
-                txt_dob.text = date
-            },year,month,day)
-            dpd.show()
+            DatePickerDialog(
+                this,
+                dateSetListener,
+                // set DatePickerDialog to point to today's date when it loads up
+                cal.get(Calendar.YEAR),
+                cal.get(Calendar.MONTH),
+                cal.get(Calendar.DAY_OF_MONTH)
+            ).show()
         }
+
+
         txt_dob.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
+                // Log.e("ddddddddddd",""+dobYear)
             }
 
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+                // Log.e("ssssssssssssssss",""+dobYear)
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                currentAge=currentYear-dobYear
+                currentAge = currentYear - dobYear
 
-                text_age1.setText(""+currentAge)
+                text_age1.setText("" + currentAge)
 
             }
         })
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val current = LocalDateTime.now()
-            currentYear= current.year
-            val formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
-            var answer: String =  current.format(formatter)
-            txt_dov.text=answer
+            currentYear = current.year
+            val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")
+            var answer: String = current.format(formatter)
+            txt_dov.text = answer
         } else {
             var date = Date()
-            val formatter = SimpleDateFormat("dd/MM/yyyy")
+            currentYear = date.year
+            val formatter = SimpleDateFormat("yyyy-MM-dd")
             val answer: String = formatter.format(date)
-            txt_dov.text=answer
+            txt_dov.text = answer
         }
 
 
@@ -142,14 +168,21 @@ class Registration : AppCompatActivity() {
 
 
         radioGender.setOnCheckedChangeListener(
-                RadioGroup.OnCheckedChangeListener { group, checkedId ->
-                    val radio_langange: RadioButton = findViewById(checkedId)
-                    gender=radio_langange.text.toString()
+            RadioGroup.OnCheckedChangeListener { group, checkedId ->
+                val radio_langange: RadioButton = findViewById(checkedId)
+                if (radio_langange.text.toString().equals(getString(R.string.male))) {
+                    gender = "Male"
+                } else if (radio_langange.text.toString().equals(getString(R.string.female))) {
+                    gender = "Female"
+                } else if (radio_langange.text.toString().equals(getString(R.string.other))) {
+                    gender = "Other"
                 }
+                gender = radio_langange.text.toString()
+            }
         )
 
         btn_add_patiant.setOnClickListener {
-            if (Validate()){
+            if (Validate()) {
                 val name = txt_name.text.toString().trim()
 
                 val middle = middle_name.text.toString().trim()
@@ -161,23 +194,22 @@ class Registration : AppCompatActivity() {
                 val age = text_age1.text.toString().trim()
                 val email = text_Email.text.toString().trim()
                 val address_line = text_Addresss.text.toString().trim()
-                val city=edt_city.text.toString().trim()
-                val dist=txt_dist.text.toString().trim()
-                val state=text_state.text.toString().trim()
-                val pin=edt_pin.text.toString().trim()
+                val city = edt_city.text.toString().trim()
+                val dist = txt_dist.text.toString().trim()
+                val state = text_state.text.toString().trim()
+                val pin = edt_pin.text.toString().trim()
 
-                val address= "$address_line,$city,$dist,$state,$pin"
-
-
+                val address = "$address_line,$city,$dist,$state,$pin"
 
 
-
-                val paitent = Patient(name, last, middle, dovisit, dob, age, gender, mobile, email, address)
+                val paitent =
+                    Patient(name, last, middle, dovisit, dob, age, gender, mobile, email, address)
                 myDatabase!!.dao()!!.patientInsertion(paitent)
+
+                /* val intent = Intent(this, LandingActivity::class.java)
+                 startActivity(intent)*/
                 finish()
             }
-
-
 
 
         }
@@ -191,12 +223,13 @@ class Registration : AppCompatActivity() {
     }
 
     private fun Validate(): Boolean {
-        if (!hasText(txt_name,"Enter First Name")) return false
-        if (!hasText(last_name,"Enter Last Name")) return false
-        if (!hasText(text_mobile,"Enter Mobile Number")) return false
-        if (!hasText(text_age1,"Enter Age")) return false
-        return  true
+        if (!hasText(txt_name, "Enter First Name")) return false
+        if (!hasText(last_name, "Enter Last Name")) return false
+        if (!hasText(text_mobile, "Enter Mobile Number")) return false
+        if (!hasText(text_age1, "Enter Age")) return false
+        return true
     }
+
     fun hasText(editText: EditText, error_message: String?): Boolean {
         val text = editText.text.toString().trim { it <= ' ' }
         editText.error = null
@@ -210,12 +243,12 @@ class Registration : AppCompatActivity() {
         return true
     }
 
-    private fun showAlertDialog(msg : String?) {
+    private fun showAlertDialog(msg: String?) {
         val alertDialog: AlertDialog.Builder = AlertDialog.Builder(this)
         alertDialog.setTitle("Data Incomplete")
         alertDialog.setMessage(msg)
         alertDialog.setPositiveButton(
-                "OK"
+            "OK"
         ) { _, _ ->
 
         }
@@ -225,6 +258,12 @@ class Registration : AppCompatActivity() {
         alert.show()
     }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+        /* val intent = Intent(this, LandingActivity::class.java)
+         startActivity(intent)
+         finish()*/
+    }
 
 
     private fun checkPermission(permissionArray: Array<String>): Boolean {
@@ -236,63 +275,63 @@ class Registration : AppCompatActivity() {
         return allSuccess
     }
 
-    override fun onRequestPermissionsResult(
-            requestCode: Int,
-            permissions: Array<out String>,
-            grantResults: IntArray
-    ) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        if (requestCode == PERMISSION_REQUEST) {
-            var allSuccess = true
-            for (i in permissions.indices) {
-                if (grantResults[i] == PackageManager.PERMISSION_DENIED) {
-                    allSuccess = false
-                    val requestAgain =
-                            Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && shouldShowRequestPermissionRationale(
-                                    permissions[i]
-                            )
-                    if (requestAgain) {
-                        Toast.makeText(this, "Permission denied", Toast.LENGTH_SHORT).show()
-                    } else {
-                        Toast.makeText(
-                                this,
-                                "Go to settings and enable the permission",
-                                Toast.LENGTH_SHORT
-                        ).show()
-                    }
-                }
-            }
+    /* override fun onRequestPermissionsResult(
+             requestCode: Int,
+             permissions: Array<out String>,
+             grantResults: IntArray
+     ) {
+         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+         if (requestCode == PERMISSION_REQUEST) {
+             var allSuccess = true
+             for (i in permissions.indices) {
+                 if (grantResults[i] == PackageManager.PERMISSION_DENIED) {
+                     allSuccess = false
+                     val requestAgain =
+                             Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && shouldShowRequestPermissionRationale(
+                                     permissions[i]
+                             )
+                     if (requestAgain) {
+                         Toast.makeText(this, "Permission denied", Toast.LENGTH_SHORT).show()
+                     } else {
+                         Toast.makeText(
+                                 this,
+                                 "Go to settings and enable the permission",
+                                 Toast.LENGTH_SHORT
+                         ).show()
+                     }
+                 }
+             }
 
-        }
-    }
+         }
+     }
+ */
 
 
+    /* fun GetAddress(latitude: String, longitude: String){
+         val geocoder: Geocoder
+         val addresses: List<Address>
+         geocoder = Geocoder(this, Locale.getDefault())
 
-    fun GetAddress(latitude: String, longitude: String){
-        val geocoder: Geocoder
-        val addresses: List<Address>
-        geocoder = Geocoder(this, Locale.getDefault())
+         addresses = geocoder.getFromLocation(
+                 latitude.toDouble(),
+                 longitude.toDouble(),
+                 1
+         ) // Here 1 represent max location result to returned, by documents it recommended 1 to 5
 
-        addresses = geocoder.getFromLocation(
-                latitude.toDouble(),
-                longitude.toDouble(),
-                1
-        ) // Here 1 represent max location result to returned, by documents it recommended 1 to 5
+         val address =
+                 addresses[0].getAddressLine(0) // If any additional address line present than only, check with max available address lines by getMaxAddressLineIndex()
+         val city = addresses[0].locality
+         val state = addresses[0].adminArea
+         val country = addresses[0].countryName
+         val postalCode = addresses[0].postalCode
+         txt_dist.setText(city)
+         text_state.setText(state)
+         edt_pin.setText(postalCode)
+        // val knownName = addresses[0].getFeatureName() // Only if available else return NULL
 
-        val address =
-                addresses[0].getAddressLine(0) // If any additional address line present than only, check with max available address lines by getMaxAddressLineIndex()
-        val city = addresses[0].locality
-        val state = addresses[0].adminArea
-        val country = addresses[0].countryName
-        val postalCode = addresses[0].postalCode
-        txt_dist.setText(city)
-        text_state.setText(state)
-        edt_pin.setText(postalCode)
-       // val knownName = addresses[0].getFeatureName() // Only if available else return NULL
-
-        Log.e("sssssssssssssssss", "" + address + "   " + city)
-    }
-
+        // Log.e("sssssssssssssssss", "" + address + "   " + city)
+     }
+ */
     private fun setLocate(Lang: String) {
 
         val locale = Locale(Lang)
@@ -313,6 +352,19 @@ class Registration : AppCompatActivity() {
         val sharedPreferences = getSharedPreferences("Settings", Activity.MODE_PRIVATE)
         val language = sharedPreferences.getString("My_Lang", "")
         setLocate(language.toString())
+    }
+
+    private fun updateDateInView() {
+        val myFormat = "yyyy-MM-dd" // mention the format you need
+        val year = "yyyy"
+        val xxx = SimpleDateFormat(year, Locale.US)
+        val sdf = SimpleDateFormat(myFormat, Locale.US)
+        txt_dob!!.text = sdf.format(cal.getTime())
+        dobYear = xxx.format(cal.getTime()).toInt()
+        // Log.e("sddddddddddddddd",""+dobYear)
+        currentAge = currentYear - dobYear
+
+        text_age1.setText("" + currentAge)
     }
 
 }

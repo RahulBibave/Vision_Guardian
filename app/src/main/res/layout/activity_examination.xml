@@ -68,39 +68,39 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-        <TextView
-            android:layout_marginTop="20dp"
-            android:id="@+id/question1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/question1"
-            android:textColor="@color/primaryText"
-            android:textSize="18sp" />
 
-        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="fill_parent"
-            android:id="@+id/radio_group1"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+                <TextView
+                    android:id="@+id/question1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/question1"
+                    android:textColor="@color/primaryText"
+                    android:textSize="18sp" />
 
-
-            <RadioButton
-                android:id="@+id/question1_choice2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checked="false"
-                android:text="@string/question1_choice2" />
-
-            <RadioButton
-                android:id="@+id/question1_choice1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checked="false"
-                android:text="@string/question1_choice1" />
+                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:id="@+id/radio_group1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
 
+                    <RadioButton
+                        android:id="@+id/question1_choice2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="@string/question1_choice2" />
 
-        </RadioGroup>
+                    <RadioButton
+                        android:id="@+id/question1_choice1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="@string/question1_choice1" />
+
+
+                </RadioGroup>
 
                 <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                     android:id="@+id/which_eye1"
@@ -359,13 +359,14 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
                     <CheckBox
                         android:id="@+id/question3_1"
                         android:layout_weight="1"
                         android:onClick="onCheckboxClicked3"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Redness" />
+                        android:text="@string/redness" />
 
                     <CheckBox
                         android:id="@+id/question3_2"
@@ -373,7 +374,7 @@
                         android:onClick="onCheckboxClicked3"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Pain" />
+                        android:text="@string/pain" />
 
                     <CheckBox
                         android:id="@+id/question3_3"
@@ -381,29 +382,32 @@
                         android:onClick="onCheckboxClicked3"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Tearing" />
+                        android:text="@string/tearing" />
 
 
 
 
                 </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
-                    <CheckBox
-                        android:id="@+id/question3_4"
-                        android:layout_weight="1"
-                        android:onClick="onCheckboxClicked3"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:text="Discharge" />
-                    <CheckBox
-                        android:id="@+id/question3_5"
-                        android:layout_weight="2"
-                        android:onClick="onCheckboxClicked3"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:text="Uncomfortable eyes" />
+
+                        <CheckBox
+                            android:id="@+id/question3_4"
+                            android:layout_weight="1"
+                            android:onClick="onCheckboxClicked3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/discharge" />
+
+                        <CheckBox
+                            android:id="@+id/question3_5"
+                            android:layout_weight="2"
+                            android:onClick="onCheckboxClicked3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/uncomfortable" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -499,7 +503,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableEnd="@drawable/ic_arrow_drop_down"
-                    android:text="Showmore..."
+                    android:text="@string/Showmore"
                     android:layout_marginBottom="10dp"
                     android:textAllCaps="false" />
 
@@ -912,7 +916,7 @@
                         android:layout_weight="0.8"
                         android:id="@+id/pastHistory_duration"
                         android:layout_width="0dp"
-                        android:hint="Duration"
+                        android:hint="@string/duration"
                         android:maxLength="2"
                         android:layout_height="wrap_content"
                         android:imeOptions="actionDone"
@@ -935,7 +939,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
-                    android:text="Addmore"
+                    android:text="@string/addmore"
                     android:layout_marginBottom="10dp"
                     android:textAllCaps="false" />
 
@@ -956,7 +960,7 @@
                         android:layout_weight="0.8"
                         android:id="@+id/pastHistory_duration1"
                         android:layout_width="0dp"
-                        android:hint="Duration"
+                        android:hint="@string/duration"
                         android:maxLength="2"
                         android:layout_height="wrap_content"
                         android:imeOptions="actionDone"
@@ -1018,7 +1022,7 @@
                       android:layout_weight="0.8"
                         android:id="@+id/question11_duration"
                         android:layout_width="0dp"
-                        android:hint="Duration"
+                        android:hint="@string/duration"
                         android:maxLength="2"
                         android:layout_height="wrap_content"
                         android:imeOptions="actionDone"
@@ -1040,7 +1044,7 @@
                     android:id="@+id/addSecond7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Addmore"
+                    android:text="@string/addmore"
                     android:layout_marginBottom="10dp"
                     android:textAllCaps="false" />
 
@@ -1060,7 +1064,7 @@
                         android:layout_weight="0.8"
                         android:id="@+id/question11_duration_1"
                         android:layout_width="0dp"
-                        android:hint="Duration"
+                        android:hint="@string/duration"
                         android:maxLength="2"
                         android:layout_height="wrap_content"
                         android:imeOptions="actionDone"
@@ -1137,67 +1141,67 @@
             android:text="@string/question11_choice9" />-->
 
 
-       </LinearLayout>
+            </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_margin="5dp"
-            android:background="@color/textColor"
-            android:layout_height="0.5dp"/>
+        <!-- <View
+             android:layout_width="match_parent"
+             android:layout_margin="5dp"
+             android:background="@color/textColor"
+             android:layout_height="0.5dp"/>
 
-        <androidx.cardview.widget.CardView
-            android:visibility="gone"
-            android:elevation="25dp"
-            app:cardCornerRadius="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <LinearLayout
-                android:id="@+id/card12"
-                android:paddingLeft="@dimen/size8dp"
-                android:paddingRight="@dimen/size8dp"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+         <androidx.cardview.widget.CardView
+             android:visibility="gone"
+             android:elevation="25dp"
+             app:cardCornerRadius="10dp"
+             android:layout_marginBottom="10dp"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+             <LinearLayout
+                 android:id="@+id/card12"
+                 android:paddingLeft="@dimen/size8dp"
+                 android:paddingRight="@dimen/size8dp"
+                 android:orientation="vertical"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/question12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="@dimen/activity_vertical_margin"
-            android:text="@string/question12"
-            android:textColor="@color/primaryText"
-            android:textSize="18sp" />
+         <TextView
+             android:id="@+id/question12"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:paddingTop="@dimen/activity_vertical_margin"
+             android:text="@string/question12"
+             android:textColor="@color/primaryText"
+             android:textSize="18sp" />
 
-        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/radio_group12"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+         <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/radio_group12"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical">
 
-            <RadioButton
-                android:id="@+id/question12_choice1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checked="false"
-                android:text="@string/question12_choice1" />
+             <RadioButton
+                 android:id="@+id/question12_choice1"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:checked="false"
+                 android:text="@string/question12_choice1" />
 
-            <RadioButton
-                android:id="@+id/question12_choice2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checked="false"
-                android:text="@string/question12_choice2" />
+             <RadioButton
+                 android:id="@+id/question12_choice2"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:checked="false"
+                 android:text="@string/question12_choice2" />
 
-        </RadioGroup>
-
-
-</LinearLayout>
-        </androidx.cardview.widget.CardView>
+         </RadioGroup>
 
 
+ </LinearLayout>
+         </androidx.cardview.widget.CardView>
 
+
+ -->
 
 
 

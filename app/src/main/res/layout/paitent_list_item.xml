@@ -56,6 +56,7 @@
         android:orientation="vertical">
 
         <LinearLayout
+            android:id="@+id/lay_up"
             android:background="@color/blue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -70,34 +71,54 @@
         </LinearLayout>
 
 
-    <LinearLayout
-        android:id="@+id/linear_view"
-        android:orientation="vertical"
-        android:paddingBottom="@dimen/size8dp"
-        android:paddingLeft="@dimen/size8dp"
-        android:paddingRight="@dimen/size8dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/txtAge"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="1dp"
-            android:textColor="@color/black" />
-        <TextView
-            android:id="@+id/txtDovisit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="1dp"
-            android:textColor="@color/black" />
-        <TextView
-            android:id="@+id/txtMobile"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="1dp"
-            android:textColor="@color/black" />
-    </LinearLayout>
+            android:layout_height="wrap_content">
 
+            <LinearLayout
+                android:id="@+id/linear_view"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/size8dp"
+                android:paddingLeft="@dimen/size8dp"
+                android:paddingRight="@dimen/size8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/txtDovisit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/txtMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <!-- <LinearLayout
+                 android:gravity="center"
+                 android:layout_alignParentEnd="true"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content">
+                 <ImageView
+                     android:layout_marginRight="10dp"
+                     android:src="@drawable/ic_upload"
+                     android:layout_width="80dp"
+                     android:layout_height="80dp"/>
+             </LinearLayout>-->
+
+        </RelativeLayout>
 
     </LinearLayout>
 

@@ -20,7 +20,7 @@
         <item name="spinBars">true</item>
         <item name="color">@android:color/white</item>
     </style>
-
+    ]
 
 
     <style name="MyDrawerArrowToggle" parent="Widget.AppCompat.DrawerArrowToggle">
@@ -28,7 +28,6 @@
     </style>
 
     <color name="orange">#FF4E17</color>
-
 
 
 </resources>

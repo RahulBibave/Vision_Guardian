@@ -7,7 +7,6 @@ import android.content.res.Configuration
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
@@ -15,9 +14,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.room.Room
 import com.example.visionguardian.db.ExaminationData
 import com.example.visionguardian.db.MyDatabase
-import kotlinx.android.synthetic.main.activity_examination.*
-import kotlinx.android.synthetic.main.activity_refraction.*
-import kotlinx.android.synthetic.main.activity_registration.*
 import kotlinx.android.synthetic.main.activity_tourch_light_examination.*
 import java.text.SimpleDateFormat
 import java.time.LocalDateTime
@@ -34,6 +30,7 @@ class TourchLightExamination : AppCompatActivity() {
     var eyelidsRight = ""
     var eyelidsLeft = ""
     var eyelashesLeft = ""
+
     var eyelashesRight = ""
     var whiteRight = ""
     var whiteLeft = ""
@@ -53,6 +50,12 @@ class TourchLightExamination : AppCompatActivity() {
     var ques5 = ""
     var ques6 = ""
     var ques6_1 = ""
+
+    var Q6_op = ""
+    var Q6_duration = ""
+    var Q7_op = ""
+    var Q7_duration = ""
+
 
     var ques7 = ""
     var ques8 = ""
@@ -80,18 +83,31 @@ class TourchLightExamination : AppCompatActivity() {
     var cylinderL = ""
     var axisR = ""
     var axisL = ""
-    var dateOfExam=""
+    var dateOfExam = ""
 
-    var flagDev=1
-    var flagsize=1
-    var flageyelids=1
-    var flageyelashes=1
-    var flageyeWhite=1
-    var flageyeBlack=1
-    var flageyePupile=1
-    var flageyeInjury=1
-    var flageyeFB=1
+    var flagDev = 1
+    var flagsize = 1
+    var flageyelids = 1
+    var flageyelashes = 1
+    var flageyeWhite = 1
+    var flageyeBlack = 1
+    var flageyePupile = 1
+    var flageyeInjury = 1
+    var flageyeFB = 1
     val REQUEST_CODE = 1
+
+    var sp_R = ""
+    var sp_L = ""
+    var cy_R = ""
+    var cy_L = ""
+    var axis_R = ""
+    var axis_L = ""
+    var sub_visionR = ""
+    var sub_visionL = ""
+    var sub_AddR = ""
+    var sub_AddL = ""
+    var sub_NVR = ""
+    var sub_NVL = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -102,21 +118,20 @@ class TourchLightExamination : AppCompatActivity() {
 
 
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        dateOfExam = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val current = LocalDateTime.now()
             val formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
-            var answer: String =  current.format(formatter)
-            dateOfExam=answer
+            var answer: String = current.format(formatter)
+            answer
         } else {
             var date = Date()
             val formatter = SimpleDateFormat("dd/MM/yyyy")
             val answer: String = formatter.format(date)
-            dateOfExam=answer
+            answer
         }
 
 
-
-       var back_arrow=findViewById<ImageView>(R.id.back_arrow)
+        var back_arrow = findViewById<ImageView>(R.id.back_arrow)
         back_arrow.setOnClickListener { finish() }
 
         radio_deviation_right.setOnCheckedChangeListener(
@@ -126,8 +141,13 @@ class TourchLightExamination : AppCompatActivity() {
                 if (flagDev == 3) {
                     card_t1.setBackgroundColor(Color.GRAY)
                 }
+                if (radio_langange.text.toString() == getString(R.string.absent)) {
+                    devRight = "Absent"
+                } else if (radio_langange.text.toString() == getString(R.string.present)) {
+                    devRight = "Present"
+                }
 
-                devRight = radio_langange.text.toString()
+                // devRight = radio_langange.text.toString()
                 //  Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
             }
         )
@@ -140,7 +160,12 @@ class TourchLightExamination : AppCompatActivity() {
                     card_t1.setBackgroundColor(Color.GRAY)
                 }
                 //  flag += 1
-                devLeft = radio_langange.text.toString()
+                if (radio_langange.text.toString() == getString(R.string.absent)) {
+                    devLeft = "Absent"
+                } else if (radio_langange.text.toString() == getString(R.string.present)) {
+                    devLeft = "Present"
+                }
+                // devLeft = radio_langange.text.toString()
                 // Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
             }
         )
@@ -154,7 +179,12 @@ class TourchLightExamination : AppCompatActivity() {
                 }
 
                 //  flag += 1
-                sizeRight = radio_langange.text.toString()
+                if (radio_langange.text.toString() == getString(R.string.yes)) {
+                    sizeRight = "Yes"
+                } else if (radio_langange.text.toString() == getString(R.string.no)) {
+                    sizeRight = "No"
+                }
+                // sizeRight = radio_langange.text.toString()
                 //  Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
             }
         )
@@ -166,8 +196,13 @@ class TourchLightExamination : AppCompatActivity() {
                 if (flagsize == 3) {
                     card_t2.setBackgroundColor(Color.GRAY)
                 }
+                if (radio_langange.text.toString() == getString(R.string.yes)) {
+                    sizeLeft = "Yes"
+                } else if (radio_langange.text.toString() == getString(R.string.no)) {
+                    sizeLeft = "No"
+                }
                 //  flag += 1
-                sizeLeft = radio_langange.text.toString()
+                //  sizeLeft = radio_langange.text.toString()
                 //  Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
             }
         )
@@ -180,9 +215,26 @@ class TourchLightExamination : AppCompatActivity() {
                 if (flageyelids == 3) {
                     card_t3.setBackgroundColor(Color.GRAY)
                 }
+                when {
+                    radio_langange.text.toString() == getString(R.string.normal) -> {
+                        eyelidsRight = "Normal"
+                    }
+                    radio_langange.text.toString() == getString(R.string.diffuse) -> {
+                        eyelidsRight = "Diffuse swelling"
+                    }
+                    radio_langange.text.toString() == getString(R.string.whitescale) -> {
+                        eyelidsRight = "White scales on the lid margin"
+                    }
+                    radio_langange.text.toString() == getString(R.string.stye) -> {
+                        eyelidsRight = "Stye / chalazion"
+                    }
+                    radio_langange.text.toString() == getString(R.string.abnormal) -> {
+                        eyelidsRight = "Abnormal closure"
+                    }
+                }
 
                 //  flag += 1
-                eyelidsRight = radio_langange.text.toString()
+                // eyelidsRight = radio_langange.text.toString()
                 //  Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
             }
         )
@@ -194,7 +246,24 @@ class TourchLightExamination : AppCompatActivity() {
                     card_t3.setBackgroundColor(Color.GRAY)
                 }
                 //  flag += 1
-                eyelidsLeft = radio_langange.text.toString()
+                when {
+                    radio_langange.text.toString() == getString(R.string.normal) -> {
+                        eyelidsLeft = "Normal"
+                    }
+                    radio_langange.text.toString() == getString(R.string.diffuse) -> {
+                        eyelidsLeft = "Diffuse swelling"
+                    }
+                    radio_langange.text.toString() == getString(R.string.whitescale) -> {
+                        eyelidsLeft = "White scales on the lid margin"
+                    }
+                    radio_langange.text.toString() == getString(R.string.stye) -> {
+                        eyelidsLeft = "Stye / chalazion"
+                    }
+                    radio_langange.text.toString() == getString(R.string.abnormal) -> {
+                        eyelidsLeft = "Abnormal closure"
+                    }
+                }
+                // eyelidsLeft = radio_langange.text.toString()
                 //   Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
             }
         )
@@ -209,8 +278,19 @@ class TourchLightExamination : AppCompatActivity() {
                     card_t4.setBackgroundColor(Color.GRAY)
                 }
 
+                when {
+                    radio_langange.text.toString() == getString(R.string.normal) -> {
+                        eyelashesRight = "Normal"
+                    }
+                    radio_langange.text.toString() == getString(R.string.lashes) -> {
+                        eyelashesRight = "Lashes facing inward"
+                    }
+                    radio_langange.text.toString() == getString(R.string.crusting) -> {
+                        eyelashesRight = "Crusting"
+                    }
+                }
                 //  flag += 1
-                eyelashesRight = radio_langange.text.toString()
+                //eyelashesRight = radio_langange.text.toString()
                 //  Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
             }
         )
@@ -221,8 +301,19 @@ class TourchLightExamination : AppCompatActivity() {
                 if (flageyelashes == 3) {
                     card_t4.setBackgroundColor(Color.GRAY)
                 }
+                when {
+                    radio_langange.text.toString() == getString(R.string.normal) -> {
+                        eyelashesLeft = "Normal"
+                    }
+                    radio_langange.text.toString() == getString(R.string.lashes) -> {
+                        eyelashesLeft = "Lashes facing inward"
+                    }
+                    radio_langange.text.toString() == getString(R.string.crusting) -> {
+                        eyelashesLeft = "Crusting"
+                    }
+                }
                 //  flag += 1
-                eyelashesLeft = radio_langange.text.toString()
+                //eyelashesLeft = radio_langange.text.toString()
                 //  Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
             }
         )
@@ -237,8 +328,22 @@ class TourchLightExamination : AppCompatActivity() {
                     card_t5.setBackgroundColor(Color.GRAY)
                 }
 
+                when {
+                    radio_langange.text.toString() == getString(R.string.whitewith) -> {
+                        whiteRight = "White with few veins"
+                    }
+                    radio_langange.text.toString() == getString(R.string.red) -> {
+                        whiteRight = "Red "
+                    }
+                    radio_langange.text.toString() == getString(R.string.whitest) -> {
+                        whiteRight = "Whitish mass present"
+                    }
+                    radio_langange.text.toString() == getString(R.string.other) -> {
+                        whiteRight = "Other"
+                    }
+                }
                 //  flag += 1
-                whiteRight = radio_langange.text.toString()
+                // whiteRight = radio_langange.text.toString()
                 // Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
             }
         )
@@ -250,7 +355,21 @@ class TourchLightExamination : AppCompatActivity() {
                     card_t5.setBackgroundColor(Color.GRAY)
                 }
                 //  flag += 1
-                whiteLeft = radio_langange.text.toString()
+                when {
+                    radio_langange.text.toString() == getString(R.string.whitewith) -> {
+                        whiteLeft = "White with few veins"
+                    }
+                    radio_langange.text.toString() == getString(R.string.red) -> {
+                        whiteLeft = "Red "
+                    }
+                    radio_langange.text.toString() == getString(R.string.whitest) -> {
+                        whiteLeft = "Whitish mass present"
+                    }
+                    radio_langange.text.toString() == getString(R.string.other) -> {
+                        whiteLeft = "Other"
+                    }
+                }
+                // whiteLeft = radio_langange.text.toString()
                 //  Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
             }
         )
@@ -266,8 +385,19 @@ class TourchLightExamination : AppCompatActivity() {
                     card_t6.setBackgroundColor(Color.GRAY)
                 }
 
+                when {
+                    radio_langange.text.toString() == getString(R.string.bkackandsk) -> {
+                        blackRight = "Black and shiny "
+                    }
+                    radio_langange.text.toString() == getString(R.string.whiteorgrey) -> {
+                        blackRight = "White or grey areas "
+                    }
+                    radio_langange.text.toString() == getString(R.string.foreign) -> {
+                        blackRight = "Foreign body "
+                    }
+                }
                 //  flag += 1
-                blackRight = radio_langange.text.toString()
+                // blackRight = radio_langange.text.toString()
                 //    Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
             }
         )
@@ -279,7 +409,18 @@ class TourchLightExamination : AppCompatActivity() {
                     card_t6.setBackgroundColor(Color.GRAY)
                 }
                 //  flag += 1
-                blackLeft = radio_langange.text.toString()
+                when {
+                    radio_langange.text.toString() == getString(R.string.bkackandsk) -> {
+                        blackLeft = "Black and shiny "
+                    }
+                    radio_langange.text.toString() == getString(R.string.whiteorgrey) -> {
+                        blackLeft = "White or grey areas "
+                    }
+                    radio_langange.text.toString() == getString(R.string.foreign) -> {
+                        blackLeft = "Foreign body "
+                    }
+                }
+                // blackLeft = radio_langange.text.toString()
                 //   Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
             }
         )
@@ -296,8 +437,13 @@ class TourchLightExamination : AppCompatActivity() {
                     card_t7.setBackgroundColor(Color.GRAY)
                 }
 
+                if (radio_langange.text.toString() == getString(R.string.black)) {
+                    pupilRight = "Black "
+                } else if (radio_langange.text.toString() == getString(R.string.whiteorgrey)) {
+                    pupilRight = "White or grey areas "
+                }
                 //  flag += 1
-                pupilRight = radio_langange.text.toString()
+                // pupilRight = radio_langange.text.toString()
                 //   Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
             }
         )
@@ -308,8 +454,13 @@ class TourchLightExamination : AppCompatActivity() {
                 if (flageyePupile == 3) {
                     card_t7.setBackgroundColor(Color.GRAY)
                 }
+                if (radio_langange.text.toString() == getString(R.string.black)) {
+                    pupilLeft = "Black "
+                } else if (radio_langange.text.toString() == getString(R.string.whiteorgrey)) {
+                    pupilLeft = "White or grey areas "
+                }
                 //  flag += 1
-                pupilLeft = radio_langange.text.toString()
+                // pupilLeft = radio_langange.text.toString()
                 //   Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
             }
         )
@@ -322,8 +473,13 @@ class TourchLightExamination : AppCompatActivity() {
                     card_t8.setBackgroundColor(Color.GRAY)
                 }
 
+                if (radio_langange.text.toString() == getString(R.string.yes)) {
+                    externalRight = "Yes"
+                } else if (radio_langange.text.toString() == getString(R.string.no)) {
+                    externalRight = "No"
+                }
                 //  flag += 1
-                externalRight = radio_langange.text.toString()
+                //externalRight = radio_langange.text.toString()
                 // Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
             }
         )
@@ -334,8 +490,13 @@ class TourchLightExamination : AppCompatActivity() {
                 if (flageyeInjury == 3) {
                     card_t8.setBackgroundColor(Color.GRAY)
                 }
+                if (radio_langange.text.toString() == getString(R.string.yes)) {
+                    externalLeft = "Yes"
+                } else if (radio_langange.text.toString() == getString(R.string.no)) {
+                    externalLeft = "No"
+                }
                 //  flag += 1
-                externalLeft = radio_langange.text.toString()
+                //externalLeft = radio_langange.text.toString()
                 //  Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
             }
         )
@@ -349,9 +510,13 @@ class TourchLightExamination : AppCompatActivity() {
                 if (flageyeFB == 3) {
                     card_t9.setBackgroundColor(Color.GRAY)
                 }
-
+                if (radio_langange.text.toString() == getString(R.string.yes)) {
+                    foreignRight = "Yes"
+                } else if (radio_langange.text == getString(R.string.no)) {
+                    foreignRight = "No"
+                }
                 //  flag += 1
-                foreignRight = radio_langange.text.toString()
+                // foreignRight = radio_langange.text.toString()
                 //  Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
             }
         )
@@ -362,8 +527,13 @@ class TourchLightExamination : AppCompatActivity() {
                 if (flageyeFB == 3) {
                     card_t9.setBackgroundColor(Color.GRAY)
                 }
+                if (radio_langange.text.toString() == getString(R.string.yes)) {
+                    foreignLeft = "Yes"
+                } else if (radio_langange.text == getString(R.string.no)) {
+                    foreignLeft = "No"
+                }
                 //  flag += 1
-                foreignLeft = radio_langange.text.toString()
+                // foreignLeft = radio_langange.text.toString()
 
                 // Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
             }
@@ -374,12 +544,13 @@ class TourchLightExamination : AppCompatActivity() {
 
 
         submit.setOnClickListener {
-            RefferDialog()
+            ReferDialog()
         }
 
 
     }
-    fun submitData(reffer: String){
+
+    private fun submitData(reffer: String) {
         val examination = ExaminationData(
             ques1,
             ques2,
@@ -393,7 +564,7 @@ class TourchLightExamination : AppCompatActivity() {
             ques9,
             ques10,
             ques11,
-            ques12,
+            ques12, Q6_op, Q6_duration, Q7_op, Q7_duration,
             patientID,
             disWithoutGL,
             disWithoutGR,
@@ -427,7 +598,19 @@ class TourchLightExamination : AppCompatActivity() {
             externalRight,
             foreignRight,
             foreignLeft,
-            dateOfExam
+            dateOfExam,
+            sp_R,
+            sp_L,
+            cy_R,
+            cy_L,
+            axis_R,
+            axis_L,
+            sub_visionR,
+            sub_visionL,
+            sub_AddR,
+            sub_AddL,
+            sub_NVR,
+            sub_NVL, ""
         )
         myDatabase!!.examDao()!!.patientExamInsertion(examination)
         val sharedPreferences = getSharedPreferences("MySharedPref", MODE_PRIVATE)
@@ -460,7 +643,7 @@ class TourchLightExamination : AppCompatActivity() {
         alert.show()
     }
 
-    fun getShareData() {
+    private fun getShareData() {
         val sharedPreferences = getSharedPreferences("MySharedPref", MODE_PRIVATE)
         sharedPreferences.getString("username", "defaultName")
         ques1 = sharedPreferences.getString("history_1", "").toString()
@@ -475,7 +658,13 @@ class TourchLightExamination : AppCompatActivity() {
         ques9 = sharedPreferences.getString("history_9", "").toString()
         ques10 = sharedPreferences.getString("history_10", "").toString()
         ques11 = sharedPreferences.getString("history_11", "").toString()
-        ques12 = sharedPreferences.getString("history_12", "").toString()
+        //note added on 23 Aug 2021
+        ques12 = sharedPreferences.getString("note", "").toString()
+        Q6_op = sharedPreferences.getString("Q6_op", "").toString()
+        Q6_duration = sharedPreferences.getString("Q6_duration", "").toString()
+        Q7_op = sharedPreferences.getString("Q7_op", "").toString()
+        Q7_duration = sharedPreferences.getString("Q7_duration", "").toString()
+
         patientID = sharedPreferences.getInt("p_ID", 1)
 
         disWithoutGL = sharedPreferences.getString("DVWithoutL", "").toString()
@@ -488,29 +677,43 @@ class TourchLightExamination : AppCompatActivity() {
         nearVisionWithOutR = sharedPreferences.getString("NVWithoutR", "").toString()
         catOfVisual = sharedPreferences.getString("catOfVI", "").toString()
 
-        sphereR =sharedPreferences.getString("sphereR", "").toString()
-        sphereL =sharedPreferences.getString("sphereL", "").toString()
+        sphereR = sharedPreferences.getString("sphereR", "").toString()
+        sphereL = sharedPreferences.getString("sphereL", "").toString()
         cylinderR = sharedPreferences.getString("cylinderR", "").toString()
-        cylinderL =sharedPreferences.getString("cylinderL", "").toString()
+        cylinderL = sharedPreferences.getString("cylinderL", "").toString()
         axisR = sharedPreferences.getString("axisR", "").toString()
-        axisL =sharedPreferences.getString("axisL", "").toString()
+        axisL = sharedPreferences.getString("axisL", "").toString()
+
+        sp_R = sharedPreferences.getString("sphereRAuto", "").toString()
+        sp_L = sharedPreferences.getString("sphereLAuto", "").toString()
+        cy_R = sharedPreferences.getString("cylinderRAuto", "").toString()
+        cy_L = sharedPreferences.getString("cylinderLAuto", "").toString()
+        axis_R = sharedPreferences.getString("axisRAuto", "").toString()
+        axis_L = sharedPreferences.getString("axisLAuto", "").toString()
+
+        sub_visionR = sharedPreferences.getString("sub_visionR", "").toString()
+        sub_visionL = sharedPreferences.getString("sub_visionL", "").toString()
+        sub_AddR = sharedPreferences.getString("sub_AddR", "").toString()
+        sub_AddL = sharedPreferences.getString("sub_AddL", "").toString()
+        sub_NVR = sharedPreferences.getString("sub_NVR", "").toString()
+        sub_NVL = sharedPreferences.getString("sub_NVL", "").toString()
 
     }
 
-    fun RefferDialog(){
+    private fun ReferDialog() {
         val builder = AlertDialog.Builder(this)
-        builder.setMessage("Do you want to Refer ?")
-                .setCancelable(false)
-                .setPositiveButton("Yes") { dialog, id ->
-                    val intent = Intent(this, OpenCamera::class.java)
-                    startActivityForResult(intent, REQUEST_CODE)
-                  // submitData("Yes")
+        builder.setMessage(getString(R.string.doureffer))
+            .setCancelable(false)
+            .setPositiveButton("Yes") { dialog, id ->
+                /*val intent = Intent(this, OpenCamera::class.java)
+                startActivityForResult(intent, REQUEST_CODE)*/
+                submitData("Yes")
 
-                }
-                .setNegativeButton("No") { dialog, id ->
-                    submitData("NO")
-                    dialog.dismiss()
-                }
+            }
+            .setNegativeButton("No") { dialog, id ->
+                submitData("No")
+                dialog.dismiss()
+            }
         val alert = builder.create()
         alert.show()
     }
@@ -520,7 +723,6 @@ class TourchLightExamination : AppCompatActivity() {
         when (view.getId()) {
 
             R.id.right_eye_normal -> if (checked) {
-
                 devRight = "Absent"
                 devNormalR.isChecked = true
                 sizeRight = "Yes"
@@ -573,6 +775,7 @@ class TourchLightExamination : AppCompatActivity() {
             submitData("Yes")
         }
     }
+
     private fun setLocate(Lang: String) {
 
         val locale = Locale(Lang)

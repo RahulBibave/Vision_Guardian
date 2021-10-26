@@ -22,20 +22,21 @@
         android:title="@string/scheme"/>
     <item
         android:id="@+id/mGk"
-        android:title="@string/generalcare"/>
+        android:title="@string/generalcare" />
 
-     <item
+    <item
         android:id="@+id/mCamp"
-        android:title="@string/setlocation"/>
+        android:title="@string/setlocation" />
 
     <item
         android:id="@+id/mSelectLang"
-        android:title="@string/changlang"
-        />
-   <!-- <item
-        android:id="@+id/"
-        android:title="Change Language"/>-->
-
+        android:title="@string/changlang" />
+    <item
+        android:id="@+id/mHelp"
+        android:title="Help" />
+    <item
+        android:id="@+id/mLogOut"
+        android:title="Signout" />
 
 
 </menu>

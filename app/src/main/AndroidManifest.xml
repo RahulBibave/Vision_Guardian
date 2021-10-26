@@ -1,20 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.visionguardian">
-
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!--
+     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/applogo"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:supportsRtl="true"
-        android:theme="@style/Theme.VisionGuardian">
-        <activity android:name=".Manual"></activity>
+        android:theme="@style/Theme.VisionGuardian"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".GetRefferal"></activity>
+        <activity android:name=".ActivityHelp" />
+        <activity android:name=".StorageDemo" />
+        <activity android:name=".Manual" />
         <activity
             android:name=".VisionImage"
             android:screenOrientation="portrait" />
@@ -31,10 +39,10 @@
             android:name=".GeneralCare"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".RefferalDetails"
+            android:name=".ReferralDetails"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ListOfPaitent"
+            android:name=".ListOfPatent"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Referral"
@@ -52,10 +60,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Awarness_List"
+            android:name=".Awareness_List"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Awarness"
+            android:name=".Awareness"
             android:screenOrientation="portrait" />
         <activity
             android:name=".TourchLightExamination"

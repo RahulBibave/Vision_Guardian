@@ -33,842 +33,1362 @@
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
+
             <ImageView
                 android:visibility="gone"
                 android:layout_marginEnd="20dp"
                 android:layout_alignParentRight="true"
                 android:src="@drawable/logo"
                 android:layout_width="20dp"
-                android:layout_height="20dp"/>
+                android:layout_height="20dp" />
+
+            <Switch
+                android:layout_alignParentRight="true"
+                android:id="@+id/togglebuttonVS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
         </RelativeLayout>
 
 
     </androidx.appcompat.widget.Toolbar>
 
     <ScrollView
+        android:id="@+id/new_scroll"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-    <LinearLayout
-        android:background="@color/blue"
+
+        <LinearLayout
+            android:background="@color/blue"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/size8dp"
+            android:paddingRight="@dimen/size8dp"
+            android:paddingTop="@dimen/size8dp">
+
+            <androidx.cardview.widget.CardView
+
+
+                android:layout_marginTop="15dp"
+                android:elevation="25dp"
+                app:cardCornerRadius="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:paddingLeft="@dimen/size8dp"
+                    android:paddingRight="@dimen/size8dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+
+                        android:layout_marginTop="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/vs1"
+                        android:textColor="@color/primaryText"
+                        android:textSize="18sp" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_marginBottom="10dp"
+
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/vs_right"
+                                android:textColor="@color/primaryText"
+                                android:textSize="18sp" />
+
+
+                            <!-- <Spinner
+                                 android:layout_gravity="center"
+                                 android:layout_marginTop="15dp"
+                                 android:layout_weight="1"
+                                 android:id="@+id/axisSpinnerR"
+                                 android:layout_centerInParent="true"
+
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+
+                                 />-->
+                            <Spinner
+                                android:id="@+id/spinnerWithoutR"
+                                android:layout_gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="15dp" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_margin="10dp"
+                            android:background="@color/textColor"
+                            android:layout_height="match_parent" />
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/vs_left"
+                                android:textColor="@color/primaryText"
+                                android:textSize="18sp" />
+
+
+                            <!--  <Spinner
+                                  android:layout_gravity="center"
+                                  android:textAlignment="center"
+                                  android:layout_marginTop="15dp"
+                                  android:layout_weight="1"
+                                  android:background="@drawable/bg_dropdown"
+                                  android:layout_centerInParent="true"
+                                  android:id="@+id/axisSpinnerL"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+
+                                  />-->
+
+                            <Spinner
+                                android:layout_gravity="center"
+                                android:id="@+id/spinnerWithoutL"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="15dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+
+
+                android:layout_marginTop="15dp"
+                android:elevation="25dp"
+                app:cardCornerRadius="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:paddingLeft="@dimen/size8dp"
+                    android:paddingRight="@dimen/size8dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+
+                        android:layout_marginTop="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/vs2"
+                        android:textColor="@color/primaryText"
+                        android:textSize="18sp" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_marginBottom="10dp"
+
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/vs_right"
+                                android:textColor="@color/primaryText"
+                                android:textSize="18sp" />
+
+
+                            <!-- <Spinner
+                                 android:layout_gravity="center"
+                                 android:layout_marginTop="15dp"
+                                 android:layout_weight="1"
+                                 android:id="@+id/axisSpinnerR"
+                                 android:layout_centerInParent="true"
+
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+
+                                 />-->
+                            <Spinner
+                                android:id="@+id/spinnerWithR"
+                                android:layout_gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="15dp" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_margin="10dp"
+                            android:background="@color/textColor"
+                            android:layout_height="match_parent" />
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/vs_left"
+                                android:textColor="@color/primaryText"
+                                android:textSize="18sp" />
+
+
+                            <!--  <Spinner
+                                  android:layout_gravity="center"
+                                  android:textAlignment="center"
+                                  android:layout_marginTop="15dp"
+                                  android:layout_weight="1"
+                                  android:background="@drawable/bg_dropdown"
+                                  android:layout_centerInParent="true"
+                                  android:id="@+id/axisSpinnerL"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+
+                                  />-->
+
+                            <Spinner
+                                android:layout_gravity="center"
+                                android:id="@+id/spinnerWithL"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="15dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+
+
+                android:layout_marginTop="15dp"
+                android:elevation="25dp"
+                app:cardCornerRadius="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:paddingLeft="@dimen/size8dp"
+                    android:paddingRight="@dimen/size8dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+
+                        android:layout_marginTop="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/vs3"
+                        android:textColor="@color/primaryText"
+                        android:textSize="18sp" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_marginBottom="10dp"
+
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/vs_right"
+                                android:textColor="@color/primaryText"
+                                android:textSize="18sp" />
+
+
+                            <!-- <Spinner
+                                 android:layout_gravity="center"
+                                 android:layout_marginTop="15dp"
+                                 android:layout_weight="1"
+                                 android:id="@+id/axisSpinnerR"
+                                 android:layout_centerInParent="true"
+
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+
+                                 />-->
+                            <Spinner
+                                android:id="@+id/spinnerNearWithoutR"
+                                android:layout_gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="15dp" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_margin="10dp"
+                            android:background="@color/textColor"
+                            android:layout_height="match_parent" />
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/vs_left"
+                                android:textColor="@color/primaryText"
+                                android:textSize="18sp" />
+
+
+                            <!--  <Spinner
+                                  android:layout_gravity="center"
+                                  android:textAlignment="center"
+                                  android:layout_marginTop="15dp"
+                                  android:layout_weight="1"
+                                  android:background="@drawable/bg_dropdown"
+                                  android:layout_centerInParent="true"
+                                  android:id="@+id/axisSpinnerL"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+
+                                  />-->
+
+                            <Spinner
+                                android:layout_gravity="center"
+                                android:id="@+id/spinnerNearWithoutL"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="15dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+
+
+                android:layout_marginTop="15dp"
+                android:elevation="25dp"
+                app:cardCornerRadius="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:paddingLeft="@dimen/size8dp"
+                    android:paddingRight="@dimen/size8dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+
+                        android:layout_marginTop="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/vs4"
+                        android:textColor="@color/primaryText"
+                        android:textSize="18sp" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_marginBottom="10dp"
+
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/vs_right"
+                                android:textColor="@color/primaryText"
+                                android:textSize="18sp" />
+
+
+                            <!-- <Spinner
+                                 android:layout_gravity="center"
+                                 android:layout_marginTop="15dp"
+                                 android:layout_weight="1"
+                                 android:id="@+id/axisSpinnerR"
+                                 android:layout_centerInParent="true"
+
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+
+                                 />-->
+                            <Spinner
+                                android:id="@+id/spinnerNearWithR"
+                                android:layout_gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="15dp" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_margin="10dp"
+                            android:background="@color/textColor"
+                            android:layout_height="match_parent" />
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/vs_left"
+                                android:textColor="@color/primaryText"
+                                android:textSize="18sp" />
+
+
+                            <!--  <Spinner
+                                  android:layout_gravity="center"
+                                  android:textAlignment="center"
+                                  android:layout_marginTop="15dp"
+                                  android:layout_weight="1"
+                                  android:background="@drawable/bg_dropdown"
+                                  android:layout_centerInParent="true"
+                                  android:id="@+id/axisSpinnerL"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+
+                                  />-->
+
+                            <Spinner
+                                android:layout_gravity="center"
+                                android:id="@+id/spinnerNearWithL"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="15dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/submit_next_new"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/next_button_bg"
+                android:text="@string/submit_next"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </ScrollView>
+
+
+    <ScrollView
+        android:id="@+id/scroll_1"
+
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:paddingBottom="@dimen/activity_vertical_margin"
-        android:paddingLeft="@dimen/size8dp"
-        android:paddingRight="@dimen/size8dp"
-        android:paddingTop="@dimen/size8dp">
+        android:layout_height="wrap_content">
 
-
-
-<androidx.cardview.widget.CardView
-            android:layout_marginTop="10dp"
-            android:elevation="25dp"
-            app:cardCornerRadius="10dp"
-            android:layout_marginBottom="10dp"
+        <LinearLayout
+            android:background="@color/blue"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <LinearLayout
-                android:id="@+id/card_1"
-                android:paddingLeft="@dimen/size8dp"
-                android:paddingRight="@dimen/size8dp"
-                android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/size8dp"
+            android:paddingRight="@dimen/size8dp"
+            android:paddingTop="@dimen/size8dp">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginTop="10dp"
+                android:elevation="25dp"
+                app:cardCornerRadius="10dp"
+                android:layout_marginBottom="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-
-           <TextView
-            android:layout_marginTop="20dp"
-            android:id="@+id/visions1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/vs1"
-            android:textColor="@color/primaryText"
-            android:textSize="18sp" />
-
-
-        <RelativeLayout
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        <TextView
-
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/vs_right"
-            android:textColor="@color/primaryText"
-            android:textSize="18sp" />
-                <ImageView
-                    android:id="@+id/without_R"
-                    android:layout_gravity="end"
-                    android:layout_alignParentEnd="true"
-                    android:gravity="center_vertical"
-                    android:src="@drawable/ic_photo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-        </RelativeLayout>
-        <RadioGroup
-            android:id="@+id/redio_gp1_1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
-
-                <RadioButton
-                    android:fontFamily="@font/roboto_bold"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/distance_vision1"
-
-                    />
-
-                <RadioButton
-                    android:buttonTint="#FF0000"
-                    android:fontFamily="@font/roboto_bold"
-                    android:textColor="#FF0000"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/distance_vision2"
-
-                       />
-
-
-                <RadioButton
-                    android:id="@+id/without_R_brown"
-                    android:buttonTint="#DC700D"
-                    android:textColor="#DC700D"
-                    android:fontFamily="@font/roboto_bold"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/distance_vision3"
-
-                   />
-
-                <RadioButton
-                    android:id="@+id/without_R_yellow"
-                    android:buttonTint="#fbc004"
-                    android:textColor="#fbc004"
-                    android:fontFamily="@font/roboto_bold"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/distance_vision4"
-
-                    />
-            <RadioButton
-                android:id="@+id/without_R_green"
-                android:buttonTint="#2cab6d"
-                android:textColor="#2cab6d"
-                android:fontFamily="@font/roboto_bold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/distance_vision5"
-
-                />
-
-        </RadioGroup>
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_margin="5dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:background="@color/textColor"
-                    android:layout_height="0.5dp"/>
-
-                <RelativeLayout
-                    android:layout_marginTop="10dp"
+                <LinearLayout
+                    android:id="@+id/card_1"
+                    android:paddingLeft="@dimen/size8dp"
+                    android:paddingRight="@dimen/size8dp"
+                    android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-                    <TextView
 
+
+                    <TextView
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/visions1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/vs_left"
+                        android:text="@string/vs1"
                         android:textColor="@color/primaryText"
                         android:textSize="18sp" />
-                    <ImageView
-                        android:id="@+id/without_L"
-                        android:layout_gravity="end"
-                        android:layout_alignParentEnd="true"
-                        android:gravity="center_vertical"
-                        android:src="@drawable/ic_photo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                </RelativeLayout>
-        <RadioGroup
-            android:id="@+id/redio_gp1_2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-           >
 
 
-                <RadioButton
-                    android:fontFamily="@font/roboto_bold"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/distance_vision1"
+                    <RelativeLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
-                    />
+                        <TextView
 
-                <RadioButton
-                    android:buttonTint="#FF0000"
-                    android:fontFamily="@font/roboto_bold"
-                    android:textColor="#FF0000"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/distance_vision2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/vs_right"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
 
-                       />
+                        <ImageView
+                            android:id="@+id/without_R"
+                            android:layout_gravity="end"
+                            android:layout_alignParentEnd="true"
+                            android:gravity="center_vertical"
+                            android:src="@drawable/ic_photo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+                    <RadioGroup
+                        android:id="@+id/redio_gp1_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RadioButton
+                            android:fontFamily="@font/roboto_bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/distance_vision1"
+
+                            />
+
+                        <RadioButton
+                            android:buttonTint="#FF0000"
+                            android:fontFamily="@font/roboto_bold"
+                            android:textColor="#FF0000"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/distance_vision2"
+
+                            />
 
 
-                <RadioButton
-                    android:id="@+id/without_L_brown"
-                    android:buttonTint="#DC700D"
-                    android:textColor="#DC700D"
-                    android:fontFamily="@font/roboto_bold"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/distance_vision3"
+                        <RadioButton
+                            android:id="@+id/without_R_brown"
+                            android:buttonTint="#DC700D"
+                            android:textColor="#DC700D"
+                            android:fontFamily="@font/roboto_bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/distance_vision3"
 
-                   />
+                            />
 
-                <RadioButton
-                    android:id="@+id/without_L_yellow"
-                    android:buttonTint="#fbc004"
-                    android:textColor="#fbc004"
-                    android:fontFamily="@font/roboto_bold"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/distance_vision4"
+                        <RadioButton
+                            android:id="@+id/without_R_yellow"
+                            android:buttonTint="#fbc004"
+                            android:textColor="#fbc004"
+                            android:fontFamily="@font/roboto_bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/distance_vision4"
 
-                   />
-            <RadioButton
-                android:id="@+id/without_L_green"
-                android:buttonTint="#2cab6d"
-                android:textColor="#2cab6d"
-                android:fontFamily="@font/roboto_bold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/distance_vision5"
+                            />
 
-                />
-        </RadioGroup>
-            </LinearLayout>
-</androidx.cardview.widget.CardView>
+                        <RadioButton
+                            android:id="@+id/without_R_green"
+                            android:buttonTint="#2cab6d"
+                            android:textColor="#2cab6d"
+                            android:fontFamily="@font/roboto_bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/distance_vision5"
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_margin="5dp"
-            android:background="@color/textColor"
-            android:layout_height="0.5dp"/>
+                            />
 
-        <androidx.cardview.widget.CardView
+                    </RadioGroup>
 
-            android:elevation="25dp"
-            app:cardCornerRadius="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <LinearLayout
-                android:id="@+id/card_2"
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@color/textColor"
+                        android:layout_height="0.5dp" />
 
-                android:paddingLeft="@dimen/size8dp"
-                android:paddingRight="@dimen/size8dp"
-                android:orientation="vertical"
+                    <RelativeLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/vs_left"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/without_L"
+                            android:layout_gravity="end"
+                            android:layout_alignParentEnd="true"
+                            android:gravity="center_vertical"
+                            android:src="@drawable/ic_photo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+                    <RadioGroup
+                        android:id="@+id/redio_gp1_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <RadioButton
+                            android:fontFamily="@font/roboto_bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/distance_vision1"
+
+                            />
+
+                        <RadioButton
+                            android:buttonTint="#FF0000"
+                            android:fontFamily="@font/roboto_bold"
+                            android:textColor="#FF0000"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/distance_vision2"
+
+                            />
+
+
+                        <RadioButton
+                            android:id="@+id/without_L_brown"
+                            android:buttonTint="#DC700D"
+                            android:textColor="#DC700D"
+                            android:fontFamily="@font/roboto_bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/distance_vision3"
+
+                            />
+
+                        <RadioButton
+                            android:id="@+id/without_L_yellow"
+                            android:buttonTint="#fbc004"
+                            android:textColor="#fbc004"
+                            android:fontFamily="@font/roboto_bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/distance_vision4"
+
+                            />
+
+                        <RadioButton
+                            android:id="@+id/without_L_green"
+                            android:buttonTint="#2cab6d"
+                            android:textColor="#2cab6d"
+                            android:fontFamily="@font/roboto_bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/distance_vision5"
+
+                            />
+                    </RadioGroup>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:background="@color/textColor"
+                android:layout_height="0.5dp" />
+
+            <androidx.cardview.widget.CardView
+
+                android:elevation="25dp"
+                app:cardCornerRadius="10dp"
+                android:layout_marginBottom="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-        <TextView
-            android:layout_marginTop="20dp"
-            android:id="@+id/visions2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/vs2"
-            android:textColor="@color/primaryText"
-            android:textSize="18sp" />
 
-                <RelativeLayout
-                    android:layout_marginTop="10dp"
+                <LinearLayout
+                    android:id="@+id/card_2"
+
+                    android:paddingLeft="@dimen/size8dp"
+                    android:paddingRight="@dimen/size8dp"
+                    android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-                    <TextView
 
+                    <TextView
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/visions2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/vs_right"
+                        android:text="@string/vs2"
                         android:textColor="@color/primaryText"
                         android:textSize="18sp" />
-                    <ImageView
-                        android:id="@+id/with_R"
-                        android:layout_gravity="end"
-                        android:layout_alignParentEnd="true"
-                        android:gravity="center_vertical"
-                        android:src="@drawable/ic_photo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/vs_right"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/with_R"
+                            android:layout_gravity="end"
+                            android:layout_alignParentEnd="true"
+                            android:gravity="center_vertical"
+                            android:src="@drawable/ic_photo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
 
 
-        <RadioGroup
-            android:id="@+id/redio_gp2_1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
+                    <RadioGroup
+                        android:id="@+id/redio_gp2_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
 
-            <RadioButton
-                android:fontFamily="@font/roboto_bold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/distance_vision1"
+                        <RadioButton
+                            android:fontFamily="@font/roboto_bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/distance_vision1"
 
-                />
+                            />
 
-            <RadioButton
-                android:buttonTint="#FF0000"
-                android:fontFamily="@font/roboto_bold"
-                android:textColor="#FF0000"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/distance_vision2"
+                        <RadioButton
+                            android:buttonTint="#FF0000"
+                            android:fontFamily="@font/roboto_bold"
+                            android:textColor="#FF0000"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/distance_vision2"
 
-                />
+                            />
 
 
-            <RadioButton
-                android:id="@+id/with_R_brown"
-                android:buttonTint="#DC700D"
-                android:fontFamily="@font/roboto_bold"
-                android:textColor="#DC700D"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/distance_vision3"
+                        <RadioButton
+                            android:id="@+id/with_R_brown"
+                            android:buttonTint="#DC700D"
+                            android:fontFamily="@font/roboto_bold"
+                            android:textColor="#DC700D"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/distance_vision3"
 
-                />
+                            />
 
-            <RadioButton
-                android:id="@+id/with_R_yellow"
-                android:buttonTint="#fbc004"
-                android:fontFamily="@font/roboto_bold"
-                android:textColor="#fbc004"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/distance_vision4"
+                        <RadioButton
+                            android:id="@+id/with_R_yellow"
+                            android:buttonTint="#fbc004"
+                            android:fontFamily="@font/roboto_bold"
+                            android:textColor="#fbc004"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/distance_vision4"
 
-                />
-            <RadioButton
-                android:id="@+id/with_R_green"
-                android:buttonTint="#2cab6d"
-                android:fontFamily="@font/roboto_bold"
-                android:textColor="#2cab6d"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/distance_vision5"
+                            />
 
-                />
-        </RadioGroup>
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_margin="5dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:background="@color/textColor"
-                    android:layout_height="0.5dp"/>
-                <RelativeLayout
-                    android:layout_marginTop="10dp"
+                        <RadioButton
+                            android:id="@+id/with_R_green"
+                            android:buttonTint="#2cab6d"
+                            android:fontFamily="@font/roboto_bold"
+                            android:textColor="#2cab6d"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/distance_vision5"
+
+                            />
+                    </RadioGroup>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@color/textColor"
+                        android:layout_height="0.5dp" />
+
+                    <RelativeLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/vs_left"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/with_L"
+                            android:layout_gravity="end"
+                            android:layout_alignParentEnd="true"
+                            android:gravity="center_vertical"
+                            android:src="@drawable/ic_photo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+                    <RadioGroup
+                        android:layout_marginBottom="10dp"
+                        android:id="@+id/redio_gp2_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <RadioButton
+                            android:fontFamily="@font/roboto_bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/distance_vision1"
+
+                            />
+
+                        <RadioButton
+                            android:buttonTint="#FF0000"
+                            android:fontFamily="@font/roboto_bold"
+                            android:textColor="#FF0000"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/distance_vision2"
+
+                            />
+
+
+                        <RadioButton
+                            android:id="@+id/with_L_brown"
+                            android:buttonTint="#DC700D"
+                            android:textColor="#DC700D"
+                            android:fontFamily="@font/roboto_bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/distance_vision3"
+
+                            />
+
+                        <RadioButton
+                            android:id="@+id/with_L_yellow"
+                            android:buttonTint="#fbc004"
+                            android:textColor="#fbc004"
+                            android:fontFamily="@font/roboto_bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/distance_vision4"
+
+                            />
+
+                        <RadioButton
+                            android:id="@+id/with_L_green"
+                            android:buttonTint="#2cab6d"
+                            android:textColor="#2cab6d"
+                            android:fontFamily="@font/roboto_bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/distance_vision5"
+
+                            />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:background="@color/textColor"
+                android:layout_height="0.5dp" />
+
+            <androidx.cardview.widget.CardView
+
+                android:elevation="25dp"
+                app:cardCornerRadius="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/card_3"
+
+                    android:paddingLeft="@dimen/size8dp"
+                    android:paddingRight="@dimen/size8dp"
+                    android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-                    <TextView
 
+
+                    <TextView
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/visions3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/vs_left"
+                        android:text="@string/vs3"
                         android:textColor="@color/primaryText"
                         android:textSize="18sp" />
-                    <ImageView
-                        android:id="@+id/with_L"
-                        android:layout_gravity="end"
-                        android:layout_alignParentEnd="true"
-                        android:gravity="center_vertical"
-                        android:src="@drawable/ic_photo"
+
+                    <RelativeLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/vs_right"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/vision_without_R"
+                            android:layout_gravity="end"
+                            android:layout_alignParentEnd="true"
+                            android:gravity="center_vertical"
+                            android:src="@drawable/ic_photo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+                    <RadioGroup
+                        android:id="@+id/redio_gp3_1"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <RadioButton
+                            android:id="@+id/vs_R_without1"
+                            android:layout_weight="1"
+                            android:layout_marginRight="10dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/near_vision1" />
+
+                        <RadioButton
+                            android:id="@+id/vs_R_without2"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/near_vision2" />
+
+
+                    </RadioGroup>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@color/textColor"
+                        android:layout_height="0.5dp" />
+
+                    <RelativeLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/vs_left"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/vision_without_L"
+                            android:layout_gravity="end"
+                            android:layout_alignParentEnd="true"
+                            android:gravity="center_vertical"
+                            android:src="@drawable/ic_photo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+                    <RadioGroup
+                        android:layout_margin="10dp"
+                        android:id="@+id/redio_gp3_2"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <RadioButton
+                            android:id="@+id/vs_L_without1"
+                            android:layout_weight="1"
+                            android:layout_marginRight="10dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/near_vision1" />
+
+                        <RadioButton
+                            android:id="@+id/vs_L_without2"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/near_vision2" />
+
+
+                    </RadioGroup>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:background="@color/textColor"
+                android:layout_height="0.5dp" />
+
+            <androidx.cardview.widget.CardView
+
+                android:elevation="25dp"
+                app:cardCornerRadius="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/card_4"
+
+                    android:paddingLeft="@dimen/size8dp"
+                    android:paddingRight="@dimen/size8dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/visions4"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                </RelativeLayout>
+                        android:layout_height="wrap_content"
+                        android:text="@string/vs4"
+                        android:textColor="@color/primaryText"
+                        android:textSize="18sp" />
 
-        <RadioGroup
-            android:layout_marginBottom="10dp"
-            android:id="@+id/redio_gp2_2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
+                    <RelativeLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/vs_right"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/vision_with_R"
+                            android:layout_gravity="end"
+                            android:layout_alignParentEnd="true"
+                            android:gravity="center_vertical"
+                            android:src="@drawable/ic_photo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+                    <RadioGroup
+                        android:id="@+id/redio_gp4_1"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
 
-            <RadioButton
-                android:fontFamily="@font/roboto_bold"
+                        <RadioButton
+                            android:id="@+id/vs_R_with1"
+                            android:layout_weight="1"
+                            android:layout_marginRight="10dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/near_vision1" />
+
+                        <RadioButton
+                            android:id="@+id/vs_R_with2"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/near_vision2" />
+
+
+                    </RadioGroup>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@color/textColor"
+                        android:layout_height="0.5dp" />
+
+                    <RelativeLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/vs_left"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/vision_with_L"
+                            android:layout_gravity="end"
+                            android:layout_alignParentEnd="true"
+                            android:gravity="center_vertical"
+                            android:src="@drawable/ic_photo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+                    <RadioGroup
+                        android:layout_marginBottom="10dp"
+                        android:id="@+id/redio_gp4_2"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <RadioButton
+                            android:id="@+id/vs_L_with1"
+                            android:layout_weight="1"
+                            android:layout_marginRight="10dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/near_vision1" />
+
+                        <RadioButton
+                            android:id="@+id/vs_L_with2"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/near_vision2" />
+
+
+                    </RadioGroup>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:background="@color/textColor"
+                android:layout_height="0.5dp" />
+
+            <androidx.cardview.widget.CardView
+
+                android:elevation="25dp"
+                app:cardCornerRadius="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/card_5"
+                    android:paddingLeft="@dimen/size8dp"
+                    android:paddingRight="@dimen/size8dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/visions5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/vs5"
+                        android:textColor="@color/primaryText"
+                        android:textSize="18sp" />
+
+
+                    <TextView
+                        android:id="@+id/vs_result"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:fontFamily="@font/roboto"
+                        android:textColor="@color/primaryText"
+                        android:textSize="18sp" />
+
+
+                    <!-- <RadioGroup
+                         android:layout_marginBottom="10dp"
+                         android:id="@+id/redio_gp5"
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         >
+
+                         <RadioButton
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="@string/cat_imp1"
+
+                             />
+
+                         <RadioButton
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="@string/cat_imp2"
+
+                             />
+
+
+                         <RadioButton
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="@string/cat_imp3"
+
+                             />
+
+                         <RadioButton
+
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="@string/cat_imp4"
+
+                             />
+                         <RadioButton
+
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="@string/cat_imp5"
+
+                             />
+
+                     </RadioGroup>-->
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <!--<Button
+
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="center"
+                android:id="@+id/submit_next"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/distance_vision1"
-
-                />
-
-            <RadioButton
-                android:buttonTint="#FF0000"
-                android:fontFamily="@font/roboto_bold"
-                android:textColor="#FF0000"
-                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:text="@string/submit_next" />-->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/submit_next"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/distance_vision2"
-
-                />
-
-
-            <RadioButton
-                android:id="@+id/with_L_brown"
-                android:buttonTint="#DC700D"
-                android:textColor="#DC700D"
-                android:fontFamily="@font/roboto_bold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/distance_vision3"
-
-                />
-
-            <RadioButton
-                android:id="@+id/with_L_yellow"
-                android:buttonTint="#fbc004"
-                android:textColor="#fbc004"
-                android:fontFamily="@font/roboto_bold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/distance_vision4"
-
-                />
-
-            <RadioButton
-                android:id="@+id/with_L_green"
-                android:buttonTint="#2cab6d"
-                android:textColor="#2cab6d"
-                android:fontFamily="@font/roboto_bold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/distance_vision5"
-
-                />
-
-        </RadioGroup>
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/next_button_bg"
+                android:text="@string/submit_next"
+                android:textColor="@android:color/white" />
 
         </LinearLayout>
-</androidx.cardview.widget.CardView>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_margin="5dp"
-            android:background="@color/textColor"
-            android:layout_height="0.5dp"/>
-
-        <androidx.cardview.widget.CardView
-
-            android:elevation="25dp"
-            app:cardCornerRadius="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <LinearLayout
-                android:id="@+id/card_3"
-
-                android:paddingLeft="@dimen/size8dp"
-                android:paddingRight="@dimen/size8dp"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-
-        <TextView
-            android:layout_marginTop="20dp"
-            android:id="@+id/visions3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/vs3"
-            android:textColor="@color/primaryText"
-            android:textSize="18sp" />
-
-                <RelativeLayout
-                    android:layout_marginTop="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/vs_right"
-                        android:textColor="@color/primaryText"
-                        android:textSize="18sp" />
-                    <ImageView
-                        android:id="@+id/vision_without_R"
-                        android:layout_gravity="end"
-                        android:layout_alignParentEnd="true"
-                        android:gravity="center_vertical"
-                        android:src="@drawable/ic_photo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                </RelativeLayout>
-
-        <RadioGroup
-            android:id="@+id/redio_gp3_1"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
-
-
-            <RadioButton
-                android:id="@+id/vs_R_without1"
-                android:layout_weight="1"
-                android:layout_marginRight="10dp"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/near_vision1"
-                />
-
-            <RadioButton
-                android:id="@+id/vs_R_without2"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/near_vision2"
-                />
-
-
-        </RadioGroup>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_margin="5dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:background="@color/textColor"
-                    android:layout_height="0.5dp"/>
-                <RelativeLayout
-                    android:layout_marginTop="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/vs_left"
-                        android:textColor="@color/primaryText"
-                        android:textSize="18sp" />
-                    <ImageView
-                        android:id="@+id/vision_without_L"
-                        android:layout_gravity="end"
-                        android:layout_alignParentEnd="true"
-                        android:gravity="center_vertical"
-                        android:src="@drawable/ic_photo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                </RelativeLayout>
-
-        <RadioGroup
-            android:layout_margin="10dp"
-            android:id="@+id/redio_gp3_2"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
-
-
-            <RadioButton
-                android:id="@+id/vs_L_without1"
-                android:layout_weight="1"
-                android:layout_marginRight="10dp"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/near_vision1"
-                />
-
-            <RadioButton
-                android:id="@+id/vs_L_without2"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/near_vision2"
-                />
-
-
-        </RadioGroup>
-
-
-
-
-
-        </LinearLayout>
-</androidx.cardview.widget.CardView>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_margin="5dp"
-            android:background="@color/textColor"
-            android:layout_height="0.5dp"/>
-
-        <androidx.cardview.widget.CardView
-
-            android:elevation="25dp"
-            app:cardCornerRadius="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <LinearLayout
-                android:id="@+id/card_4"
-
-                android:paddingLeft="@dimen/size8dp"
-                android:paddingRight="@dimen/size8dp"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-
-        <TextView
-            android:layout_marginTop="20dp"
-            android:id="@+id/visions4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/vs4"
-            android:textColor="@color/primaryText"
-            android:textSize="18sp" />
-
-                <RelativeLayout
-                    android:layout_marginTop="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/vs_right"
-                        android:textColor="@color/primaryText"
-                        android:textSize="18sp" />
-                    <ImageView
-                        android:id="@+id/vision_with_R"
-                        android:layout_gravity="end"
-                        android:layout_alignParentEnd="true"
-                        android:gravity="center_vertical"
-                        android:src="@drawable/ic_photo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                </RelativeLayout>
-
-        <RadioGroup
-            android:id="@+id/redio_gp4_1"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
-
-
-            <RadioButton
-                android:id="@+id/vs_R_with1"
-                android:layout_weight="1"
-                android:layout_marginRight="10dp"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/near_vision1"
-                />
-
-            <RadioButton
-                android:id="@+id/vs_R_with2"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/near_vision2"
-                />
-
-
-        </RadioGroup>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_margin="5dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:background="@color/textColor"
-                    android:layout_height="0.5dp"/>
-                <RelativeLayout
-                    android:layout_marginTop="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/vs_left"
-                        android:textColor="@color/primaryText"
-                        android:textSize="18sp" />
-                    <ImageView
-                        android:id="@+id/vision_with_L"
-                        android:layout_gravity="end"
-                        android:layout_alignParentEnd="true"
-                        android:gravity="center_vertical"
-                        android:src="@drawable/ic_photo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                </RelativeLayout>
-
-        <RadioGroup
-            android:layout_marginBottom="10dp"
-            android:id="@+id/redio_gp4_2"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
-
-
-            <RadioButton
-                android:id="@+id/vs_L_with1"
-                android:layout_weight="1"
-                android:layout_marginRight="10dp"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/near_vision1"
-                />
-
-            <RadioButton
-                android:id="@+id/vs_L_with2"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/near_vision2"
-                />
-
-
-        </RadioGroup>
-
-
-
-
-
-         </LinearLayout>
-</androidx.cardview.widget.CardView>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_margin="5dp"
-            android:background="@color/textColor"
-            android:layout_height="0.5dp"/>
-
-        <androidx.cardview.widget.CardView
-
-            android:elevation="25dp"
-            app:cardCornerRadius="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <LinearLayout
-                android:id="@+id/card_5"
-                android:paddingLeft="@dimen/size8dp"
-                android:paddingRight="@dimen/size8dp"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-
-        <TextView
-            android:layout_marginTop="20dp"
-            android:id="@+id/visions5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/vs5"
-            android:textColor="@color/primaryText"
-            android:textSize="18sp" />
-
-
-
-                <TextView
-                    android:id="@+id/vs_result"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=""
-                    android:fontFamily="@font/roboto"
-                    android:textColor="@color/primaryText"
-                    android:textSize="18sp" />
-
-
-       <!-- <RadioGroup
-            android:layout_marginBottom="10dp"
-            android:id="@+id/redio_gp5"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/cat_imp1"
-
-                />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/cat_imp2"
-
-                />
-
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/cat_imp3"
-
-                />
-
-            <RadioButton
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/cat_imp4"
-
-                />
-            <RadioButton
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/cat_imp5"
-
-                />
-
-        </RadioGroup>-->
-
-
- </LinearLayout>
-</androidx.cardview.widget.CardView>
-
-
-
-
-
-
-        <!--<Button
-
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_gravity="center"
-            android:id="@+id/submit_next"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/submit_next" />-->
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/submit_next"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:background="@drawable/next_button_bg"
-            android:text="@string/submit_next"
-            android:textColor="@android:color/white" />
-
-    </LinearLayout>
 
     </ScrollView>
 </LinearLayout>

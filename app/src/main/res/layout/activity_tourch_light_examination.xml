@@ -75,7 +75,7 @@
                android:id="@+id/right_eye_normal"
                android:backgroundTint="@color/white"
                android:textColor="@color/white"
-               android:text="Normal"
+               android:text="@string/normal"
                android:onClick="OnClickNormal"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"/>
@@ -108,7 +108,7 @@
                 android:id="@+id/left_eye_normal"
                 android:textColor="@color/white"
                 android:backgroundTint="@color/white"
-                android:text="Normal"
+                android:text="@string/normal"
                 android:onClick="OnClickNormal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
@@ -162,7 +162,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Deviation of eyes"
+                    android:text="@string/dev_of_eye"
                     android:textColor="@color/primaryText"
                     android:textSize="18sp" />
 
@@ -285,7 +285,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Both eyes are of same size "
+                    android:text="@string/same_size"
                     android:textColor="@color/primaryText"
                     android:textSize="18sp" />
 
@@ -410,7 +410,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Eyelids  "
+                    android:text="@string/Eyelids"
                     android:textColor="@color/primaryText"
                     android:textSize="18sp" />
 
@@ -578,7 +578,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Eyelashes  "
+                    android:text="@string/Eyelashes"
                     android:textColor="@color/primaryText"
                     android:textSize="18sp" />
 
@@ -717,7 +717,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="White of the eyes  "
+                    android:text="@string/Whiteeyes"
                     android:textColor="@color/primaryText"
                     android:textSize="18sp" />
 
@@ -871,7 +871,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Black of the eyes  "
+                    android:text="@string/Blackeyes"
                     android:textColor="@color/primaryText"
                     android:textSize="18sp" />
 
@@ -1002,11 +1002,11 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Pupil  "
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/Pupil"
                     android:textColor="@color/primaryText"
                     android:textSize="18sp" />
 
@@ -1130,7 +1130,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="External injury  "
+                    android:text="@string/Externalinjury"
                     android:textColor="@color/primaryText"
                     android:textSize="18sp" />
 
@@ -1256,7 +1256,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Foreign body "
+                    android:text="@string/Foreignbody"
                     android:textColor="@color/primaryText"
                     android:textSize="18sp" />
 
@@ -1290,9 +1290,9 @@
 
                             <RadioButton
 
-                                android:layout_gravity="start"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_gravity="start"
                                 android:checked="false"
                                 android:text="@string/yes" />
 
@@ -1380,7 +1380,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:background="@drawable/next_button_bg"
-            android:text="Submit"
+            android:text="@string/submit"
             android:textColor="@android:color/white" />
 
     </LinearLayout>

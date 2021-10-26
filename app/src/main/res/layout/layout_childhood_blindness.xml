@@ -226,7 +226,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_bold"
                             android:paddingTop="@dimen/activity_vertical_margin"
-                            android:text="Refractive error"
+                            android:text="@string/referror"
                             android:textColor="@color/primaryText"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -375,7 +375,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_bold"
                             android:paddingTop="@dimen/activity_vertical_margin"
-                            android:text="Cataract "
+                            android:text="@string/Cataract"
                             android:textColor="@color/primaryText"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -568,7 +568,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_bold"
                             android:paddingTop="@dimen/activity_vertical_margin"
-                            android:text="Retinopathy of prematurity"
+                            android:text="@string/retinoofpre"
                             android:textColor="@color/primaryText"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -717,7 +717,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_bold"
                             android:paddingTop="@dimen/activity_vertical_margin"
-                            android:text="Squint /crossed eyes"
+                            android:text="@string/squint"
                             android:textColor="@color/primaryText"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -869,7 +869,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_bold"
                             android:paddingTop="@dimen/activity_vertical_margin"
-                            android:text="Corneal conditions "
+                            android:text="@string/Cornealconditions"
                             android:textColor="@color/primaryText"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -894,7 +894,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/roboto"
                                 android:paddingTop="@dimen/size8dp"
-                                android:text="Refer corneal blindness"
+                                android:text="@string/refercornealblindness"
                                 android:textColor="@color/primaryText"
                                 android:textSize="18sp" />
                         </LinearLayout>

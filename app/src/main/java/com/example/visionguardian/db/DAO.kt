@@ -21,6 +21,6 @@ interface DAO {
     @Query("SELECT * FROM patient WHERE patientId=:id ")
     fun loadSingle(id: Int): List<Patient>
 
-    @Query("SELECT * FROM patient WHERE mFirstName LIKE :search " +  "OR mMobile LIKE :search")
+    @Query("SELECT * FROM patient WHERE mFirstName LIKE :search " + "OR mMobile LIKE :search")
     fun findUserWithName(search: String): List<Patient>
 }

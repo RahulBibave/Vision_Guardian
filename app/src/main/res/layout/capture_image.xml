@@ -52,35 +52,6 @@
         android:layout_margin="30dp">
 
         <ImageView
-            android:id="@+id/ivImageLeft"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:src="#dedede"
-            />
-
-        <Button
-            android:id="@+id/btCapturePhotoLeft"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:background="@color/orange"
-            android:textColor="@android:color/white"
-            android:text="Left Eye Photo"
-            />
-
-
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_centerInParent="true"
-        android:layout_margin="30dp">
-
-        <ImageView
             android:id="@+id/ivImageRight"
             android:layout_width="match_parent"
             android:layout_height="200dp"
@@ -100,7 +71,33 @@
 
 
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_margin="30dp">
 
+        <ImageView
+            android:id="@+id/ivImageLeft"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="#dedede"
+            />
+
+        <Button
+            android:id="@+id/btCapturePhotoLeft"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/orange"
+            android:textColor="@android:color/white"
+            android:text="Left Eye Photo"
+            />
+
+
+
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -122,7 +119,7 @@
             android:layout_marginTop="20dp"
             android:background="@color/orange"
             android:textColor="@android:color/white"
-            android:text="Capture Photo"
+            android:text="Both Eye Common Photo"
             />
 
 

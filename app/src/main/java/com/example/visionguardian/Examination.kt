@@ -6,17 +6,12 @@ import android.content.Intent
 import android.content.res.Configuration
 import android.graphics.Color
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
-import android.util.Log
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.room.Room
-import com.example.visionguardian.db.ExaminationData
 import com.example.visionguardian.db.MyDatabase
-import com.example.visionguardian.db.Patient
 import kotlinx.android.synthetic.main.activity_examination.*
 import java.util.*
 
@@ -79,9 +74,12 @@ class Examination : AppCompatActivity() {
     var ques9 = ""
     var ques10 = ""
     var ques10_unit = ""
+    var ques10_1_unit = ""
     var ques11 = ""
     var ques11_1 = ""
     var ques11_3 = ""
+    var ques11_3_1 = ""
+
     var ques12 = ""
     var patientID = 0
     var patientName = ""
@@ -92,8 +90,12 @@ class Examination : AppCompatActivity() {
     var str3_4 = ""
     var str3_5 = ""
     var ques3_tital = ""
+    var ques7_1_unit = ""
 
-
+    var mHistoryQ6_op = ""
+    var mHistoryQ6_op2 = ""
+    var mHistoryQ7_op = ""
+    var mHistoryQ7_op2 = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_examination)
@@ -122,14 +124,21 @@ class Examination : AppCompatActivity() {
 
         classSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
-                // Display the selected item text on text view
-                // classSpinner.text = "Spinner selected : ${parent.getItemAtPosition(position).toString()}"
-                ques1_unit = parent.getItemAtPosition(position).toString()
-                //
+                when {
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Years) -> ques1_unit = "Years"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Months) -> ques1_unit = "Months"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Weeks) -> ques1_unit = "Weeks"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Days) -> ques1_unit = "Days"
+                }
+
             }
 
             override fun onNothingSelected(parent: AdapterView<*>) {
-                // Another interface callback
+
             }
         }
 
@@ -143,31 +152,44 @@ class Examination : AppCompatActivity() {
 
 
         radio_group1.setOnCheckedChangeListener(
-                RadioGroup.OnCheckedChangeListener { group, checkedId ->
-                    val radio_langange: RadioButton = findViewById(checkedId)
-                    card1.setBackgroundColor(Color.WHITE)
+            RadioGroup.OnCheckedChangeListener { group, checkedId ->
+                val radio_langange: RadioButton = findViewById(checkedId)
+                card1.setBackgroundColor(Color.WHITE)
 
-                    if (radio_langange.text.toString() == getString(R.string.yes)) {
-                        card1.setBackgroundColor(Color.WHITE)
-                        which_eye1.visibility = View.VISIBLE
-                        firstDuration.visibility = View.VISIBLE
-                    } else if (radio_langange.text.toString() == getString(R.string.no)) {
-                        card1.setBackgroundColor(Color.GRAY)
-                        which_eye1.visibility = View.GONE
-                        firstDuration.visibility = View.GONE
-                    } else {
-                        card1.setBackgroundColor(Color.WHITE)
-                    }
-                    ques1 = radio_langange.text.toString()
-                    // Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+                if (radio_langange.text.toString() == getString(R.string.question1_choice1)) {
+                    card1.setBackgroundColor(Color.WHITE)
+                    which_eye1.visibility = View.VISIBLE
+                    firstDuration.visibility = View.VISIBLE
+                } else if (radio_langange.text.toString() == getString(R.string.question1_choice2)) {
+                    card1.setBackgroundColor(Color.GRAY)
+                    which_eye1.visibility = View.GONE
+                    firstDuration.visibility = View.GONE
+                } else {
+                    card1.setBackgroundColor(Color.WHITE)
                 }
+                if (radio_langange.text.toString() == getString(R.string.question1_choice1)) {
+                    ques1 = "Yes"
+                } else if (radio_langange.text.toString() == getString(R.string.question1_choice2)) {
+                    ques1 = "No"
+                }
+                //ques1 = radio_langange.text.toString()
+                // Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            }
         )
 
         which_eye1.setOnCheckedChangeListener(
-                RadioGroup.OnCheckedChangeListener { group, checkedId ->
-                    val radio_langange: RadioButton = findViewById(checkedId)
-                    ques1_which = radio_langange.text.toString()
-                    /*val builder = AlertDialog.Builder(this)
+            RadioGroup.OnCheckedChangeListener { group, checkedId ->
+                val radio_langange: RadioButton = findViewById(checkedId)
+                when {
+                    radio_langange.text.toString() == getString(R.string.question5_choice1) -> ques1_which =
+                        "Right Eye"
+                    radio_langange.text.toString() == getString(R.string.question5_choice2) -> ques1_which =
+                        "Left Eye"
+                    radio_langange.text.toString() == getString(R.string.question5_choice3) -> ques1_which =
+                        "Both Eye"
+                }
+                // ques1_which = radio_langange.text.toString()
+                /*val builder = AlertDialog.Builder(this)
                     val inflater = layoutInflater
                     builder.setTitle("Enter Duration")
                     val dialogLayout = inflater.inflate(R.layout.duration_dialog, null)
@@ -180,13 +202,22 @@ class Examination : AppCompatActivity() {
                     }
                     builder.show()*/
 
-                })
+            })
 
         which_eye2.setOnCheckedChangeListener(
-                RadioGroup.OnCheckedChangeListener { group, checkedId ->
-                    val radio_langange: RadioButton = findViewById(checkedId)
-                    ques2_which = radio_langange.text.toString()
-                    /* val builder = AlertDialog.Builder(this)
+            RadioGroup.OnCheckedChangeListener { group, checkedId ->
+                val radio_langange: RadioButton = findViewById(checkedId)
+
+                when {
+                    radio_langange.text.toString() == getString(R.string.question5_choice1) -> ques2_which =
+                        "Right Eye"
+                    radio_langange.text.toString() == getString(R.string.question5_choice2) -> ques2_which =
+                        "Left Eye"
+                    radio_langange.text.toString() == getString(R.string.question5_choice3) -> ques2_which =
+                        "Both Eye"
+                }
+                //ques2_which = radio_langange.text.toString()
+                /* val builder = AlertDialog.Builder(this)
                      val inflater = layoutInflater
                      builder.setTitle("Enter Duration")
                      val dialogLayout = inflater.inflate(R.layout.duration_dialog, null)
@@ -199,13 +230,24 @@ class Examination : AppCompatActivity() {
                      }
                      builder.show()*/
 
-                })
+            })
 
         classSpinner_q2.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
                 // Display the selected item text on text view
                 // classSpinner.text = "Spinner selected : ${parent.getItemAtPosition(position).toString()}"
-                ques2_unit = parent.getItemAtPosition(position).toString()
+                // classSpinner.text = "Spinner selected : ${parent.getItemAtPosition(position).toString()}"
+                when {
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Years) -> ques2_unit = "Years"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Months) -> ques2_unit = "Months"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Weeks) -> ques2_unit = "Weeks"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Days) -> ques2_unit = "Days"
+                }
+                // ques2_unit = parent.getItemAtPosition(position).toString()
 
             }
 
@@ -220,48 +262,52 @@ class Examination : AppCompatActivity() {
 
 
         radio_group2.setOnCheckedChangeListener(
-                RadioGroup.OnCheckedChangeListener { group, checkedId ->
-                    val radio_langange: RadioButton = findViewById(checkedId)
+            RadioGroup.OnCheckedChangeListener { group, checkedId ->
+                val radio_langange: RadioButton = findViewById(checkedId)
 
-                    if (radio_langange.text.toString() == getString(R.string.yes)) {
-                        card2.setBackgroundColor(Color.WHITE)
-                        which_eye2.visibility = View.VISIBLE
-                        secondDuration.visibility = View.VISIBLE
-                    } else {
-                        card2.setBackgroundColor(Color.GRAY)
-                        which_eye2.visibility = View.GONE
-                        secondDuration.visibility = View.GONE
-                    }
-                    ques2 = radio_langange.text.toString()
-                    // Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+                if (radio_langange.text.toString() == getString(R.string.question1_choice1)) {
+                    card2.setBackgroundColor(Color.WHITE)
+                    which_eye2.visibility = View.VISIBLE
+                    secondDuration.visibility = View.VISIBLE
+                } else {
+                    card2.setBackgroundColor(Color.GRAY)
+                    which_eye2.visibility = View.GONE
+                    secondDuration.visibility = View.GONE
                 }
+                if (radio_langange.text.toString() == getString(R.string.question1_choice1)) {
+                    ques2 = "Yes"
+                } else if (radio_langange.text.toString() == getString(R.string.question1_choice2)) {
+                    ques2 = "No"
+                }
+                // ques2 = radio_langange.text.toString()
+                // Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            }
         )
 
 
         //Q 3
         radio_group3.setOnCheckedChangeListener(
-                RadioGroup.OnCheckedChangeListener { group, checkedId ->
-                    val radio_langange: RadioButton = findViewById(checkedId)
+            RadioGroup.OnCheckedChangeListener { group, checkedId ->
+                val radio_langange: RadioButton = findViewById(checkedId)
 
-                    if (radio_langange.text.toString() == getString(R.string.yes)) {
-                        card3.setBackgroundColor(Color.WHITE)
-                        which_eye3.visibility = View.VISIBLE
-                        Duration3.visibility = View.VISIBLE
-                        qua3Checkbox.visibility = View.VISIBLE
-                    } else {
-                        card3.setBackgroundColor(Color.GRAY)
-                        which_eye3.visibility = View.GONE
-                        Duration3.visibility = View.GONE
-                        qua3Checkbox.visibility = View.GONE
-                    }
-                    ques3 = radio_langange.text.toString()
-
-
-
-
-                    
-                    //  Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+                if (radio_langange.text.toString() == getString(R.string.yes)) {
+                    card3.setBackgroundColor(Color.WHITE)
+                    which_eye3.visibility = View.VISIBLE
+                    Duration3.visibility = View.VISIBLE
+                    qua3Checkbox.visibility = View.VISIBLE
+                    ques3 = "Yes"
+                } else {
+                    card3.setBackgroundColor(Color.GRAY)
+                    which_eye3.visibility = View.GONE
+                    Duration3.visibility = View.GONE
+                    qua3Checkbox.visibility = View.GONE
+                    ques3 = "No"
                 }
+                //ques3 = radio_langange.text.toString()
+
+
+                //  Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            }
         )
 
         classSpinner_q3.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
@@ -269,7 +315,17 @@ class Examination : AppCompatActivity() {
                 // Display the selected item text on text view
 
                 // classSpinner.text = "Spinner selected : ${parent.getItemAtPosition(position).toString()}"
-                ques3_unit = parent.getItemAtPosition(position).toString()
+                when {
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Years) -> ques3_unit = "Years"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Months) -> ques3_unit = "Months"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Weeks) -> ques3_unit = "Weeks"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Days) -> ques3_unit = "Days"
+                }
+                // ques3_unit = parent.getItemAtPosition(position).toString()
             }
 
             override fun onNothingSelected(parent: AdapterView<*>) {
@@ -277,11 +333,18 @@ class Examination : AppCompatActivity() {
             }
         }
         which_eye3.setOnCheckedChangeListener(
-                RadioGroup.OnCheckedChangeListener { group, checkedId ->
-                    val radio_langange: RadioButton = findViewById(checkedId)
-                    ques3_which = radio_langange.text.toString()
-
-                    /* val builder = AlertDialog.Builder(this)
+            RadioGroup.OnCheckedChangeListener { group, checkedId ->
+                val radio_langange: RadioButton = findViewById(checkedId)
+                // ques3_which = radio_langange.text.toString()
+                when {
+                    radio_langange.text.toString() == getString(R.string.question5_choice1) -> ques3_which =
+                        "Right Eye"
+                    radio_langange.text.toString() == getString(R.string.question5_choice2) -> ques3_which =
+                        "Left Eye"
+                    radio_langange.text.toString() == getString(R.string.question5_choice3) -> ques3_which =
+                        "Both Eye"
+                }
+                /* val builder = AlertDialog.Builder(this)
                      val inflater = layoutInflater
                      builder.setTitle("Enter Duration")
                      val dialogLayout = inflater.inflate(R.layout.duration_dialog, null)
@@ -293,64 +356,44 @@ class Examination : AppCompatActivity() {
                      }
                      builder.show()*/
 
-                })
+            })
 
 
 
 
         radio_group5.setOnCheckedChangeListener(
-                RadioGroup.OnCheckedChangeListener { group, checkedId ->
-                    val radio_langange: RadioButton = findViewById(checkedId)
-                    card5.setBackgroundColor(Color.GRAY)
-                    flag += 1
-                    ques5 = radio_langange.text.toString()
-                    //  Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
-                }
+            RadioGroup.OnCheckedChangeListener { group, checkedId ->
+                val radio_langange: RadioButton = findViewById(checkedId)
+                card5.setBackgroundColor(Color.GRAY)
+                flag += 1
+                ques5 = radio_langange.text.toString()
+                //  Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            }
         )
 
-//        radio_group7.setOnCheckedChangeListener(
-//                RadioGroup.OnCheckedChangeListener { group, checkedId ->
-//                    val radio_langange: RadioButton = findViewById(checkedId)
-//                    card7.setBackgroundColor(Color.GRAY)
-//                    flag += 1
-//                    ques7=radio_langange.text.toString()
-//                  //  Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
-//                }
-//        )
-//
-//        radio_group8.setOnCheckedChangeListener(
-//                RadioGroup.OnCheckedChangeListener { group, checkedId ->
-//                    val radio_langange: RadioButton = findViewById(checkedId)
-//                    card8.setBackgroundColor(Color.GRAY)
-//                    flag += 1
-//                    ques8=radio_langange.text.toString()
-//                    //Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
-//                }
-//        )
+
 
 
         radio_group9.setOnCheckedChangeListener(
-                RadioGroup.OnCheckedChangeListener { group, checkedId ->
-                    val radio_langange: RadioButton = findViewById(checkedId)
-                    card9.setBackgroundColor(Color.GRAY)
-                    flag += 1
-                    ques9 = radio_langange.text.toString()
-                    // Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            RadioGroup.OnCheckedChangeListener { group, checkedId ->
+                val radio_langange: RadioButton = findViewById(checkedId)
+                card9.setBackgroundColor(Color.GRAY)
+                flag += 1
+                when {
+                    radio_langange.text.toString() == getString(R.string.question9_choice1) -> ques9 =
+                        "Yes, Have difficulty with glasses"
+                    radio_langange.text.toString() == getString(R.string.question9_choice2) -> ques9 =
+                        "Yes, No difficulty with glasses"
+                    radio_langange.text.toString() == getString(R.string.question9_choice3) -> ques9 =
+                        "Not wearing glasses"
                 }
+                // ques9 = radio_langange.text.toString()
+                // Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
+            }
         )
 
-        radio_group12.setOnCheckedChangeListener(
-                RadioGroup.OnCheckedChangeListener { group, checkedId ->
-                    val radio_langange: RadioButton = findViewById(checkedId)
-                    card12.setBackgroundColor(Color.GRAY)
-                    flag += 1
-                    ques12 = radio_langange.text.toString()
-                    // Toast.makeText(applicationContext, " On Checked change :${radio_langange.text}", Toast.LENGTH_SHORT).show()
-                }
-        )
 
-
-        //q11
+        //q7
         addSecond7.setOnClickListener {
             addSecond7.visibility = View.GONE
             q7_1.visibility = View.VISIBLE
@@ -359,10 +402,52 @@ class Examination : AppCompatActivity() {
         spinnerunit11.adapter = adapter
         spinnerunit11_1.adapter = adapter
         spinnerunit11.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
+            override fun onItemSelected(
+                parent: AdapterView<*>,
+                view: View,
+                position: Int,
+                id: Long
+            ) {
                 // Display the selected item text on text view
                 // classSpinner.text = "Spinner selected : ${parent.getItemAtPosition(position).toString()}"
-                ques11_1 = parent.getItemAtPosition(position).toString()
+                when {
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Years) -> ques11_1 = "Years"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Months) -> ques11_1 = "Months"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Weeks) -> ques11_1 = "Weeks"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Days) -> ques11_1 = "Days"
+                }
+                //ques11_1 = parent.getItemAtPosition(position).toString()
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>) {
+                // Another interface callback
+            }
+        }
+
+        spinnerunit11_1.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(
+                parent: AdapterView<*>,
+                view: View,
+                position: Int,
+                id: Long
+            ) {
+                // Display the selected item text on text view
+                // classSpinner.text = "Spinner selected : ${parent.getItemAtPosition(position).toString()}"
+                when {
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Years) -> ques7_1_unit = "Years"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Months) -> ques7_1_unit = "Months"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Weeks) -> ques7_1_unit = "Weeks"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Days) -> ques7_1_unit = "Days"
+                }
+                // ques7_1_unit = parent.getItemAtPosition(position).toString()
             }
 
             override fun onNothingSelected(parent: AdapterView<*>) {
@@ -371,21 +456,56 @@ class Examination : AppCompatActivity() {
         }
 
 
-        //Q11
-        val medication = arrayOf(getString(R.string.nil), getString(R.string.Diabetes), getString(R.string.Hypertension), getString(R.string.Asthma), getString(R.string.Thyroid), getString(R.string.Seizure), getString(R.string.Allergy), getString(R.string.Arthritis), getString(R.string.Others))
+        //Q7
+        val medication = arrayOf(
+            getString(R.string.question11_choice9),
+            getString(R.string.Diabetes),
+            getString(R.string.Hypertension),
+            getString(R.string.Asthma),
+            getString(R.string.Thyroid),
+            getString(R.string.Seizure),
+            getString(R.string.Allergy),
+            getString(R.string.Arthritis),
+            getString(R.string.Others)
+        )
         val adaptermedi = ArrayAdapter(
-                this, // Context
-                android.R.layout.simple_spinner_item, // Layout
-                medication // Array
+            this, // Context
+            android.R.layout.simple_spinner_item, // Layout
+            medication // Array
         )
         adaptermedi.setDropDownViewResource(android.R.layout.simple_list_item_1)
         medicationSpinner.adapter = adaptermedi
         medicationSpinner_1.adapter = adaptermedi
         medicationSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
+            override fun onItemSelected(
+                parent: AdapterView<*>,
+                view: View,
+                position: Int,
+                id: Long
+            ) {
                 // Display the selected item text on text view
                 // classSpinner.text = "Spinner selected : ${parent.getItemAtPosition(position).toString()}"
-                ques11_3 = parent.getItemAtPosition(position).toString()
+                when {
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.question11_choice9) -> ques11_3 = "Nil"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Diabetes) -> ques11_3 = "Diabetes"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Hypertension) -> ques11_3 = "Hypertension"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Asthma) -> ques11_3 = "Asthma"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Thyroid) -> ques11_3 = "Thyroid"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Seizure) -> ques11_3 = "Seizure"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Allergy) -> ques11_3 = "Allergy"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Arthritis) -> ques11_3 = "Arthritis"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Others) -> ques11_3 = "Others"
+                }
+                //ques11_3 = parent.getItemAtPosition(position).toString()
             }
 
             override fun onNothingSelected(parent: AdapterView<*>) {
@@ -393,21 +513,97 @@ class Examination : AppCompatActivity() {
             }
         }
 
-        //Q10
-        val pastHistoryList = arrayOf("Nil", "Cataract surgery", "Retinal surgery", "glaucoma treatment", "Eye injuries", "Laser treatment", "Other")
+
+        medicationSpinner_1.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(
+                parent: AdapterView<*>,
+                view: View,
+                position: Int,
+                id: Long
+            ) {
+                // Display the selected item text on text view
+                // classSpinner.text = "Spinner selected : ${parent.getItemAtPosition(position).toString()}"
+                when {
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.question11_choice9) -> mHistoryQ7_op =
+                        "Nil"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Diabetes) -> mHistoryQ7_op = "Diabetes"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Hypertension) -> mHistoryQ7_op =
+                        "Hypertension"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Asthma) -> mHistoryQ7_op = "Asthma"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Thyroid) -> mHistoryQ7_op = "Thyroid"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Seizure) -> mHistoryQ7_op = "Seizure"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Allergy) -> mHistoryQ7_op = "Allergy"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Arthritis) -> mHistoryQ7_op = "Arthritis"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Others) -> mHistoryQ7_op = "Others"
+                }
+                //ques11_3 = parent.getItemAtPosition(position).toString()
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>) {
+                // Another interface callback
+            }
+        }
+
+
+        //Q6
+        val pastHistoryList = arrayOf(
+            getString(R.string.question11_choice9),
+            getString(R.string.question10_choice1),
+            getString(R.string.question10_choice2),
+            getString(R.string.question10_choice3),
+            getString(R.string.question10_choice4),
+            getString(R.string.question10_choice6),
+            getString(R.string.question10_choice5)
+        )
         val adapterpast = ArrayAdapter(
-                this, // Context
-                android.R.layout.simple_spinner_item, // Layout
-                pastHistoryList // Array
+            this, // Context
+            android.R.layout.simple_spinner_item, // Layout
+            pastHistoryList // Array
         )
         adapterpast.setDropDownViewResource(android.R.layout.simple_list_item_1)
         pastHistorySpinner.adapter = adapterpast
         pastHistorySpinner1.adapter = adapterpast
         pastHistorySpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
+            override fun onItemSelected(
+                parent: AdapterView<*>,
+                view: View,
+                position: Int,
+                id: Long
+            ) {
                 // Display the selected item text on text view
                 // classSpinner.text = "Spinner selected : ${parent.getItemAtPosition(position).toString()}"
-                ques10 = parent.getItemAtPosition(position).toString()
+                when {
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.question11_choice9) -> ques10 = "Nil"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.question10_choice1) -> ques10 =
+                        "Cataract surgery"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.question10_choice2) -> ques10 =
+                        "Retinal surgery"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.question10_choice3) -> ques10 =
+                        "Glaucoma treatment"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.question10_choice4) -> ques10 =
+                        "Eye injuries"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.question10_choice6) -> ques10 =
+                        "Laser treatment"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.question10_choice5) -> ques10 = "Other"
+                }
+
+                //ques10 = parent.getItemAtPosition(position).toString()
             }
 
             override fun onNothingSelected(parent: AdapterView<*>) {
@@ -415,11 +611,41 @@ class Examination : AppCompatActivity() {
             }
         }
 
+
+        //6_2
         pastHistorySpinner1.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
+            override fun onItemSelected(
+                parent: AdapterView<*>,
+                view: View,
+                position: Int,
+                id: Long
+            ) {
                 // Display the selected item text on text view
                 // classSpinner.text = "Spinner selected : ${parent.getItemAtPosition(position).toString()}"
-                ques10 = parent.getItemAtPosition(position).toString()
+                when {
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.question11_choice9) -> mHistoryQ6_op =
+                        "Nil"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.question10_choice1) -> mHistoryQ6_op =
+                        "Cataract surgery"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.question10_choice2) -> mHistoryQ6_op =
+                        "Retinal surgery"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.question10_choice3) -> mHistoryQ6_op =
+                        "Glaucoma treatment"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.question10_choice4) -> mHistoryQ6_op =
+                        "Eye injuries"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.question10_choice6) -> mHistoryQ6_op =
+                        "Laser treatment"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.question10_choice5) -> mHistoryQ6_op =
+                        "Other"
+                }
+                // ques10 = parent.getItemAtPosition(position).toString()
             }
 
             override fun onNothingSelected(parent: AdapterView<*>) {
@@ -431,7 +657,17 @@ class Examination : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
                 // Display the selected item text on text view
                 // classSpinner.text = "Spinner selected : ${parent.getItemAtPosition(position).toString()}"
-                ques10_unit = parent.getItemAtPosition(position).toString()
+                when {
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Years) -> ques10_unit = "Years"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Months) -> ques10_unit = "Months"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Weeks) -> ques10_unit = "Weeks"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Days) -> ques10_unit = "Days"
+                }
+                // ques10_unit = parent.getItemAtPosition(position).toString()
             }
 
             override fun onNothingSelected(parent: AdapterView<*>) {
@@ -439,10 +675,22 @@ class Examination : AppCompatActivity() {
             }
         }
 
+
+
         spinnerunit10_1.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
                 // Display the selected item text on text view
                 // classSpinner.text = "Spinner selected : ${parent.getItemAtPosition(position).toString()}"
+                when {
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Years) -> ques10_1_unit = "Years"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Months) -> ques10_1_unit = "Months"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Weeks) -> ques10_1_unit = "Weeks"
+                    parent.getItemAtPosition(position)
+                        .toString() == getString(R.string.Days) -> ques10_1_unit = "Days"
+                }
                 // ques10_unit=parent.getItemAtPosition(position).toString()
             }
 
@@ -477,21 +725,30 @@ class Examination : AppCompatActivity() {
          })*/
 
         submit_next.setOnClickListener {
+
             if (flag >= 0) {
+
                 ques11 = " (" + question11_duration.text + " " + ques11_1 + " )"
                 ques6 = ques11_3
                 ques7 = " (" + pastHistory_duration.text + " " + ques10_unit + " )"
+                mHistoryQ6_op2 = " (" + pastHistory_duration1.text + " " + ques10_1_unit + " )"
+                mHistoryQ7_op2 = " (" + question11_duration_1.text + " " + ques7_1_unit + " )"
                 if (ques1 == "Yes") {
                     ques1 = "$ques1_which ( ${question1_duration.text} $ques1_unit )"
+
                 }
                 if (ques2 == "Yes") {
                     ques2 = "$ques2_which ( ${question2_duration.text} $ques2_unit )"
+
                 }
                 if (ques3 == "Yes") {
                     ques3_duration = question3_duration.text.toString()
                     ques3 = ques3_tital
                     ques5 = " $ques3_which( ${question3_duration.text} $ques3_unit )"
+                    //Log.e("zzzzzzz333",""+ques3)
+                    // Log.e("zzzz311111",""+ques5)
                 }
+
                 val myEdit = sharedPreferences.edit()
                 myEdit.putString("history_1", ques1)
                 myEdit.putString("history_2", ques2)
@@ -506,6 +763,10 @@ class Examination : AppCompatActivity() {
                 myEdit.putString("history_10", ques10)
                 myEdit.putString("history_11", ques11)
                 myEdit.putString("history_12", ques12)
+                myEdit.putString("Q6_op", mHistoryQ6_op)
+                myEdit.putString("Q6_duration", mHistoryQ6_op2)
+                myEdit.putString("Q7_op", mHistoryQ7_op)
+                myEdit.putString("Q7_duration", mHistoryQ7_op2)
                 myEdit.putInt("p_ID", patientID)
                 myEdit.putString("patientName", patientName)
                 myEdit.commit()

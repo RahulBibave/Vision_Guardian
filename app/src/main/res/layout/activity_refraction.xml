@@ -25,6 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
+                android:id="@+id/txt_ccr"
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
@@ -34,14 +35,22 @@
                 android:textColor="@color/white"
                 android:textSize="18sp" />
 
+            <Switch
+                android:layout_alignParentRight="true"
+                android:id="@+id/togglebutton"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
             <ImageView
+
                 android:onClick="onClickInfo"
                 android:id="@+id/img_info"
                 android:layout_marginEnd="20dp"
-                android:layout_alignParentRight="true"
+                android:layout_toLeftOf="@+id/togglebutton"
                 android:src="@drawable/ic_preview"
                 android:layout_width="20dp"
-                android:layout_height="20dp"/>
+                android:layout_height="20dp" />
         </RelativeLayout>
 
 
@@ -63,13 +72,212 @@
         android:paddingTop="@dimen/activity_vertical_margin">
 
 
-          <androidx.cardview.widget.CardView
-
+        <androidx.cardview.widget.CardView
+            android:visibility="gone"
+            android:id="@+id/card_c1"
             android:elevation="25dp"
             app:cardCornerRadius="10dp"
             android:layout_marginBottom="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
+            <LinearLayout
+
+                android:paddingLeft="@dimen/size8dp"
+                android:paddingRight="@dimen/size8dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:layout_marginBottom="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <!-- <TextView
+                             android:layout_marginTop="20dp"
+                             android:id="@+id/visions1"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="@string/refraction1"
+                             android:textColor="@color/primaryText"
+                             android:textSize="18sp" />-->
+
+                        <TextView
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/vs_right"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/edt_sphR"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionDone"
+                            android:hint="Sph"
+                            android:maxLength="5"
+                            android:inputType="numberSigned|numberDecimal" />
+
+                        <EditText
+                            android:id="@+id/edt_cylR"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionDone"
+                            android:hint="Cyl"
+                            android:maxLength="5"
+                            android:inputType="numberSigned|numberDecimal" />
+
+                        <EditText
+                            android:id="@+id/edt_axisR"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionDone"
+                            android:hint="Axis"
+                            android:maxLength="5"
+                            android:inputType="numberSigned|numberDecimal" />
+
+                        <Spinner
+                            android:id="@+id/sp_visionR"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="15dp" />
+
+                        <EditText
+                            android:id="@+id/edt_addR"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionDone"
+                            android:hint="Add"
+                            android:maxLength="5"
+                            android:inputType="numberSigned|numberDecimal" />
+
+                        <Spinner
+                            android:id="@+id/sp_NVR"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="15dp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/textColor"
+                        android:layout_height="match_parent" />
+
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <!-- <TextView
+                             android:layout_marginTop="20dp"
+                             android:id="@+id/visions1"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+
+                             android:textColor="@color/primaryText"
+                             android:textSize="18sp" />-->
+
+                        <TextView
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/vs_left"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/edt_sphL"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionDone"
+                            android:hint="Sph"
+                            android:maxLength="5"
+                            android:inputType="numberDecimal|numberSigned" />
+
+                        <EditText
+                            android:id="@+id/edt_cylL"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionDone"
+                            android:hint="Cyl"
+                            android:maxLength="5"
+                            android:inputType="numberDecimal|numberSigned" />
+
+                        <EditText
+                            android:id="@+id/edt_axisL"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionDone"
+                            android:hint="Axis"
+                            android:maxLength="5"
+                            android:inputType="numberDecimal|numberSigned" />
+
+                        <Spinner
+                            android:id="@+id/sp_visionL"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="15dp" />
+
+                        <EditText
+                            android:id="@+id/edt_addL"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionDone"
+                            android:hint="Add"
+                            android:maxLength="5"
+                            android:inputType="numberSigned|numberDecimal" />
+
+                        <Spinner
+                            android:id="@+id/sp_NVL"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="15dp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <!-- <View
+             android:layout_width="match_parent"
+             android:layout_marginTop="15dp"
+             android:layout_margin="5dp"
+             android:background="@color/textColor"
+             android:layout_height="0.5dp"/>-->
+        <androidx.cardview.widget.CardView
+
+            android:id="@+id/card_ccr1"
+            android:elevation="25dp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
             <LinearLayout
                 android:id="@+id/card_5"
                 android:paddingLeft="@dimen/size8dp"
@@ -87,6 +295,7 @@
                     android:text="@string/refraction1"
                     android:textColor="@color/primaryText"
                     android:textSize="18sp" />
+
                 <LinearLayout
                     android:layout_marginBottom="15dp"
                     android:layout_width="match_parent"
@@ -144,13 +353,12 @@
                             android:inputType="numberSigned|numberDecimal" />
 
 
-
                         <androidx.appcompat.widget.AppCompatButton
                             android:layout_gravity="center"
                             android:id="@+id/btn_right_avg"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Average" />
+                            android:text="@string/average" />
 
                         <TextView
                             android:visibility="gone"
@@ -228,7 +436,8 @@
                             android:id="@+id/btn_left_avg"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Average" />
+                            android:text="@string/average" />
+
                         <TextView
                             android:visibility="gone"
                             android:id="@+id/average_left"
@@ -242,29 +451,21 @@
                     </LinearLayout>
 
 
-
-
-
                 </LinearLayout>
 
             </LinearLayout>
-          </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
+        <androidx.cardview.widget.CardView
 
-        <View
-            android:layout_width="match_parent"
+            android:id="@+id/card_ccr2"
             android:layout_marginTop="15dp"
-            android:layout_margin="5dp"
-            android:background="@color/textColor"
-            android:layout_height="0.5dp"/>
-
-          <androidx.cardview.widget.CardView
-
             android:elevation="25dp"
             app:cardCornerRadius="10dp"
             android:layout_marginBottom="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <LinearLayout
                 android:id="@+id/card_rf1"
                 android:paddingLeft="@dimen/size8dp"
@@ -283,7 +484,6 @@
                     android:textSize="18sp" />
 
 
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -293,6 +493,7 @@
                         android:layout_weight="1"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content">
+
                         <TextView
                             android:layout_gravity="center"
                             android:layout_marginTop="10dp"
@@ -301,6 +502,7 @@
                             android:text="@string/vs_right"
                             android:textColor="@color/primaryText"
                             android:textSize="18sp" />
+
                         <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                             android:id="@+id/radio_group_rf1"
                             android:layout_width="fill_parent"
@@ -325,6 +527,7 @@
 
                         </RadioGroup>
                     </LinearLayout>
+
                     <View
                         android:layout_width="0.5dp"
                         android:layout_margin="10dp"
@@ -337,6 +540,7 @@
                         android:layout_weight="1"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content">
+
                         <TextView
                             android:layout_gravity="center"
                             android:layout_marginTop="10dp"
@@ -345,6 +549,7 @@
                             android:text="@string/vs_left"
                             android:textColor="@color/primaryText"
                             android:textSize="18sp" />
+
                         <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                             android:id="@+id/radio_group_rf2"
                             android:layout_width="fill_parent"
@@ -371,24 +576,27 @@
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
-          </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
 
-        <View
+        <!--<View
             android:layout_width="match_parent"
             android:layout_marginTop="15dp"
             android:layout_margin="5dp"
             android:background="@color/textColor"
-            android:layout_height="0.5dp"/>
+            android:layout_height="0.5dp"/>-->
 
 
-         <androidx.cardview.widget.CardView
+        <androidx.cardview.widget.CardView
 
+            android:id="@+id/card_ccr3"
+            android:layout_marginTop="15dp"
             android:elevation="25dp"
             app:cardCornerRadius="10dp"
             android:layout_marginBottom="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <LinearLayout
                 android:paddingLeft="@dimen/size8dp"
                 android:paddingRight="@dimen/size8dp"
@@ -494,16 +702,26 @@
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
-         </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
 
-        <View
+        <!-- <View
+             android:layout_width="match_parent"
+             android:layout_marginTop="15dp"
+             android:layout_margin="5dp"
+             android:background="@color/textColor"
+             android:layout_height="0.5dp"/>-->
+        <EditText
+            android:padding="5dp"
+            android:hint="Add note here"
+            android:background="@color/white"
+            android:id="@+id/edt_note"
             android:layout_width="match_parent"
-            android:layout_marginTop="15dp"
-            android:layout_margin="5dp"
-            android:background="@color/textColor"
-            android:layout_height="0.5dp"/>
-
+            android:layout_height="wrap_content"
+            android:lines="10"
+            android:minLines="5"
+            android:gravity="top|left"
+            android:maxLines="15" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/submit_next_t"

@@ -45,7 +45,7 @@
         <ImageView
            android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
-            android:src="@drawable/logo"
+            android:src="@drawable/digidrishti_white_r"
             android:layout_width="150dp"
             android:layout_height="150dp"/>
 

@@ -27,12 +27,12 @@ class OpenCamera : AppCompatActivity() {
     private val REQUEST_IMAGE_CAPTURE = 1
     private val REQUEST_IMAGE_CAPTURE_LEFT = 2
     private val REQUEST_IMAGE_CAPTURE_RIGHT = 3
-    var name=""
+    var name = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.capture_image)
         val sharedPreferences = getSharedPreferences("MySharedPref", MODE_PRIVATE)
-        name=sharedPreferences.getString("patientName", "").toString()
+        name = sharedPreferences.getString("patientName", "").toString()
         btCapturePhoto.setOnClickListener { openCamera(REQUEST_IMAGE_CAPTURE) }
         btCapturePhotoLeft.setOnClickListener { openCamera(REQUEST_IMAGE_CAPTURE_LEFT) }
         btCapturePhotoRight.setOnClickListener { openCamera(REQUEST_IMAGE_CAPTURE_RIGHT) }
@@ -55,6 +55,7 @@ class OpenCamera : AppCompatActivity() {
             )
         }
     }
+
     private fun openCamera(CODE: Int) {
         Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { intent ->
             intent.resolveActivity(packageManager)?.also {
@@ -66,17 +67,17 @@ class OpenCamera : AppCompatActivity() {
     var fos: OutputStream? = null
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        var answer=""
+        var answer = ""
         if (resultCode == RESULT_OK) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 val current = LocalDateTime.now()
                 val formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
-                answer=  current.format(formatter)
+                answer = current.format(formatter)
 
             } else {
                 var date = Date()
                 val formatter = SimpleDateFormat("dd/MM/yyyy")
-                answer= formatter.format(date)
+                answer = formatter.format(date)
 
             }
             if (requestCode == REQUEST_IMAGE_CAPTURE) {
@@ -84,81 +85,79 @@ class OpenCamera : AppCompatActivity() {
                 ivImage.setImageBitmap(bitmap)
 
 
-                    contentResolver?.also { resolver ->
-                        val contentValues = ContentValues().apply {
-                            put(
-                                MediaStore.MediaColumns.DISPLAY_NAME,
-                                name + answer + "_Both" + ".jpg"
-                            )
-                            put(MediaStore.MediaColumns.MIME_TYPE, "image/jpg")
-                            put(
-                                MediaStore.MediaColumns.RELATIVE_PATH,
-                                Environment.DIRECTORY_PICTURES + File.separator + "TestFolder"
-                            )
-                        }
-                        val imageUri: Uri? =
-                                resolver.insert(
-                                    MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
-                                    contentValues
-                                )
-                        fos = imageUri?.let { resolver.openOutputStream(it) }
-                        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fos)
-                        Objects.requireNonNull(fos)
+                contentResolver?.also { resolver ->
+                    val contentValues = ContentValues().apply {
+                        put(
+                            MediaStore.MediaColumns.DISPLAY_NAME,
+                            name + answer + "_Both" + ".jpg"
+                        )
+                        put(MediaStore.MediaColumns.MIME_TYPE, "image/jpg")
+                        put(
+                            MediaStore.MediaColumns.RELATIVE_PATH,
+                            Environment.DIRECTORY_PICTURES + File.separator + "TestFolder"
+                        )
                     }
+                    val imageUri: Uri? =
+                        resolver.insert(
+                            MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
+                            contentValues
+                        )
+                    fos = imageUri?.let { resolver.openOutputStream(it) }
+                    bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fos)
+                    Objects.requireNonNull(fos)
+                }
 
-            }
-            else if (requestCode == REQUEST_IMAGE_CAPTURE_LEFT) {
+            } else if (requestCode == REQUEST_IMAGE_CAPTURE_LEFT) {
                 val bitmap = data?.extras?.get("data") as Bitmap
                 ivImageLeft.setImageBitmap(bitmap)
 
-                    contentResolver?.also { resolver ->
-                        val contentValues = ContentValues().apply {
-                            put(
-                                MediaStore.MediaColumns.DISPLAY_NAME,
-                                name + answer + "_Left" + ".jpg"
-                            )
-                            put(MediaStore.MediaColumns.MIME_TYPE, "image/jpg")
-                            put(
-                                MediaStore.MediaColumns.RELATIVE_PATH,
-                                Environment.DIRECTORY_PICTURES + File.separator + "TestFolder"
-                            )
-                        }
-                        val imageUri: Uri? =
-                                resolver.insert(
-                                    MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
-                                    contentValues
-                                )
-                        fos = imageUri?.let { resolver.openOutputStream(it) }
-                        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fos)
-                        Objects.requireNonNull(fos)
+                contentResolver?.also { resolver ->
+                    val contentValues = ContentValues().apply {
+                        put(
+                            MediaStore.MediaColumns.DISPLAY_NAME,
+                            name + answer + "_Left" + ".jpg"
+                        )
+                        put(MediaStore.MediaColumns.MIME_TYPE, "image/jpg")
+                        put(
+                            MediaStore.MediaColumns.RELATIVE_PATH,
+                            Environment.DIRECTORY_PICTURES + File.separator + "TestFolder"
+                        )
+                    }
+                    val imageUri: Uri? =
+                        resolver.insert(
+                            MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
+                            contentValues
+                        )
+                    fos = imageUri?.let { resolver.openOutputStream(it) }
+                    bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fos)
+                    Objects.requireNonNull(fos)
 
                 }
-            }
-            else if (requestCode == REQUEST_IMAGE_CAPTURE_RIGHT) {
+            } else if (requestCode == REQUEST_IMAGE_CAPTURE_RIGHT) {
                 val bitmap = data?.extras?.get("data") as Bitmap
                 ivImageRight.setImageBitmap(bitmap)
 
-                    contentResolver?.also { resolver ->
-                        val contentValues = ContentValues().apply {
-                            put(
-                                MediaStore.MediaColumns.DISPLAY_NAME,
-                                name + answer + "_Right" + ".jpg"
-                            )
-                            put(MediaStore.MediaColumns.MIME_TYPE, "image/jpg")
-                            put(
-                                MediaStore.MediaColumns.RELATIVE_PATH,
-                                Environment.DIRECTORY_PICTURES + File.separator + "PaitentPhotograph"
-                            )
-                        }
-                        val imageUri: Uri? =
-                                resolver.insert(
-                                    MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
-                                    contentValues
-                                )
-                        fos = imageUri?.let { resolver.openOutputStream(it) }
-                        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fos)
-                        Objects.requireNonNull(fos)
+                contentResolver?.also { resolver ->
+                    val contentValues = ContentValues().apply {
+                        put(
+                            MediaStore.MediaColumns.DISPLAY_NAME,
+                            name + answer + "_Right" + ".jpg"
+                        )
+                        put(MediaStore.MediaColumns.MIME_TYPE, "image/jpg")
+                        put(
+                            MediaStore.MediaColumns.RELATIVE_PATH,
+                            Environment.DIRECTORY_PICTURES + File.separator + "PaitentPhotograph"
+                        )
                     }
+                    val imageUri: Uri? =
+                        resolver.insert(
+                            MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
+                            contentValues
+                        )
+                    fos = imageUri?.let { resolver.openOutputStream(it) }
+                    bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fos)
+                    Objects.requireNonNull(fos)
+                }
 
             }
         }

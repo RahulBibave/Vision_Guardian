@@ -5,7 +5,6 @@
     android:orientation="vertical"
     android:layout_height="match_parent">
 
-
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:background="@color/blue"
@@ -94,16 +93,16 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/roboto"
                                 android:paddingTop="@dimen/size8dp"
-                                android:text="a. "
+                                android:text="\u25CF "
                                 android:textColor="@color/primaryText"
                                 android:textSize="18sp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/roboto"
+                                android:fontFamily="@font/roboto_bold"
                                 android:paddingTop="@dimen/size8dp"
-                                android:text="When something falls into your eyes"
+                                android:text="@string/firstaid1"
                                 android:textColor="@color/primaryText"
                                 android:textSize="18sp" />
                         </LinearLayout>
@@ -114,7 +113,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto"
                             android:paddingTop="@dimen/size8dp"
-                            android:text="○	Do not rub the eyes "
+                            android:text="@string/firstaid11"
                             android:textColor="@color/primaryText"
                             android:textSize="18sp" />
                         <ImageView
@@ -128,7 +127,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto"
                             android:paddingTop="@dimen/size8dp"
-                            android:text="○	Wash with plenty of clean water "
+                            android:text="@string/firstaid12"
                             android:textColor="@color/primaryText"
                             android:textSize="18sp" />
 
@@ -140,16 +139,16 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/roboto"
                                 android:paddingTop="@dimen/size8dp"
-                                android:text="b. "
+                                android:text="\u25CF "
                                 android:textColor="@color/primaryText"
                                 android:textSize="18sp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/roboto"
+                                android:fontFamily="@font/roboto_bold"
                                 android:paddingTop="@dimen/size8dp"
-                                android:text="When something falls into your eyes"
+                                android:text="@string/firstaid2"
                                 android:textColor="@color/primaryText"
                                 android:textSize="18sp" />
                         </LinearLayout>
@@ -160,7 +159,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto"
                             android:paddingTop="@dimen/size8dp"
-                            android:text="○	Immediately wash the eye with plenty of clean water."
+                            android:text="@string/firstaid1_2"
                             android:textColor="@color/primaryText"
                             android:textSize="18sp" />
                         <TextView
@@ -170,7 +169,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto"
                             android:paddingTop="@dimen/size8dp"
-                            android:text="○	Seek emergency medical treatment right away. "
+                            android:text="@string/firstaid1_3"
                             android:textColor="@color/primaryText"
                             android:textSize="18sp" />
 
@@ -182,16 +181,16 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/roboto"
                                 android:paddingTop="@dimen/size8dp"
-                                android:text="c. "
+                                android:text="\u25CF "
                                 android:textColor="@color/primaryText"
                                 android:textSize="18sp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/roboto"
+                                android:fontFamily="@font/roboto_bold"
                                 android:paddingTop="@dimen/size8dp"
-                                android:text="When something falls into your eyes"
+                                android:text="@string/firstaid3"
                                 android:textColor="@color/primaryText"
                                 android:textSize="18sp" />
                         </LinearLayout>
@@ -202,7 +201,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto"
                             android:paddingTop="@dimen/size8dp"
-                            android:text="○	Gently apply a cold compress "
+                            android:text="@string/firstaid1_4"
                             android:textColor="@color/primaryText"
                             android:textSize="18sp" />
                         <TextView
@@ -212,7 +211,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto"
                             android:paddingTop="@dimen/size8dp"
-                            android:text="○	Avoid applying pressure "
+                            android:text="@string/firstaid1_5"
                             android:textColor="@color/primaryText"
                             android:textSize="18sp" />
                         <TextView
@@ -222,7 +221,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto"
                             android:paddingTop="@dimen/size8dp"
-                            android:text="○	Seek immediate medical service"
+                            android:text="@string/firstaid1_6"
                             android:textColor="@color/primaryText"
                             android:textSize="18sp" />
 
@@ -234,16 +233,16 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/roboto"
                                 android:paddingTop="@dimen/size8dp"
-                                android:text="d. "
+                                android:text="\u25CF "
                                 android:textColor="@color/primaryText"
                                 android:textSize="18sp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/roboto"
+                                android:fontFamily="@font/roboto_bold"
                                 android:paddingTop="@dimen/size8dp"
-                                android:text="Cut in the eye "
+                                android:text="@string/firstaid_cut"
                                 android:textColor="@color/primaryText"
                                 android:textSize="18sp" />
                         </LinearLayout>
@@ -254,7 +253,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto"
                             android:paddingTop="@dimen/size8dp"
-                            android:text="○	Gently place a shield over the eye"
+                            android:text="@string/firstaid1_7"
                             android:textColor="@color/primaryText"
                             android:textSize="18sp" />
 
@@ -265,7 +264,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto"
                             android:paddingTop="@dimen/size8dp"
-                            android:text="○	Do not rinse with water."
+                            android:text="@string/firstaid1_8"
                             android:textColor="@color/primaryText"
                             android:textSize="18sp" />
                         <TextView
@@ -275,7 +274,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto"
                             android:paddingTop="@dimen/size8dp"
-                            android:text="○	Do not remove any objects that are stuck in the eye."
+                            android:text="@string/firstaid1_9"
                             android:textColor="@color/primaryText"
                             android:textSize="18sp" />
                         <TextView
@@ -285,7 +284,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto"
                             android:paddingTop="@dimen/size8dp"
-                            android:text="○	Do not rub or apply pressure to the eye."
+                            android:text="@string/firstaid1_10"
                             android:textColor="@color/primaryText"
                             android:textSize="18sp" />
                         <TextView
@@ -295,7 +294,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto"
                             android:paddingTop="@dimen/size8dp"
-                            android:text="○	Get emergency medical help immediately"
+                            android:text="@string/firstaid1_11"
                             android:textColor="@color/primaryText"
                             android:textSize="18sp" />
 

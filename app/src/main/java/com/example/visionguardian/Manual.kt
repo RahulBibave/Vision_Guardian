@@ -1,8 +1,8 @@
 package com.example.visionguardian
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 
 class Manual : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

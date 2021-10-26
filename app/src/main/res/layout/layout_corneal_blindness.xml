@@ -233,7 +233,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_bold"
                         android:paddingTop="@dimen/activity_vertical_margin"
-                        android:text="Ocular injuries "
+                        android:text="@string/ocular"
 
                         android:textColor="@color/primaryText"
                         android:textSize="18sp"
@@ -244,7 +244,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_bold"
                         android:paddingTop="@dimen/activity_vertical_margin"
-                        android:text="What are the causes of ocular injuries ?"
+                        android:text="@string/whatarecauses"
 
                         android:textColor="@color/primaryText"
                         android:textSize="18sp"
@@ -333,7 +333,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_bold"
                         android:paddingTop="@dimen/activity_vertical_margin"
-                        android:text="How to prevent ocular injuries?"
+                        android:text="@string/howtoprevent"
 
                         android:textColor="@color/primaryText"
                         android:textSize="18sp"
@@ -466,7 +466,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_bold"
                         android:paddingTop="@dimen/activity_vertical_margin"
-                        android:text="What should you do in case of ocular injury ?"
+                        android:text="@string/whatShould"
 
                         android:textColor="@color/primaryText"
                         android:textSize="18sp"
@@ -570,8 +570,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_bold"
                         android:paddingTop="@dimen/activity_vertical_margin"
-                        android:text="Corneal Ulceration  "
-
+                        android:text="@string/CornealUlceration"
                         android:textColor="@color/primaryText"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -581,7 +580,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_bold"
                         android:paddingTop="@dimen/activity_vertical_margin"
-                        android:text="What is a corneal ulcer?"
+                        android:text="@string/Whatcornealulcer"
 
                         android:textColor="@color/primaryText"
                         android:textSize="18sp"
@@ -622,7 +621,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_bold"
                         android:paddingTop="@dimen/activity_vertical_margin"
-                        android:text="What are the symptoms?"
+                        android:text="@string/what_symptoms"
 
                         android:textColor="@color/primaryText"
                         android:textSize="18sp"
@@ -664,7 +663,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_bold"
                         android:paddingTop="@dimen/activity_vertical_margin"
-                        android:text="What are the causes of corneal ulcer ?"
+                        android:text="@string/causes0fcorneal"
 
                         android:textColor="@color/primaryText"
                         android:textSize="18sp"
@@ -725,7 +724,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_bold"
                         android:paddingTop="@dimen/activity_vertical_margin"
-                        android:text="Who is at risk of developing corneal ulceration?"
+                        android:text="@string/whoisrisk"
 
                         android:textColor="@color/primaryText"
                         android:textSize="18sp"
@@ -831,7 +830,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_bold"
                         android:paddingTop="@dimen/activity_vertical_margin"
-                        android:text="How can we prevent corneal ulceration?"
+                        android:text="@string/howprevent"
 
                         android:textColor="@color/primaryText"
                         android:textSize="18sp"
@@ -940,7 +939,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_bold"
                         android:paddingTop="@dimen/activity_vertical_margin"
-                        android:text="Trachoma   "
+                        android:text="@string/trachoma"
 
                         android:textColor="@color/primaryText"
                         android:textSize="18sp"
@@ -951,7 +950,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_bold"
                         android:paddingTop="@dimen/activity_vertical_margin"
-                        android:text="What is trachoma?"
+                        android:text="@string/whatistracoma"
 
                         android:textColor="@color/primaryText"
                         android:textSize="18sp"
@@ -989,7 +988,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_bold"
                         android:paddingTop="@dimen/activity_vertical_margin"
-                        android:text="How does trachoma spread?"
+                        android:text="@string/tracomaspred"
 
                         android:textColor="@color/primaryText"
                         android:textSize="18sp"
@@ -1031,7 +1030,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_bold"
                         android:paddingTop="@dimen/activity_vertical_margin"
-                        android:text="What are the symptoms of trachoma ?"
+                        android:text="@string/tracomasym"
 
                         android:textColor="@color/primaryText"
                         android:textSize="18sp"
@@ -1114,7 +1113,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_bold"
                         android:paddingTop="@dimen/activity_vertical_margin"
-                        android:text="How can we prevent trachoma?"
+                        android:text="@string/preventtracoma"
 
                         android:textColor="@color/primaryText"
                         android:textSize="18sp"
@@ -1220,7 +1219,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_bold"
                         android:paddingTop="@dimen/activity_vertical_margin"
-                        android:text="Is trachoma treatable?"
+                        android:text="@string/tracomatreatble"
 
                         android:textColor="@color/primaryText"
                         android:textSize="18sp"
@@ -1286,7 +1285,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_bold"
                         android:paddingTop="@dimen/activity_vertical_margin"
-                        android:text="VITAMIN A DEFICIENCY  "
+                        android:text="@string/vitaA"
 
                         android:textColor="@color/primaryText"
                         android:textSize="18sp"
@@ -1297,7 +1296,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_bold"
                         android:paddingTop="@dimen/activity_vertical_margin"
-                        android:text="What is Vitamin A deficiency?"
+                        android:text="@string/whatisvitaA"
 
                         android:textColor="@color/primaryText"
                         android:textSize="18sp"
@@ -1364,7 +1363,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_bold"
                         android:paddingTop="@dimen/activity_vertical_margin"
-                        android:text="What are the symptoms?"
+                        android:text="@string/whataresymvita"
 
                         android:textColor="@color/primaryText"
                         android:textSize="18sp"
@@ -1491,7 +1490,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_bold"
                         android:paddingTop="@dimen/activity_vertical_margin"
-                        android:text="How to prevent vitamin A deficiency?"
+                        android:text="@string/howtopreventvitaA"
                         android:textColor="@color/primaryText"
                         android:textSize="18sp"
                         android:textStyle="bold" />

@@ -6,12 +6,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
 
-    tools:context=".RefferalDetails">
+    tools:context=".ReferralDetails">
 
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:background="@color/blue"
         android:layout_height="wrap_content">
+
         <ImageView
             android:id="@+id/back_arrow"
             android:layout_width="wrap_content"
@@ -397,6 +398,7 @@
 
 
                 <LinearLayout
+                    android:orientation="vertical"
                     android:id="@+id/txtHistr"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -404,15 +406,22 @@
 
                     <TextView
                         android:id="@+id/txtPastHistory"
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:fontFamily="@font/roboto_bold"
-                        android:text="Past History "
+                        android:text=""
                         android:textColor="@color/black"
                         android:textSize="15sp" />
 
+                    <TextView
+                        android:id="@+id/txtPastHistory_op"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
 
+                        android:fontFamily="@font/roboto_bold"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
 
                 </LinearLayout>
 
@@ -435,7 +444,6 @@
                     android:fontFamily="@font/roboto"
                     android:textColor="@color/black"/>
                 <LinearLayout
-
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp">
@@ -464,6 +472,35 @@
 
                 </LinearLayout>
 
+                <LinearLayout
+                    android:id="@+id/lin_q7_op"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/txtQ7_op"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text=" "
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/txtQ7_op_duration"
+                        android:layout_marginLeft="@dimen/size5dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:text=""
+                        android:textColor="@color/textColor"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
 
 
                 <View
@@ -1314,11 +1351,57 @@
                     android:textSize="15sp" />
             </LinearLayout>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/size5dp"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Pupil"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+
+                <TextView
+                    android:id="@+id/txtPupilR"
+                    android:layout_marginLeft="@dimen/size5dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto"
+                    android:text="Right Eye"
+                    android:textColor="@color/textColor"
+                    android:textSize="15sp" />
+
+
+                <TextView
+                    android:id="@+id/txtPupilL"
+                    android:layout_marginLeft="@dimen/size5dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto"
+                    android:text="Left Eye "
+                    android:textColor="@color/textColor"
+                    android:textSize="15sp" />
+            </LinearLayout>
 
         </LinearLayout>
 
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:layout_marginBottom="20dp"
                 android:id="@+id/btn_refer"
                 android:layout_width="match_parent"

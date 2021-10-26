@@ -72,7 +72,7 @@
                 android:layout_marginLeft="20dp"
                 android:background="@drawable/yes_no_button_bg"
                 android:id="@+id/big_e_yes"
-                android:text="correct"
+                android:text="@string/correct"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
@@ -81,7 +81,7 @@
                 android:background="@drawable/yes_no_button_bg"
                 android:layout_marginLeft="10dp"
                 android:id="@+id/big_e_no"
-                android:text="incorrect"
+                android:text="@string/incorrect"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
@@ -92,7 +92,7 @@
                 android:background="@drawable/yes_no_button_bg"
                 android:layout_gravity="end"
                 android:id="@+id/big_flip"
-                android:text="Rotate"
+                android:text="@string/rotate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </RelativeLayout>
@@ -101,7 +101,7 @@
 
                 android:textColor="@color/textColor"
                 android:fontFamily="@font/roboto_bold"
-                android:text="(Note:-Use this chart at 10 feet)"
+                android:text="@string/note1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
@@ -167,7 +167,7 @@
                 android:layout_marginLeft="20dp"
                 android:background="@drawable/yes_no_button_bg"
                 android:id="@+id/mid_e_yes"
-                android:text="correct"
+                android:text="@string/correct"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
@@ -177,7 +177,7 @@
                 android:background="@drawable/yes_no_button_bg"
                 android:layout_marginLeft="20dp"
                 android:id="@+id/mid_e_no"
-                android:text="incorrect"
+                android:text="@string/incorrect"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
@@ -188,7 +188,7 @@
                 android:background="@drawable/yes_no_button_bg"
                 android:layout_gravity="end"
                 android:id="@+id/mid_flip"
-                android:text="Rotate"
+                android:text="@string/rotate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </RelativeLayout>
@@ -196,7 +196,7 @@
 
                 android:textColor="@color/textColor"
                 android:fontFamily="@font/roboto_bold"
-                android:text="(Note:-Use this chart at 10 feet)"
+                android:text="@string/note1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
@@ -256,7 +256,7 @@
                 android:layout_marginLeft="20dp"
                 android:background="@drawable/yes_no_button_bg"
                 android:id="@+id/small_e_yes"
-                android:text="correct"
+                android:text="@string/correct"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
@@ -265,7 +265,7 @@
                 android:layout_marginLeft="20dp"
                 android:background="@drawable/yes_no_button_bg"
                 android:id="@+id/small_e_no"
-                android:text="incorrect"
+                android:text="@string/incorrect"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
@@ -276,7 +276,7 @@
                 android:background="@drawable/yes_no_button_bg"
                 android:layout_gravity="end"
                 android:id="@+id/small_flip"
-                android:text="Rotate"
+                android:text="@string/rotate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </RelativeLayout>
@@ -284,7 +284,7 @@
 
                 android:textColor="@color/textColor"
                 android:fontFamily="@font/roboto_bold"
-                android:text="(Note:-Use this chart at 10 feet)"
+                android:text="@string/note1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
@@ -317,61 +317,122 @@
              android:layout_height="wrap_content"/>-->
 
 
+        <!-- <LinearLayout
+             android:orientation="vertical"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:gravity="center">
+
+             <ImageView
+                 android:layout_marginTop="20dp"
+                 android:layout_width="2.2mm"
+                 android:layout_height="2.2mm"
+                 android:src="@drawable/ic_car"/>
+             <ImageView
+                 android:layout_marginTop="20dp"
+                 android:layout_width="2.2mm"
+                 android:layout_height="2.2mm"
+                 android:src="@drawable/ic_apple_new"/>
+             <ImageView
+                 android:layout_marginTop="20dp"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:src="@drawable/apple"/>
+             <ImageView
+                 android:layout_marginTop="20dp"
+                 android:layout_marginBottom="20dp"
+                 android:layout_width="1.16mm"
+                 android:layout_height="1.16mm"
+                 android:src="@drawable/ic_baseline_home"/>
+             <View
+                 android:layout_width="match_parent"
+                 android:layout_height="0.5dp"
+                 android:layout_margin="20dp"
+                 android:background="@color/primaryText"/>
+             <ImageView
+                 android:layout_marginTop="20dp"
+                 android:layout_width="1.16mm"
+                 android:layout_height="1.16mm"
+                 android:src="@drawable/e"/>
+             <ImageView
+                 android:rotation="180"
+                 android:layout_marginTop="20dp"
+                 android:layout_width="1.16mm"
+                 android:layout_height="1.16mm"
+                 android:src="@drawable/e"/>
+             <ImageView
+                 android:rotation="90"
+                 android:layout_marginTop="20dp"
+                 android:layout_width="1.16mm"
+                 android:layout_height="1.16mm"
+                 android:src="@drawable/e"/>
+             <ImageView
+                 android:rotation="270"
+                 android:layout_marginTop="20dp"
+                 android:layout_width="1.16mm"
+                 android:layout_height="1.16mm"
+                 android:src="@drawable/e"/>
+
+         </LinearLayout>-->
+
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center">
+            \
 
-            <ImageView
-                android:layout_marginTop="20dp"
-                android:layout_width="6pt"
-                android:layout_height="6pt"
-                android:src="@drawable/ic_car"/>
             <ImageView
                 android:layout_marginTop="20dp"
                 android:layout_width="2.2mm"
                 android:layout_height="2.2mm"
-                android:src="@drawable/ic_apple_new"/>
+                android:src="@drawable/ic_apple_new" />
+
             <ImageView
                 android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/apple"/>
+                android:src="@drawable/apple" />
+
             <ImageView
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
                 android:layout_width="1.16mm"
                 android:layout_height="1.16mm"
-                android:src="@drawable/ic_baseline_home"/>
+                android:src="@drawable/ic_baseline_home" />
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
                 android:layout_margin="20dp"
-                android:background="@color/primaryText"/>
+                android:background="@color/primaryText" />
+
             <ImageView
                 android:layout_marginTop="20dp"
                 android:layout_width="1.16mm"
                 android:layout_height="1.16mm"
-                android:src="@drawable/e"/>
+                android:src="@drawable/e" />
+
             <ImageView
                 android:rotation="180"
                 android:layout_marginTop="20dp"
                 android:layout_width="1.16mm"
                 android:layout_height="1.16mm"
-                android:src="@drawable/e"/>
+                android:src="@drawable/e" />
+
             <ImageView
                 android:rotation="90"
                 android:layout_marginTop="20dp"
                 android:layout_width="1.16mm"
                 android:layout_height="1.16mm"
-                android:src="@drawable/e"/>
+                android:src="@drawable/e" />
+
             <ImageView
                 android:rotation="270"
                 android:layout_marginTop="20dp"
                 android:layout_width="1.16mm"
                 android:layout_height="1.16mm"
-                android:src="@drawable/e"/>
+                android:src="@drawable/e" />
 
         </LinearLayout>
 
@@ -396,7 +457,7 @@
                     android:layout_marginLeft="20dp"
                     android:background="@drawable/yes_no_button_bg"
                     android:id="@+id/vision_yes"
-                    android:text="correct"
+                    android:text="@string/correct"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
@@ -405,7 +466,7 @@
                     android:background="@drawable/yes_no_button_bg"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/vision_no"
-                    android:text="incorrect"
+                    android:text="@string/incorrect"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
@@ -416,7 +477,7 @@
 
                 android:textColor="@color/textColor"
                 android:fontFamily="@font/roboto_bold"
-                android:text="(Note:-Use this chart at 16 Inch/40 cmn)"
+                android:text="@string/note2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
