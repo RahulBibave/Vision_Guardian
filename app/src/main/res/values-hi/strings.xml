@@ -15,6 +15,7 @@
     <string name="sign_in">New User Registration</string>
     <string name="submit">जमा करा </string>
     <string name="hint_age">वय</string>
+    <string name="password">पासवर्ड</string>
     <string name="hint_Address">Address line 1</string>
     <string name="hint_firstname">पाहिले नाव *</string>
     <string name="hint_middal">Middle name</string>
